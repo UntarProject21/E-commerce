@@ -44,8 +44,18 @@ section{
     font-size: 1.8rem;
 }
 
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+
 .answer p{
     padding-top: 1rem;
     line-height: 1.6;
     font-size: 1.4rem;
+}
+
+.faq.active .answer{
+    max-height: 300px;
 }
