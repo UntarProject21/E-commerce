@@ -8,5 +8,20 @@
 
 body{
     font-family: "Quicksand", sans-serif;
-    background-color:blanchedalmond;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+section{
+    min-height: 1000px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-size: 3em;
+    margin: 2em 0em;
 }
