@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="/css/plugins/bootsrap.min.css"> -->
     <!-- Boxicons -->
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
+    
     <!-- Glide js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css">
     <!-- Custom StyleSheet -->
     <link rel="stylesheet" href="./css/styles.css" />
+    
     <title>ecommerce Website</title>
   </head>
   <body>
@@ -292,19 +295,62 @@
 
     <!-- Promo -->
 
-    <section class="section banner">
-<div class="left">
-  <span class="trend">Trend Design</span>
-  <h1>New Collection 2021</h1>
-  <p>New Arrival <span class="color">Sale 50% OFF</span> Limited Time Offer</p>
-  <a href="#" class="btn btn-1">Discover Now</a>
-</div>
-<div class="right">
-  <img src="./images/banner.png" alt="">
-</div>
-    </section>
+    
 
 
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner"">
+        <div class="carousel-item active" data-interval="2000">
+          <div class="overlay-image" 
+          style="background-image:url(./images/banner.png);">
+          </div>
+          <div class="container">
+            <h1>Example headline</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis neque nobis dolores, eum cum quisquam.</p>
+            <a href="#" class="btn btn-lg btn-primary">
+              Shop Now!
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item" data-interval="2000">
+          <div class="overlay-image" 
+          style="background-image:url(./images/banner.png);">
+          </div>
+          <div class="container">
+            <h1>Example headline</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis neque nobis dolores, eum cum quisquam.</p>
+            <a href="#" class="btn btn-lg btn-primary">
+              Shop Now!
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item"data-interval="2000">
+          <div class="overlay-image" 
+          style="background-image:url(./images/banner.png);">
+          </div>
+          <div class="container">
+            <h1>Example headline</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis neque nobis dolores, eum cum quisquam.</p>
+            <a href="#" class="btn btn-lg btn-primary">
+              Shop Now!
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+        <span class="sr-only">Previous</span>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+        <span class="sr-only">Next</span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+    </div>
 
 
     <!-- Featured -->
@@ -473,7 +519,9 @@
       </div>
     </div>
   </div>
-
+  
+  <script src="js/plugins/bootstrap.min.js"></script>
+  <script src="js/plugins/popper.min.js"></script>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
   <script src="./js/slider.js"></script>
