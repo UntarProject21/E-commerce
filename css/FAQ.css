@@ -8,8 +8,8 @@
 
 body{
     font-family: "Quicksand", sans-serif;
-    background: #ffffff;
-    color: rgb(0, 0, 0);
+    background: #727171;
+    color: rgb(255, 255, 255);
 }
 
 section{
@@ -64,18 +64,7 @@ section{
 .faq.active svg{
     transform: rotate(180deg);
 }
-
-.svg{
+ 
+svg{
     transition: transform 0.5s ease-in;
-}
-
-@keyframes fade{
-    from{
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0px);
-    }
 }
