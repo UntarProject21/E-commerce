@@ -6,12 +6,12 @@
 }
 .about{
     width: 100%;
-    padding: 78px 50px;
+    padding: 125px 50px;
     background-color: #ffac89;
 }
 .about img{
     height: auto;
-    width: 240px;
+    width: 35%;
 }
 .about-text{
     width: 550px;
@@ -36,9 +36,6 @@
     text-transform: capitalize;
     margin-bottom: 25px;
     letter-spacing: 2px;
-}
-.span{
-    color: aqua;
 }
 .about-text p{
     font-size: 18px;

@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #666;
+    background-color: rgb(255, 255, 255);
 }
 .contact .content{
     max-width: 800px;
@@ -24,11 +24,11 @@
 .contact .content h2{
     font-size: 36px;
     font-weight: 500;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 .contact .content p{
     font-weight: 300;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 .container{
     width: 100%;
@@ -61,7 +61,7 @@
     display: flex;
     margin-left: 20px;
     font-size: 16px;
-    color: #fff;
+    color: rgb(0, 0, 0);
     flex-direction: column;
     font-weight: 300;
 }
@@ -72,7 +72,7 @@
 .contactForm{
     width: 40%;
     padding: 40px;
-    background: #fff;
+    background: rgb(255, 255, 255);
 }
 .contactForm h2{
     font-size: 30px;
