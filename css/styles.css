@@ -48,7 +48,7 @@ li {
   padding: 0 3rem;
 }
 
-.d-flex-nav {
+.d-flex {
   display: flex; 
   align-items: center;
 }
@@ -862,7 +862,7 @@ footer .row {
 /* Carousel */
 .carousel-item{
   height: 58rem;
-  background: #000;
+  background: #555;
   color:white;
   position: relative;
   
@@ -883,7 +883,7 @@ footer .row {
   top: 0;
   background-position: center;
   background-size: cover;
-  opacity:0.5;
+  opacity:0.8;
 }
 .carousel-item .btn-1 {
   background-color: var(--green);
