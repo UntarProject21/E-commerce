@@ -1,75 +1,138 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Responsive CONTACT US page</title>
-        <link rel="stylesheet" href="https://stackpath.boostrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="
-        sha384-wvFXpqpZZVQGK6TAh5PV1GOfQNHSoD2xbE+QkPxCAF1NEevoEH3S10sibVcOQVnN" crossorigin="
-        anonymous">
-        <link rel="stylesheet" type="text/css" href="../E-commerce\css\contactus.css">
-    </head>
-    <body>
-        <section class="contact">
-            <div class="content">
-                <h2>Contact Us</h2>
-            </div>
-            <div class="container">
-                <div class="contactInfo">
-                    <div class="box">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-                          </svg>
-                        </div>
-                        <div class="text">
-                            <h3>Address</h3>
-                            <p>Jl. Letjen S. Parman No. 1,<br>Jakarta Barat,<br>11440</p>
-                        </div>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive CONTACT US page</title>
+    <link rel="stylesheet" href="https://stackpath.boostrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="
+    sha384-wvFXpqpZZVQGK6TAh5PV1GOfQNHSoD2xbE+QkPxCAF1NEevoEH3S10sibVcOQVnN" crossorigin="
+    anonymous">
+    <link rel="stylesheet" type="text/css" href="../E-commerce\css\contactus.css">
+</head>
+<body>
+    <div class="top-nav">
+      <div class="container d-flex">
+        <p><b>Welcome To The Cheapest, Easiest, and Trendiest Shop</b></p>
+        <ul class="d-flex">
+          <li><a href="FAQ.html" title="Frequently Asked Question">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="navigation">
+      <div class="nav-center container d-flex">
+      <a href="/" class="logo"><h1>KeosYaro</h1></a>
+
+        <ul class="nav-list d-flex">
+          <li class="nav-item">
+            <a href="/" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="product.html" class="nav-link">Shop</a>
+          </li>
+          <li class="nav-item">
+          <a href="#terms" class="nav-link" title="Terms & Conditions">T&C</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link" title="About Us">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="contactus.html" class="nav-link" title="Contact Us">Contact</a>
+          </li>
+          <li class="icons d-flex">
+          <a href="login.html" class="icon">
+            <i class="bx bx-user"></i>
+          </a>
+          <div class="icon">
+            <i class="bx bx-heart"></i>
+            <span class="d-flex">0</span>
+          </div>
+          <a href="cart.html" class="icon">
+            <i class="bx bx-cart"></i>
+            <span class="d-flex">0</span>
+          </a>
+        </li>
+        </ul>
+
+        <div class="icons d-flex">
+          <a href="login.html" class="icon" title="Login">
+            <i class="bx bx-user"></i>
+          </a>
+          <a href="#wishlist" class="icon" title="Wishlist">
+            <i class="bx bx-heart"></i>
+            <span class="d-flex">0</span>
+          </a>
+          <a href="cart.html" class="icon" title="Shopping Cart">
+            <i class="bx bx-cart"></i>
+            <span class="d-flex">0</span>
+          </a>
+        </div>
+
+        <div class="hamburger">
+          <i class="bx bx-menu-alt-left"></i>
+        </div>
+      </div>
+    </div>
+    <!-- Navigation -->
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                        </svg>
                     </div>
-                    <div class="box">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-outbound-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z"/>
-                          </svg>
-                        </div>
-                        <div class="text">
-                            <h3>Phone</h3>
-                            <p>0812-5374-2353</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-paper-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M6.5 9.5 3 7.5v-6A1.5 1.5 0 0 1 4.5 0h7A1.5 1.5 0 0 1 13 1.5v6l-3.5 2L8 8.75l-1.5.75ZM1.059 3.635 2 3.133v3.753L0 5.713V5.4a2 2 0 0 1 1.059-1.765ZM16 5.713l-2 1.173V3.133l.941.502A2 2 0 0 1 16 5.4v.313Zm0 1.16-5.693 3.337L16 13.372v-6.5Zm-8 3.199 7.941 4.412A2 2 0 0 1 14 16H2a2 2 0 0 1-1.941-1.516L8 10.072Zm-8 3.3 5.693-3.162L0 6.873v6.5Z"/>
-                          </svg>
-                        </div>
-                        <div class="text">
-                            <h3>Email</h3>
-                            <p>@untar.ac.id</p>
-                        </div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Jl. Letjen S. Parman No. 1,<br>Jakarta Barat,<br>11440</p>
                     </div>
                 </div>
-                <div class="contactForm">
-                    <form>
-                        <h2>Send Message</h2>
-                        <div class="inputBox">
-                            <input type="text" name="" required="required">
-                            <span>Full Name</span>
-                        </div>
-                        <div class="inputBox">
-                            <input type="text" name="" required="required">
-                            <span>Email</span>
-                        </div>
-                        <div class="inputBox">
-                            <textarea required="required"></textarea>
-                            <span>Type your Message</span>
-                        </div>
-                        <div class="inputBox">
-                            <input type="submit" name="" value="send">
-                        </div>
-                    </form>
+                <div class="box">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-outbound-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>0812-5374-2353</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-paper-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6.5 9.5 3 7.5v-6A1.5 1.5 0 0 1 4.5 0h7A1.5 1.5 0 0 1 13 1.5v6l-3.5 2L8 8.75l-1.5.75ZM1.059 3.635 2 3.133v3.753L0 5.713V5.4a2 2 0 0 1 1.059-1.765ZM16 5.713l-2 1.173V3.133l.941.502A2 2 0 0 1 16 5.4v.313Zm0 1.16-5.693 3.337L16 13.372v-6.5Zm-8 3.199 7.941 4.412A2 2 0 0 1 14 16H2a2 2 0 0 1-1.941-1.516L8 10.072Zm-8 3.3 5.693-3.162L0 6.873v6.5Z"/>
+                        </svg>
+                    </div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>@untar.ac.id</p>
+                    </div>
                 </div>
             </div>
-        </section>
-    </body>
+            <div class="contactForm">
+                <form>
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Type your Message</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
 </html>

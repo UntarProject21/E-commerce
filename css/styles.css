@@ -80,7 +80,6 @@ Header
   color: var(--white);
   padding: 0 0.5rem;
 }
-
 /* 
 =================
 Navigation
@@ -844,6 +843,22 @@ footer .row {
 .footer .col h4 {
   margin-bottom: 1rem;
 }
+
+.footer .col i {
+  font-size: 200%;
+}
+.footer p{
+  font-size: 300%;
+}
+
+.bottom-footer { 
+  text-align: center;;
+}
+.bottom-footer p {
+  color: #777b92;
+  font-size: 16px; 
+}
+
 
 @media only screen and (max-width: 567px) {
   footer .row {

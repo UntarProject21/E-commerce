@@ -5,16 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/plugins/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="/css/plugins/OwlCarousel2-2.2.1/owl.carousel.css"> -->
     <!-- Boxicons -->
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
+    
     <!-- Glide js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css">
     <!-- Custom StyleSheet -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    
     <title>ecommerce Website</title>
   </head>
   <body>
@@ -23,66 +27,58 @@
       <!-- Top Nav -->
       <div class="top-nav">
         <div class="container d-flex">
-          <p>Order Online Or Call Us: (001) 2222-55555</p>
+          <p><b>Welcome To The Cheapest, Easiest, and Trendiest Shop</b></p>
           <ul class="d-flex">
-            <li><a href="#">About Us</a></li>
-            <li><a href="../E-commerce\FAQ.html">FAQ</a></li>
-            <li><a href="../E-commerce\contactus.html">Contact</a></li>
+            <li><a href="FAQ.html" title="Frequently Asked Question">FAQ</a></li>
           </ul>
         </div>
       </div>
       <div class="navigation">
         <div class="nav-center container d-flex">
-        <a href="/" class="logo"><h1>Dans</h1></a>
+        <a href="/" class="logo"><h1>KeosYaro</h1></a>
 
           <ul class="nav-list d-flex">
             <li class="nav-item">
               <a href="/" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="product.html" class="nav-link">Shop</a>
+              <a href="product.html" class="nav-link">Mall</a>
             </li>
             <li class="nav-item">
-            <a href="#terms" class="nav-link">Terms</a>
+            <a href="#terms" class="nav-link" title="Terms & Conditions">T&C</a>
             </li>
             <li class="nav-item">
-              <a href="#about" class="nav-link">About</a>
+              <a href="#about" class="nav-link" title="About Us">About</a>
             </li>
             <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact</a>
+              <a href="contactus.html" class="nav-link" title="Contact Us">Contact</a>
             </li>
             <li class="icons d-flex">
             <a href="login.html" class="icon">
               <i class="bx bx-user"></i>
             </a>
             <div class="icon">
-              <i class="bx bx-search"></i>
-            </div>
-            <div class="icon">
               <i class="bx bx-heart"></i>
-              <span class="d-flex">0</span>
+              
             </div>
             <a href="cart.html" class="icon">
               <i class="bx bx-cart"></i>
-              <span class="d-flex">0</span>
+              
             </a>
           </li>
           </ul>
 
           <div class="icons d-flex">
-            <a href="login.html" class="icon">
+            <a href="login.html" class="icon" title="Login">
               <i class="bx bx-user"></i>
             </a>
-            <div class="icon">
-              <i class="bx bx-search"></i>
-            </div>
-            <div class="icon">
+            <a href="wishlist.html" class="icon" title="Wishlist">
               <i class="bx bx-heart"></i>
-              <span class="d-flex">0</span>
-            </div>
-            <a href="cart.html" class="icon">
+              
+            </a>
+            <a href="cart.html" class="icon" title="Shopping Cart">
               <i class="bx bx-cart"></i>
-              <span class="d-flex">0</span>
+              
             </a>
           </div>
 
@@ -99,10 +95,10 @@
             <li class="glide__slide">
               <div class="center">
                 <div class="left">
-                  <span class="">New Inspiration 2020</span>
+                  <span class="">New Inspiration 2022</span>
                   <h1 class="">NEW COLLECTION!</h1>
-                  <p>Trending from men's and women's  style collection</p>
-                  <a href="#" class="hero-btn">SHOP NOW</a>
+                  <p>Trending from men's and women's style collection</p>
+                  <a href="product.html" class="hero-btn">SHOP NOW</a>
                 </div>
                 <div class="right">
                     <img class="img1" src="./images/hero-1.png" alt="">
@@ -112,10 +108,10 @@
             <li class="glide__slide">
               <div class="center">
                 <div class="left">
-                  <span>New Inspiration 2020</span>
+                  <span>New Inspiration 2022</span>
                   <h1>THE PERFECT MATCH!</h1>
                   <p>Trending from men's and women's  style collection</p>
-                  <a href="#" class="hero-btn">SHOP NOW</a>
+                  <a href="product.html" class="hero-btn">SHOP NOW</a>
                 </div>
                 <div class="right">
                   <img class="img2" src="./images/hero-2.png" alt="">
@@ -138,12 +134,6 @@
           </div>
         </div>
         <div class="cat">
-          <img src="./images/cat2.jpg" alt="" />
-          <div>
-            <p>ACCESSORIES</p>
-          </div>
-        </div>
-        <div class="cat">
           <img src="./images/cat1.jpg" alt="" />
           <div>
             <p>MEN'S WEAR</p>
@@ -162,7 +152,7 @@
       <div class="product-center">
         <div class="product-item">
           <div class="overlay">
-            <a href="productDetails.html" class="product-thumb">
+            <a href="productDetails" class="product-thumb">
               <img src="./images/product-1.jpg" alt="" />
             </a>
           </div>
@@ -172,9 +162,9 @@
             <h4>$700</h4>
           </div>
           <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
+            <li><a href=""><i class="bx bx-heart"></i></a></li>
+            <li><a href="productDetails.html"><i class="bx bx-search"></a></i></li>
+            <li><a href=""><i class="bx bx-cart"></i></a></li>
           </ul>
         </div>
         <div class="product-item">
@@ -182,7 +172,7 @@
             <a href="" class="product-thumb">
               <img src="./images/product-3.jpg" alt="" />
             </a>
-            <span class="discount">50%</span>
+            
           </div>
 
           <div class="product-info">
@@ -218,7 +208,7 @@
             <a href="" class="product-thumb">
               <img src="./images/product-4.jpg" alt="" />
             </a>
-            <span class="discount">50%</span>
+            
           </div>
           <div class="product-info">
             <span>MEN'S CLOTHES</span>
@@ -270,7 +260,7 @@
             <a href="" class="product-thumb">
               <img src="./images/product-7.jpg" alt="" />
             </a>
-            <span class="discount">50%</span>
+            
           </div>
           <div class="product-info">
             <span>MEN'S CLOTHES</span>
@@ -303,30 +293,66 @@
       </div>
     </section>
 
-
-    <!-- Promo -->
-
-    <section class="section banner">
-<div class="left">
-  <span class="trend">Trend Design</span>
-  <h1>New Collection 2021</h1>
-  <p>New Arrival <span class="color">Sale 50% OFF</span> Limited Time Offer</p>
-  <a href="#" class="btn btn-1">Discover Now</a>
-</div>
-<div class="right">
-  <img src="./images/banner.png" alt="">
-</div>
-    </section>
-
-
-
+    <!-- Carousel -->
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner"">
+        <div class="carousel-item active" data-interval="500">
+          <div class="overlay-image" 
+          style="background-image:url(./images/cat1.jpg);">
+          </div>
+          <div class="container">
+            <h1>Example headline</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis neque nobis dolores, eum cum quisquam.</p><br>
+            <a href="#" class="btn-1">
+              Shop Now!
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item" data-interval="500">
+          <div class="overlay-image" 
+          style="background-image:url(./images/cat2.jpg);">
+          </div>
+          <div class="container">
+            <h1>Example headline</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis neque nobis dolores, eum cum quisquam.</p><br>
+            <a href="#" class="btn-1">
+              Shop Now!
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item"data-interval="500">
+          <div class="overlay-image" 
+          style="background-image:url(./images/cat3.jpg);">
+          </div>
+          <div class="container">
+            <h1>Example headline</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis neque nobis dolores, eum cum quisquam.</p><br>
+            <a href="#" class="btn-1">
+              Shop Now!
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+        <span class="sr-only">Previous</span>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+        <span class="sr-only">Next</span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+    </div>
 
     <!-- Featured -->
-  
     <section class="section new-arrival">
       <div class="title">
-        <h1>Featured</h1>
-        <p>All the latest picked from designer of our store</p>
+        <h1>Best Seller</h1>
+        <p></p>
       </div>
 
       <div class="product-center">
@@ -335,7 +361,7 @@
             <a href="" class="product-thumb">
               <img src="./images/product-7.jpg" alt="" />
             </a>
-            <span class="discount">50%</span>
+            
           </div>
           <div class="product-info">
             <span>MEN'S CLOTHES</span>
@@ -371,7 +397,7 @@
             <a href="" class="product-thumb">
               <img src="./images/product-1.jpg" alt="" />
             </a>
-            <span class="discount">40%</span>
+            
           </div>
           <div class="product-info">
             <span>MEN'S CLOTHES</span>
@@ -408,18 +434,26 @@
     <section class="section contact">
       <div class="row">
         <div class="col">
-          <h2>EXCELLENT SUPPORT</h2>
+          <h2>SUPPORTS</h2>
           <p>We love our customers and they can reach us any time
           of day we will be at your service 24/7</p>
-          <a href="../E-commerce\contactus.html" class="btn btn-1">Contact</a>
+          <a href="contactus.html" class="btn-1">Contact</a>
         </div>
         <div class="col">
-          <form action="">
-            <div>
-              <input type="email" placeholder="Email Address">
-            <a href="">Send</a>
-            </div>
-          </form>
+          <ul>
+            <li>
+              <h1><i class="bx bxs-truck" style="color:greenyellow"></i>Free Shipping</h1>
+              <p>More Money, More Happy </p>
+            </li>
+            <li>
+              <h1><i class="bx bx-undo" style="color:greenyellow"></i>7 days return</h1>
+              <p>Guarantee 100%</p>
+            </li>
+            <li>
+              <h1><i class="bx bx-time" style="color:greenyellow"></i>Operation Hours</h1>
+              <p>10AM - 10PM</p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -431,20 +465,25 @@
           <h4>INFORMATION</h4>
           <a href="">About us</a>
           <a href="">Contact Us</a>
-          <a href="">Term & Conditions</a>
+          <a href="">Terms & Conditions</a>
+          
         </div>
+        
         <div class="col d-flex">
-          <h4>USEFUL LINK</h4>
-          <a href="">Customer Services</a>
-          <a href="">Promotion</a>
-          <a href="">Top Brands</a>
+          <span><a href="https://www.facebook.com/untarjakarta"><i class='bx bxl-facebook-square'></i></a></span>
+          <span><a href="https://www.instagram.com/untarjakarta/"><i class='bx bxl-instagram-alt' ></i></a></span>
+          <span><a href="https://github.com/Testfirsthehehe"><i class='bx bxl-github' ></i></a></span>
+          <span><a href="https://twitter.com/untarjakarta"><i class='bx bxl-twitter' ></i></a></span>
+          <span><a href="https://www.youtube.com/UniversitasTarumanagara"><i class='bx bxl-youtube' ></i></a></span>
         </div>
-        <div class="col d-flex">
-          <span><i class='bx bxl-facebook-square'></i></span>
-          <span><i class='bx bxl-instagram-alt' ></i></span>
-          <span><i class='bx bxl-github' ></i></span>
-          <span><i class='bx bxl-twitter' ></i></span>
-          <span><i class='bx bxl-pinterest' ></i></span>
+      </div>
+
+      <p style="text-align:right;">
+        <a href="#header"><i class="bx bx-chevron-up"></i></a>
+      </p>
+      <div class="bottom-footer">
+        <div class="container">
+            <p>© NO copyright 2022 <a href="#" style="color: blue">Website E-Commerce</a></p>
         </div>
       </div>
     </footer>
@@ -463,7 +502,7 @@
       </div>
       <div class="popup-right">
         <div class="right-content">
-          <h1>Get Discount <span>50%</span> Off</h1>
+          <h1>Get Discount <span>30%</span> Off</h1>
           <p>Sign up to our newsletter and save 30% for you next purchase. No spam, we promise!
           </p>
           <form action="#">
@@ -474,9 +513,13 @@
       </div>
     </div>
   </div>
-
+  
+  <script src="js/plugins/bootstrap.min.js"></script>
+  <script src="js/plugins/popper.min.js"></script>
+  <!-- <script src="css/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script> -->
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
   <script src="./js/slider.js"></script>
   <script src="./js/index.js"></script>
+  <script src="./js/wishlist.js"></script>
 </html>
