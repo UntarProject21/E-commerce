@@ -477,6 +477,11 @@ Hero Media Query
   text-align: center;
 }
 
+
+.product-price {
+  text-align: center;
+}
+
 .product-info span {
   display: inline-block;
   font-size: 1.2rem;
@@ -1195,6 +1200,10 @@ table {
 .cart-info {
   display: flex;
   flex-wrap: wrap;
+}
+
+.wish-action {
+  object-position: right;
 }
 
 th {
