@@ -6,3 +6,4 @@ if (hamburer) {
     navList.classList.toggle("open");
   });
 }
+
