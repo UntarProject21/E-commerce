@@ -43,10 +43,9 @@
             <a href="login.html" class="icon">
               <i class="bx bx-user"></i>
             </a>
-            <div class="icon">
-            <a href="wishlist.html" class="icon"></a>
+            <a href="wishlist.html" class="icon">
               <i class="bx bx-heart"></i>
-            </div>
+            </a>
             <a href="cart.html" class="icon">
               <i class="bx bx-cart"></i>
               
@@ -74,9 +73,9 @@
         </div>
       </div>
     <!-- Login -->
-    <div class="container">
+    <div class="container" >
       <div class="login-form">
-        <form action="">
+        <form action="" id="loginForm">
           <h1>Login</h1>
           <p>
             Not have an account? Sign up
@@ -94,24 +93,22 @@
             required
           />
 
-          <label>
-            <input
-              type="checkbox"
-              checked="checked"
-              id="remember"
-              style="margin-bottom: 15px"
-            />
-            Remember me
-          </label>
-
           <div class="buttons">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn">Login</button>
+            <button class="cancelbtn">Cancel</button>
+            <button onclick="onLogin()" class="signupbtn" id="loginButton">Login</button>
+            <button onclick="onLogout()" class="logoutbtn" id="logoutButton">Logout</button>
           </div>
         </form>
+        <h1 id="adminOnly">
+          <img src="/images/551px-AsashioSchool.png" alt="" width="80%"><br>
+          <b>Okaerinasai Shikikan-sama</b><br>お帰りなさい 指揮官様
+        </h1>
       </div>
     </div>
 
+    
+      
+    
     <!-- Footer -->
     <footer class="footer">
       <div class="row">
@@ -121,7 +118,7 @@
           <a href="contactus.html">Contact Us</a>
           
         </div>
-        
+        <br>
         <div class="col d-flex">
           <span><a href="https://www.facebook.com/untarjakarta"><i class='bx bxl-facebook-square'></i></a></span>
           <span><a href="https://www.instagram.com/untarjakarta/"><i class='bx bxl-instagram-alt' ></i></a></span>
