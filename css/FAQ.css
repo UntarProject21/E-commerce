@@ -13,12 +13,13 @@ body{
 }
 
 section{
-    min-height: 100vh;
+    padding-left: 20%;
+    min-height: 65vh;
     width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 
 .title{
@@ -68,3 +69,4 @@ section{
 svg{
     transition: transform 0.5s ease-in;
 }
+
