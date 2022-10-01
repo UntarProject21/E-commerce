@@ -72,10 +72,11 @@ li {
 }
 
 .login-form form label {
-  margin-bottom: 1rem;
+  margin-top: 10rem;
 }
 
 .login-form form input {
+  width: 400px;
   border: 1px solid #ccc;
   outline: none;
   padding: 1.5rem 0;
