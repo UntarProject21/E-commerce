@@ -6,7 +6,7 @@
 }
 .about{
     width: 100%;
-    padding: 125px 50px;
+    padding: 5% 0.5%;
     background-color: #ffac89;
 }
 .about img{
@@ -44,3 +44,4 @@
     line-height: 28px;
     margin-bottom: 45px;
 }
+
