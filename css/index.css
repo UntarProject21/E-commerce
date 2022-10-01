@@ -883,7 +883,7 @@ footer .row {
   top: 0;
   background-position: center;
   background-size: cover;
-  opacity:0.8;
+  opacity:1;
 }
 .carousel-item .btn-1 {
   background-color: var(--green);
