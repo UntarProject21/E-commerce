@@ -128,6 +128,7 @@ th:last-child {
 
 @media only screen and (max-width: 567px) {
   .cart-info p {
+    padding: 0%;
     display: none;
   }
 }
