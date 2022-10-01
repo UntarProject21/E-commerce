@@ -9,8 +9,8 @@
 
 .contactus{
     position: relative;
-    min-height: 100vh;
-    padding: 50px 100px;
+    min-height: 10vh;
+    padding: 25px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,8 +84,8 @@
     width: 100%;
     margin-top: 10px;
 }
-.contactForm .inputBox input,
-.contactForm .inputBox textarea{
+/* method untuk mengedit input dan textare yang ada di dalam contactform */
+.contactForm .inputBox input, .contactForm .inputBox textarea{
     width: 100%;
     padding: 5px 0;
     font-size: 16px;
