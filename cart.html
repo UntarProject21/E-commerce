@@ -92,19 +92,18 @@
               <div>
                 <p>Boy’s T-Shirt</p>
                 <span>Price: $50.00</span> <br />
-                <a href="#"><i class="bx bx-trash"></i> Remove</a>
+                <button class="cart-delete" type="button"><i class="bx bx-trash"></i> Remove</button>
+                
               </div>
             </div>
           </td>
           <td>
             <div class="cart-buttons">
-              <button class="bx bx-minus"></button>
-              <input type="text" value="2" min="1">
-              <button class="bx bx-plus"></button>
+              <input class="cart-quantity-input" type="number" value="2" min="1">
             </div>
           </td>
           <td>
-            <span class="text">$50.00</span>
+            <span>$50</span>
           </td>
         </tr>
         <tr>
@@ -114,30 +113,19 @@
               <div>
                 <p>Boy’s T-Shirt</p>
                 <span>Price: $90.00</span> <br />
-                <a href="#"><i class="bx bx-trash"></i> Remove</a>
+                <button class="cart-delete" type="button"><i class="bx bx-trash"></i> Remove</button>
+                
               </div>
             </div>
           </td>
-          <td><button class="bx bx-minus" ></button>
-            <input type="text" value="2" min="1">
-            <button class="bx bx-plus"></button></td>
-          <td>$90.00</td>
-        </tr>
-        <tr>
           <td>
-            <div class="cart-info">
-              <img src="./images/product-4.jpg" alt="" />
-              <div>
-                <p>Boy’s T-Shirt</p>
-                <span>Price: $60.00</span> <br />
-                <a href="#"><i class="bx bx-trash"></i> Remove</a>
-              </div>
+            <div class="cart-buttons">
+              <input class="cart-quantity-input" type="number" value="2" min="1">
             </div>
           </td>
-          <td><button class="bx bx-minus" ></button>
-            <input type="text" value="2" min="1">
-            <button class="bx bx-plus"></button></td>
-          <td>$60.00</td>
+          <td>
+            <span>$90</span>
+          </td>
         </tr>
         <tr>
           <td>
@@ -145,50 +133,76 @@
               <img src="./images/product-5.jpg" alt="" />
               <div>
                 <p>Boy’s T-Shirt</p>
-                <span>Price: $60.00</span> <br />
-                <a href="#"><i class="bx bx-trash"></i> Remove</a>
+                <span>Price: $90.00</span> <br />
+                <button class="cart-delete" type="button"><i class="bx bx-trash"></i> Remove</button>
+                
               </div>
             </div>
           </td>
-          <td><button class="bx bx-minus" ></button>
-            <input type="text" value="2" min="1">
-            <button class="bx bx-plus"></button></td>
-          <td>$60.00</td>
-        </tr>
-        <tr>
           <td>
-            <div class="cart-info">
-              <img src="./images/product-6.jpg" alt="" />
-              <div>
-                <p>Boy’s T-Shirt</p>
-                <span>Price: $60.00</span> <br />
-                <a href="#"><i class="bx bx-trash"></i> Remove</a>
-              </div>
+            <div class="cart-buttons">
+              <input class="cart-quantity-input" type="number" value="2" min="1">
             </div>
           </td>
-          <td><button class="bx bx-minus" ></button>
-            <input type="text" value="2" min="1">
-            <button class="bx bx-plus"></button></td>
-          <td>$60.00</td>
+          <td>
+            <span>$90</span>
+          </td>
         </tr>
+
+        
       </table>
       <div class="total-price">
         <table>
           <tr>
             <td>Subtotal</td>
-            <td>$320</td>
+            <td>$100</td>
           </tr>
           <tr>
-            <td>Tax</td>
-            <td>$20</td>
+            <td>Tax (5%)</td>
+            <td>$0</td>
           </tr>
           <tr>
             <td>Total</td>
-            <td>$340</td>
+            <td>$100</td>
           </tr>
         </table>
-        <span class="checkout btn">Proceed To Checkout</span>
+        <a class="checkout btn">Proceed To Checkout</a>
+        
       </div>
+    </div>
+
+    <div class="sidebar-form">
+		
+      <div class="call-action">
+        <span>Enquriy Form</span>
+      </div>
+  
+      <h3>Enquriy Form</h3>
+  
+      <form action="">
+          <div class="form-group">
+            <label for="">Full Name</label>
+            <input type="text" name="" id="" class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="">Email Address</label>
+            <input type="email" name="" id="" class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="">Phone No.</label>
+            <input type="text" name="" id="" class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="">Subject</label>
+            <input type="text" name="" id="" class="form-control">
+          </div>
+  
+          <input type="submit" value="Send Enquiry" id="submit-btn">
+      </form>
+  
     </div>
 
 

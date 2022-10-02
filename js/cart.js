@@ -17,13 +17,13 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
-    var removeCartItemButtons = document.getElementsByClassName('bx bx-trash')
+    var removeCartItemButtons = document.getElementsByClassName('cart-delete')
     for (var i = 0; i < removeCartItemButtons.length; i++) {
         var button = removeCartItemButtons[i]
         button.addEventListener('click', removeCartItem)
     }
 
-    var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+    var quantityInputs = document.getElementsByClassName('cart-buttons')
     for (var i = 0; i < quantityInputs.length; i++) {
         var input = quantityInputs[i]
         input.addEventListener('change', quantityChanged)
@@ -50,9 +50,10 @@ function purchaseClicked() {
 }
 
 function removeCartItem(event) {
-    var buttonClicked = event.target
-    buttonClicked.parentElement.parentElement.parentElement.remove()
-    updateCartTotal()
+  var buttonClicked = event.target
+  buttonClicked.parentElement.parentElement.parentElement.parentElement.remove()
+  updateCartTotal()
+  document.getElementsByClassName('checkout btn')[0].addEventListener('click', purchaseClicked)
 }
 
 function addToCart(event) {
@@ -64,10 +65,11 @@ function addToCart(event) {
 function quantityChanged(event) {
     var input = event.target
     if (isNaN(input.value) || input.value <= 0) {
-        input.value = 1
+      input.value = 1
     }
     updateCartTotal()
 }
+
 
 function addToCartClicked(event) {
     var button = event.target
@@ -117,36 +119,52 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
 
+function quantityChanged(event) {
+  var input = event.target
+  if (isNaN(input.value) || input.value <= 0) {
+      input.value = 1
+  }
+  updateCartTotal()
+  document.getElementsByClassName('checkout btn')[0].addEventListener('click', purchaseClicked)
+}
+
 function updateCartTotal() {
-  var cartItemContainer = document.getElementsByClassName('container cart')[0]
-  var cartRows = cartItemContainer.getElementsByClassName('cart-info')
+  var cartItemContainer = document.getElementsByTagName('table')[0]
   var total = 0
   var subtotal = 0
-  var tax = 0
-  for (var i = 0; i < cartRows.length; i++) {
-      var cartRow = cartRows[i]
-      var priceElement = cartRow.getElementsByClassName('cart-price')[0]
-      var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-      var price = parseFloat(priceElement.innerText.replace('$', ''))
-      var quantity = quantityElement.value
-      subtotal = subtotal + (price * quantity)
-  }
+  var tax = (5 * subtotal)/100
+
+
+  for (var i = 1, row; row = cartItemContainer.rows[i]; i++) {
+    console.log(i)
+    var cartRows = cartItemContainer.rows[i]
+    //console.log(cartRows)
+    var priceElement = cartRows.getElementsByTagName('span')[1]
+    var quantityElement = cartRows.getElementsByClassName('cart-quantity-input')[0]
+    var price = parseFloat(priceElement.innerText.replace('$', ''))
+    var quantity = quantityElement.value
+    subtotal += (price * quantity)
+ }
+  tax = (5 * subtotal)/100
   subtotal = Math.round(subtotal * 100) / 100
-  total = subtotal - tax
+  total = subtotal + tax
   //document.getElementsByClassName('total-price')[0].innerText = 'Total $' + total
   document.getElementsByClassName('total-price')[0].innerHTML =
-  `        <table>
+  `        
+  <table>
   <tr>
     <td>Subtotal</td>
     <td>$${subtotal}</td>
   </tr>
   <tr>
-    <td>Tax</td>
+    <td>Tax (5%)</td>
     <td>$${tax}</td>
   </tr>
   <tr>
     <td>Total</td>
     <td>$${total}</td>
   </tr>
-</table>`
+</table>
+<a class="checkout btn">Proceed To Checkout</a>`
 }
+
