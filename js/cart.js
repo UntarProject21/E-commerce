@@ -17,6 +17,7 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
+  updateCartTotal()
     var removeCartItemButtons = document.getElementsByClassName('cart-delete')
     for (var i = 0; i < removeCartItemButtons.length; i++) {
         var button = removeCartItemButtons[i]
@@ -141,7 +142,7 @@ function updateCartTotal() {
     //console.log(cartRows)
     var priceElement = cartRows.getElementsByTagName('span')[1]
     var quantityElement = cartRows.getElementsByClassName('cart-quantity-input')[0]
-    var price = parseFloat(priceElement.innerText.replace('$', ''))
+    var price = parseFloat(priceElement.innerText.replace('IDR ', ''))
     var quantity = quantityElement.value
     subtotal += (price * quantity)
  }
@@ -154,15 +155,15 @@ function updateCartTotal() {
   <table>
   <tr>
     <td>Subtotal</td>
-    <td>$${subtotal}</td>
+    <td>IDR ${subtotal}</td>
   </tr>
   <tr>
     <td>Tax (5%)</td>
-    <td>$${tax}</td>
+    <td>IDR ${tax}</td>
   </tr>
   <tr>
     <td>Total</td>
-    <td>$${total}</td>
+    <td>IDR ${total}</td>
   </tr>
 </table>
 <a class="checkout btn">Proceed To Checkout</a>`
