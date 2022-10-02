@@ -75,33 +75,42 @@
           </div>
         </div>
       </div>
-    <!-- Login -->
-    <div class="container">
+    <!-- Sign Up -->
+    <div class="container" >
       <div class="login-form">
-        <form action="">
+        <form action="" >
+          <div id="loginForm">
           <h1>Sign Up</h1>
           <p>
-            Please fill in this form to create an account. or Login
+            Already have an account? Login 
             <a href="login.html">here</a>.
           </p>
 
-          <label for="email">Email</label>
-          <input type="text" placeholder="Enter Email" id="email" required />
+          <label for="email">Email</label><br><br>
+          <input type="text" placeholder="Enter Email" id="email" required /><br>
 
-          <label for="psw">Password</label>
+          <label for="password">Password</label><br><br>
           <input
             type="password"
             placeholder="Enter Password"
             id="password"
             required
           />
-
-
+        </div>
           <div class="buttons">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn">Sign Up</button>
+            
+            <button onclick="onLogin()" class="signupbtn" id="loginButton">Login</button>
+            <button onclick="onLogout()" class="logoutbtn" id="logoutButton">Logout</button>
           </div>
         </form>
+        <h1 id="adminOnly">
+          <img src="/images/437px-NoshiroMaid.png" alt="" width="70%"><br>
+          <b>Irasshaimase Shikikan-sama</b><br>いらっしゃいませ 指揮官様<br>
+          <a href="https://azurlane.koumakan.jp/wiki/Noshiro/Gallery#Hold_the_Ice-0" 
+          style="text-align: right; font-size: small; color:blue; text-decoration: underline; ">Source
+          </a>
+          
+        </h1>
       </div>
     </div>
 
