@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo_keos_web.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo_keos_web.png">
     <!-- Box icons -->
     <link
       rel="stylesheet"
@@ -14,9 +16,11 @@
   </head>
   <body>
     <!-- Navigation -->
-      <div class="top-nav" id="topper">
+      <div class="top-nav">
         <div class="container d-flex">
-          <p><b>Welcome To The Cheapest, Easiest, and Trendiest Shop</b></p>
+          <marquee>
+            <p><b>Welcome To The Cheapest, Easiest, and Trendiest Shop</b></p>
+          </marquee>
           <ul class="d-flex">
             <li><a href="FAQ.html" title="Frequently Asked Question">FAQ</a></li>
           </ul>
@@ -24,8 +28,7 @@
       </div>
       <div class="navigation">
         <div class="nav-center container d-flex">
-          <a><h1 style="font-family: 'Calligraffitti', cursive">KeosYaro</h1></a>
-
+        <img src="./images/logo_keos.png" alt="AwesomeImage" height="80" width="110" />
           <ul class="nav-list d-flex">
             <li class="nav-item">
               <a href="index.html" class="nav-link">Home</a>
@@ -72,33 +75,42 @@
           </div>
         </div>
       </div>
-    <!-- Login -->
-    <div class="container">
+    <!-- Sign Up -->
+    <div class="container" >
       <div class="login-form">
-        <form action="">
+        <form action="" >
+          <div id="loginForm">
           <h1>Sign Up</h1>
           <p>
-            Please fill in this form to create an account. or Login
+            Already have an account? Login 
             <a href="login.html">here</a>.
           </p>
 
-          <label for="email">Email</label>
-          <input type="text" placeholder="Enter Email" id="email" required />
+          <label for="email">Email</label><br><br>
+          <input type="text" placeholder="Enter Email" id="email" required /><br>
 
-          <label for="psw">Password</label>
+          <label for="password">Password</label><br><br>
           <input
             type="password"
             placeholder="Enter Password"
             id="password"
             required
           />
-
-
+        </div>
           <div class="buttons">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn">Sign Up</button>
+            
+            <button onclick="onLogin()" class="signupbtn" id="loginButton">Login</button>
+            <button onclick="onLogout()" class="logoutbtn" id="logoutButton">Logout</button>
           </div>
         </form>
+        <h1 id="adminOnly">
+          <img src="/images/437px-NoshiroMaid.png" alt="" width="70%"><br>
+          <b>Irasshaimase Shikikan-sama</b><br>いらっしゃいませ 指揮官様<br>
+          <a href="https://azurlane.koumakan.jp/wiki/Noshiro/Gallery#Hold_the_Ice-0" 
+          style="text-align: right; font-size: small; color:blue; text-decoration: underline; ">Source
+          </a>
+          
+        </h1>
       </div>
     </div>
 
@@ -121,9 +133,10 @@
         </div>
       </div>
 
-      <p style="text-align:right;">
-        <a href="#topper"><i class="bx bx-chevron-up"></i></a>
+      <p style="text-align: right;">
+      <a href="#"><i class="bx bx-chevron-up"></i></a>
       </p>
+
       <div class="bottom-footer">
         <div class="container">
             <p>© NO copyright 2022 <a href="#" style="color: blue">Website E-Commerce</a></p>

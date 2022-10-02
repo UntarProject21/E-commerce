@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo_keos.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo_keos.png">
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo_keos_web.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo_keos_web.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/plugins/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="/css/plugins/OwlCarousel2-2.2.1/owl.carousel.css"> -->
     <!-- Boxicons -->
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
@@ -21,6 +21,12 @@
     <link rel="stylesheet" href="/css/index.css" />
     
     <title>KeosYaro</title>
+    <!-- Preloader func -->
+    <script>
+      $(document).ready(function(){
+      $(".preloader").fadeOut();
+      })
+      </script>
   </head>
   <body>
     <!-- Preloader -->
@@ -30,7 +36,9 @@
       <!-- Top Nav -->
       <div class="top-nav">
         <div class="container d-flex">
-          <p><b>Welcome To The Cheapest, Easiest, and Trendiest Shop</b></p>
+          <marquee>
+            <p><b>Welcome To The Cheapest, Easiest, and Trendiest Shop</b></p>
+          </marquee>
           <ul class="d-flex">
             <li><a href="FAQ.html" title="Frequently Asked Question">FAQ</a></li>
           </ul>
@@ -38,9 +46,7 @@
       </div>
       <div class="navigation">
         <div class="nav-center container d-flex">
-        <img src="./images/logo_keos.png" height="70" />
-        
-
+        <img src="./images/logo_keos.png" alt="AwesomeImage" height="80" width="110" />
           <ul class="nav-list d-flex">
             <li class="nav-item">
               <a href="index.html" class="nav-link">Home</a>

@@ -5,7 +5,12 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    font-family: "Quicksand", sans-serif;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
 }
 
 .contactus{
@@ -124,20 +129,14 @@
     font-size: 18px;
 }
 
-.nav-center .hamburger {
-    display: none;
-    font-size: 2.3rem;
-    color: var(--black);
-    cursor: pointer;
-  }
 
 @media (max-width: 991px){
     .contact{
         padding: 50px;
     }
-    .container{
+    /* .container{
         flex-direction: column;
-    }
+    } */
     .container .contactInfo{
         margin-bottom: 40px;
     }
