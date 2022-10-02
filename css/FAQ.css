@@ -1,18 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 
+/* Bagian ini dibuat untuk mengatur mergin dan padding untuk halaman html FAQ */
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
+/* selanjutnya dibagian body ini akan di beri tipe font quiksand dan juga mengatur warna background berwarna putih dan tulisannya berwarna hitam */
 body{
     font-family: "Quicksand", sans-serif;
     background: #ffffff;
     color: rgb(0, 0, 0);
 }
 
+/* bagian ini berfungsi untuk mengatur propertis yang akan ditampilkan disection yang meliputi question dan answer nya */
 section{
     padding-left: 20%;
     min-height: 65vh;
@@ -23,11 +25,13 @@ section{
     align-items: left;
 }
 
+/* berikutnya kita akan mengatur ukuran tulisan dan margin di dalam method title ini */
 .title{
     font-size: 3rem;
     margin: 2rem 0em;
 }
 
+/* bagian ini mengatur tampilan box untuk menampung section question dan answer */
 .faq{
     max-width: 700px;
     margin-top: 2rem;
@@ -36,16 +40,18 @@ section{
     cursor: pointer;
 }
 
+/* bagian ini akan mengatur tampilan box terkhusu untuk menampung question*/
 .question{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
+/* setelah membuat tampilan boxnya , maka dilanjut dengan mengatur ukuran tulisannya*/
 .question h3{
     font-size: 1.8rem;
 }
 
+/* dan begitu juga di lanjutkan untuk bagian answernya */
 .answer{
     max-height: 0;
     overflow: hidden;
@@ -58,15 +64,18 @@ section{
     font-size: 1.4rem;
 }
 
+/* bagian ini dibuat untuk menampilkan answernya dengan animation fade ketika tombolnya arrow di tekan */
 .faq.active .answer{
     max-height: 300px;
     animation: fade 1s ease-in-out;
 }
 
+/* seterusnya faq active svg ini akan di rotate 180 derajat */
 .faq.active svg{
     transform: rotate(180deg);
 }
  
+/* dan disini akan mengatur lamanya selang waktu disaat arrownya ber rotate */
 svg{
     transition: transform 0.5s ease-in;
 }

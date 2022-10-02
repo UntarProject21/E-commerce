@@ -1,20 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 
+/* Bagian ini dibuat untuk mengatur mergin dan padding untuk halaman html ABOUT US */
 *{
     padding: 5;
     margin: 5;
-    box-sizing: border-box;
 }
+/* selanjutnya dibagian body ini akan di beri tipe font quiksand dan juga mengatur warna background berwarna putih dan tulisannya berwarna hitam */
 body{
     font-family: "Quicksand", sans-serif;
     background: #ffffff;
     color: rgb(0, 0, 0);
 }
+
 .about{
     width: 100%;
     padding: 5% 0.%;
     background-color: #ffffff;
 }
+/* bagian ini dibuat untuk mengatur tampilan box height dan width pada gambar serta width pada textnya yang telah dimasukkin ke dalam section */
 .about img{
     height: auto;
     width: 35%;
@@ -22,6 +25,7 @@ body{
 .about-text{
     width: 550px;
 }
+/* bagian ini berfungsi untuk mengatur tampilan box yang akan menampung h1 , h5 , dan p */
 .main{
     width: 1130px;
     max-width: 95%;
@@ -30,6 +34,7 @@ body{
     align-items: center;
     justify-content: space-around;
 }
+/* bagian ini berfungsi untuk mengatur propertis h1 , h5 , dan p yang akan ditampilkan di sectionnya */
 .about-text h1{
     color: rgb(255, 31, 39);
     font-size: 60px;

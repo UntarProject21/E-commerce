@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 
+/* Bagian ini dibuat untuk mengatur mergin dan 
+padding untuk halaman html CONTACT US */
 *{
     margin: 0%;
     padding: 0%;
-    box-sizing: border-box;
 }
-
+/* selanjutnya dibagian body ini akan di beri tipe font quiksand 
+dan juga mengatur warna background berwarna putih dan tulisannya berwarna hitam */
 body{
     font-family: "Quicksand", sans-serif;
     background: #ffffff;
     color: rgb(0, 0, 0);
 }
-
+/* bagian ini berfungsi untuk mengatur propertis CONTAINER nya */
 .contactus{
     position: relative;
     min-height: 10vh;
@@ -23,6 +25,8 @@ body{
     flex-direction: column;
     background-color: rgb(255, 255, 255);
 }
+/* bagian ini dibuat untuk mengatur propertis tampilan box h2 dan p 
+yang ada di dalam containernya */
 .contactus .content{
     max-width: 800px;
     text-align: center;
@@ -36,6 +40,8 @@ body{
     font-weight: 300;
     color: rgb(0, 0, 0);
 }
+/* seterusnya akan membuat sebuah method container dan mengatur propertis 
+untuk bagian CONTACT INFO & CONTACT FORM yang meliputi tulisan , garis bawah serta iconnya */
 .container{
     width: 100%;
     display: flex;
@@ -90,7 +96,7 @@ body{
     width: 100%;
     margin-top: 10px;
 }
-/* method untuk mengedit input dan textare yang ada di dalam contactform */
+/* method untuk mengedit input dan textarea yang ada di dalam contactform */
 .contactForm .inputBox input, .contactForm .inputBox textarea{
     width: 100%;
     padding: 5px 0;
@@ -101,6 +107,8 @@ body{
     outline: none;
     resize: none;
 }
+/* method ini digunakan untuk dapat auto sambung ke bawahnya 
+ketika tulisannya sudah mencapai maksimum pada line itu */
 .contactForm .inputBox span{
     position: absolute;
     left: 0;
@@ -129,14 +137,11 @@ body{
     font-size: 18px;
 }
 
-
+/* bagian ini dibuat untuk menyesuaikan dengan resolution screen */
 @media (max-width: 991px){
     .contact{
         padding: 50px;
     }
-    /* .container{
-        flex-direction: column;
-    } */
     .container .contactInfo{
         margin-bottom: 40px;
     }
