@@ -1,5 +1,6 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 
 /* Color Variables */
 :root {
@@ -72,10 +73,11 @@ li {
 }
 
 .login-form form label {
-  margin-bottom: 1rem;
+  margin-top: 10rem;
 }
 
 .login-form form input {
+  width: 400px;
   border: 1px solid #ccc;
   outline: none;
   padding: 1.5rem 0;
