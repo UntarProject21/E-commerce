@@ -143,6 +143,12 @@ li {
   color: #fff;
   border-radius: 3rem;
 }
+.product-detail .form .addWish {
+  background: var(--green);
+  padding: 0.8rem 4rem;
+  color: #fff;
+  border-radius: 3rem;
+}
 
 .product-detail h3 {
   text-transform: uppercase;
