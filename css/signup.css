@@ -76,7 +76,7 @@ li {
   margin-bottom: 1rem;
 }
 
-.login-form form input {
+.login-form form .email-password {
   width: 400px;
   border: 1px solid #ccc;
   outline: none;
