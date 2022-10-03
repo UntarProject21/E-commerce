@@ -49,6 +49,7 @@ body{
     letter-spacing: 2px;
 }
 .about-text p{
+    text-align: justify;
     font-size: 18px;
     color: rgb(0, 0, 0);
     letter-spacing: 1px;
