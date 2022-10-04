@@ -54,6 +54,10 @@ li {
   align-items: center;
 }
 
+/* .search-box{
+  border-radius: 200px;
+} */
+
 /* 
 =================
 Header
@@ -119,6 +123,10 @@ Navigation
   cursor: pointer;
 }
 
+.nav-center .harm-nav {
+  display: none;
+}
+
 /* Icons */
 
 .icon {
@@ -146,6 +154,8 @@ Navigation
   justify-content: center;
 }
 
+
+
 @media only screen and (max-width: 768px) {
   .nav-list {
     position: fixed;
@@ -170,6 +180,10 @@ Navigation
   .nav-list .nav-item {
     margin: 0 0 1rem 0;
     width: 100%;
+  }
+
+  .nav-center .harm-nav{
+    display:block;
   }
 
   .nav-list .nav-link {
