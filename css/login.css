@@ -111,6 +111,9 @@ li {
 .login-form form p a {
   color: dodgerblue;
 }
+a:hover {
+  text-decoration: underline;
+}
 /* Footer */
 .footer {
   padding: 7rem 1rem;
