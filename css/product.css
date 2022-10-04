@@ -54,10 +54,15 @@ li {
 }
 /* All Products */
 .section .top {
-display: flex;
-align-items: center;
-justify-content: space-between;
-margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  position:sticky;
+  top:0px;
+  z-index: 9999;
+  background-color: white;
+  padding :2rem;
 }
 
 .all-products .top select {
@@ -290,6 +295,8 @@ footer .row {
   border-radius: 2rem;
   font-size: 1.5rem;
 }
+
+
 
 @media only screen and (max-width: 567px) {
   .product-center {
