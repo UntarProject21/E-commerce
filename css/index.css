@@ -126,7 +126,10 @@ Navigation
 .nav-center .harm-nav {
   display: none;
 }
-
+.nav-center .logo-keos {
+  width: 80;
+  height: 100;
+}
 /* Icons */
 
 .icon {
@@ -184,6 +187,11 @@ Navigation
 
   .nav-center .harm-nav{
     display:block;
+  }
+
+  .nav-center .logo-keos {
+    width: 60px;
+    height: 50px;
   }
 
   .nav-list .nav-link {
