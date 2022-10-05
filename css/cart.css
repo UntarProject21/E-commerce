@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;;
+  font-family: 'roboto', sans-serif;;
   font-size: 1.6rem;
   background-color: var(--white);
   color: var(--black);
@@ -186,11 +186,12 @@ ul{
 	margin-bottom: 10px;
 }
 .footer-col ul li a{
+  margin-bottom: 16px;
 	font-size: 16px;
 	text-transform: capitalize;
 	color: var(--white);
 	text-decoration: none;
-	font-weight: 300;
+	font-weight: 400;
 	color: var(--white);
 	display: block;
 	transition: all 0.3s ease;
@@ -217,13 +218,13 @@ ul{
 }
 
 .bottom-footer { 
-  padding-top: 30px;
-  padding-bottom: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   text-align: center;
+  background-color: var(--black);
 }
 .bottom-footer p {
-  color: #777b92;
-
+  color: var(--white);
   font-size: 16px; 
 }
 
