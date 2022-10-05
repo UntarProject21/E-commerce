@@ -1,152 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 
-/* Bagian ini dibuat untuk mengatur mergin dan 
-padding untuk halaman html CONTACT US */
-*{
-    margin: 0%;
-    padding: 0%;
-}
-/* selanjutnya dibagian body ini akan di beri tipe font quiksand 
-dan juga mengatur warna background berwarna putih dan tulisannya berwarna hitam */
-body{
-    font-family: "Quicksand", sans-serif;
-    background: #ffffff;
-    color: rgb(0, 0, 0);
-}
-/* bagian ini berfungsi untuk mengatur propertis CONTAINER nya */
-.contactus{
-    position: relative;
-    min-height: 10vh;
-    padding: 25px 100px;
-    display: flex;
-    justify-content: center;
+/* Color Variables */
+:root {
+    --white: #fff;
+    --black: #222;
+    --green: #6cbe02;
+    --grey1: #f0f0f0;
+    --grey2: #e9d7d3;
+  }
+  
+  /* Basic Reset */
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: 'roboto', sans-serif;;
+    font-size: 1.6rem;
+    background-color: var(--white);
+    color: var(--black);
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--black)
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  .container {
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+  
+  .d-flex {
+    display: flex; 
     align-items: center;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-}
-/* bagian ini dibuat untuk mengatur propertis tampilan box h2 dan p 
-yang ada di dalam containernya */
-.contactus .content{
-    max-width: 800px;
-    text-align: center;
-}
-.contactus .content h2{
-    font-size: 36px;
-    font-weight: 500;
-    color: rgb(0, 0, 0);
-}
-.contactus .content p{
-    font-weight: 300;
-    color: rgb(0, 0, 0);
-}
-/* seterusnya akan membuat sebuah method container dan mengatur propertis 
-untuk bagian CONTACT INFO & CONTACT FORM yang meliputi tulisan , garis bawah serta iconnya */
-.container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-.container .contactInfo{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-}
-.container .contactInfo .box {
-    position: relative;
-    padding: 20px 0;
-    display: flex;
-}
-.container .contactInfo .box .icon{
-    min-width: 60px;
-    height: 60px;
-    background: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 22px;
-}
-.container .contactInfo .box .text{
-    display: flex;
-    margin-left: 20px;
-    font-size: 16px;
-    color: rgb(0, 0, 0);
-    flex-direction: column;
-    font-weight: 300;
-}
-.container .contactInfo .box .text h3{
-    font-weight: 500;
-    color: #00bcd4;
-}
-.contactForm{
-    width: 40%;
-    padding: 40px;
-    background: rgb(255, 255, 255);
-}
-.contactForm h2{
-    font-size: 30px;
-    color: #333;
-    font-weight: 500;
-}
-.contactForm .inputBox{
-    position: relative;
-    width: 100%;
-    margin-top: 10px;
-}
-/* method untuk mengedit input dan textarea yang ada di dalam contactform */
-.contactForm .inputBox input, .contactForm .inputBox textarea{
-    width: 100%;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
-    border: none;
-    border-bottom: 2px solid #333;
-    outline: none;
-    resize: none;
-}
-/* method ini digunakan untuk dapat auto sambung ke bawahnya 
-ketika tulisannya sudah mencapai maksimum pada line itu */
-.contactForm .inputBox span{
-    position: absolute;
-    left: 0;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
-    pointer-events: none;
-    transition: 0.5%;
-    color: #666;
-}
-.contactForm .inputBox input:focus ~ span,
-.contactForm .inputBox input:valid ~ span,
-.contactForm .inputBox textarea:focus ~ span,
-.contactForm .inputBox textarea:valid ~ span{
-    color: #e91e63;
-    font-size: 12px;
-    transform: translateY(-20px);
-}
-.contactForm .inputBox input[type="submot"]{
-    width: 100px;
-    background: #00bcd4;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
-}
+  }
 
-/* bagian ini dibuat untuk menyesuaikan dengan resolution screen */
-@media (max-width: 991px){
-    .contact{
-        padding: 50px;
-    }
-    .container .contactInfo{
-        margin-bottom: 40px;
-    }
-    .container .contactInfo,
-    .contactForm{
-        width: 100%;
-    }
-}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
