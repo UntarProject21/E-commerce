@@ -42,6 +42,73 @@ li {
   list-style: none;
 }
 
+/* bagian ini berfungsi untuk mengatur propertis yang akan ditampilkan disection yang meliputi question dan answer nya */
+section{
+    padding-left: 20%;
+    min-height: 65vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+/* berikutnya kita akan mengatur ukuran tulisan dan margin di dalam method title ini */
+.title{
+    font-size: 3rem;
+    margin: 2rem 0em;
+}
+
+/* bagian ini mengatur tampilan box untuk menampung section question dan answer */
+.faq{
+    max-width: 700px;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/* bagian ini akan mengatur tampilan box terkhusu untuk menampung question*/
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* setelah membuat tampilan boxnya , maka dilanjut dengan mengatur ukuran tulisannya*/
+.question h3{
+    font-size: 1.8rem;
+}
+
+/* dan begitu juga di lanjutkan untuk bagian answernya */
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+
+.answer p{
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+/* bagian ini dibuat untuk menampilkan answernya dengan animation fade ketika tombolnya arrow di tekan */
+.faq.active .answer{
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+
+/* seterusnya faq active svg ini akan di rotate 180 derajat */
+.faq.active svg{
+    transform: rotate(180deg);
+}
+ 
+/* dan disini akan mengatur lamanya selang waktu disaat arrownya ber rotate */
+svg{
+    transition: transform 0.5s ease-in;
+}
+
 .container {
   max-width: 114rem;
   margin: 0 auto;
