@@ -77,6 +77,20 @@ ul{
   font-size: 16px; 
 }
 
+/* back to top */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: block;
+    width: 5%;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 /*responsive*/
 @media(max-width: 767px){
   .footer-col{
