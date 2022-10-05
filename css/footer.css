@@ -103,3 +103,10 @@ ul{
     width: 100%;
 }
 }
+
+@media only screen and (max-width: 567px) {
+    footer .row {
+      grid-template-columns: 1fr;
+      row-gap: 3rem;
+    }
+  }
