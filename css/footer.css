@@ -1,55 +1,91 @@
-/* Footer */
-.footer {
-    padding: 7rem 1rem;
-    background-color: var(--green);
-  }
-  
-  footer .row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 99.6rem;
-    margin: 0 auto;
-  }
-  
-  .footer .col {
-    flex-direction: column;
-    color: var(--white);
-    align-items: flex-start;
-  }
-  
-  .footer .col:last-child {
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  .footer .col:last-child span {
-    font-size: 2.5rem;
-    margin-right: 0.5rem;
-    color: var(--white);
-  }
-  
-  .footer .col a {
-    color: var(--white);
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    font-weight: 300;
-  }
-  
-  .footer .col h4 {
-    margin-bottom: 1rem;
-  }
-  
-  .footer .col i {
-    font-size: 200%;
-  }
-  .footer p{
-    font-size: 300%;
-  }
-  
-  .bottom-footer { 
-    text-align: center;
-  }
-  .bottom-footer p {
-    color: #777b92;
-    font-size: 16px; 
-  }
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: var(--green);
+  padding-top: 50px;
+}
+.footer-col{
+   width: 25%;
+   padding-bottom: 25px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: var(--white);
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+  margin-bottom: 16px;
+	font-size: 16px;
+	text-transform: capitalize;
+	color: var(--white);
+	text-decoration: none;
+	font-weight: 400;
+	color: var(--white);
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: var(--white);
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: var(--white);
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: var(--black);
+	background-color: var(--white);
+}
+
+.bottom-footer { 
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  background-color: var(--black);
+}
+.bottom-footer p {
+  color: var(--white);
+  font-size: 16px; 
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
