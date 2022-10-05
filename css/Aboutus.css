@@ -1,60 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 
-/* Bagian ini dibuat untuk mengatur mergin dan padding untuk halaman html ABOUT US */
-*{
-    padding: 5;
-    margin: 5;
-}
-/* selanjutnya dibagian body ini akan di beri tipe font quiksand dan juga mengatur warna background berwarna putih dan tulisannya berwarna hitam */
-body{
-    font-family: "Quicksand", sans-serif;
-    background: #ffffff;
-    color: rgb(0, 0, 0);
-}
-
-.about{
-    width: 100%;
-    padding: 5% 0.%;
-    background-color: #ffffff;
-}
-/* bagian ini dibuat untuk mengatur tampilan box height dan width pada gambar serta width pada textnya yang telah dimasukkin ke dalam section */
-.about img{
-    height: auto;
-    width: 35%;
-}
-.about-text{
-    width: 550px;
-}
-/* bagian ini berfungsi untuk mengatur tampilan box yang akan menampung h1 , h5 , dan p */
-.main{
-    width: 1130px;
-    max-width: 95%;
+/* Color Variables */
+:root {
+    --white: #fff;
+    --black: #222;
+    --green: #6cbe02;
+    --grey1: #f0f0f0;
+    --grey2: #e9d7d3;
+  }
+  
+  /* Basic Reset */
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: 'roboto', sans-serif;;
+    font-size: 1.6rem;
+    background-color: var(--white);
+    color: var(--black);
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--black)
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  .container {
+    max-width: 114rem;
     margin: 0 auto;
-    display: flex;
+    padding: 0 3rem;
+  }
+  
+  .d-flex {
+    display: flex; 
     align-items: center;
-    justify-content: space-around;
-}
-/* bagian ini berfungsi untuk mengatur propertis h1 , h5 , dan p yang akan ditampilkan di sectionnya */
-.about-text h1{
-    color: rgb(255, 31, 39);
-    font-size: 60px;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-}
-.about-text h5{
-    color: rgb(0, 0, 0);
-    font-size: 25px;
-    text-transform: capitalize;
-    margin-bottom: 25px;
-    letter-spacing: 2px;
-}
-.about-text p{
-    text-align: justify;
-    font-size: 18px;
-    color: rgb(0, 0, 0);
-    letter-spacing: 1px;
-    line-height: 28px;
-    margin-bottom: 45px;
-}
+  }
+
+/*  */
 
 
