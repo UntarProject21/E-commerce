@@ -15,7 +15,7 @@
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
     <!-- Custom StyleSheet -->
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/wishlist.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/plugins/bootstrap-checkout.min.css">
@@ -100,7 +100,7 @@
         <tr>
           <th>Product</th>
           <th>Quantity</th>
-          <th>Subtotal</th>
+          <th>Action</th>
         </tr>
         <tr>
           <td>
@@ -108,8 +108,7 @@
               <img src="./images/product-2.jpg" alt="" />
               <div>
                 <p>Red Backpack</p>
-                <span>Price: IDR 50,000</span> <br />
-                <button class="cart-delete" type="button"><i class="bx bx-trash"></i> Remove</button>
+                <span>IDR 50,000</span> <br />
                 
               </div>
             </div>
@@ -120,7 +119,8 @@
             </div>
           </td>
           <td>
-            <span>IDR 50000</span>
+            <button class="cart-move" type="button"><i class="bx bx-cart"></i> +</button>
+            <button class="cart-delete" type="button"><i class="bx bx-trash"></i></button>
           </td>
         </tr>
         <tr>
@@ -129,9 +129,7 @@
               <img src="./images/product-7.jpg" alt="" />
               <div>
                 <p>Blue T-Shirt</p>
-                <span>Price: IDR 90,000</span> <br />
-                <button class="cart-delete" type="button"><i class="bx bx-trash"></i> Remove</button>
-                
+                <span>IDR 90,000</span> <br /> 
               </div>
             </div>
           </td>
@@ -141,7 +139,8 @@
             </div>
           </td>
           <td>
-            <span>IDR 90000</span>
+            <button class="cart-move" type="button"><i class="bx bx-cart"></i> +</button>
+            <button class="cart-delete" type="button"><i class="bx bx-trash"></i></button>
           </td>
         </tr>
         <tr>
@@ -150,9 +149,7 @@
               <img src="./images/product-5.jpg" alt="" />
               <div>
                 <p>Black Hoodie</p>
-                <span>Price: IDR 120,000</span> <br />
-                <button class="cart-delete" type="button"><i class="bx bx-trash"></i> Remove</button>
-                
+                <span>IDR 120,000</span> <br />
               </div>
             </div>
           </td>
@@ -162,28 +159,19 @@
             </div>
           </td>
           <td>
-            <span>IDR 120000</span>
+            <button class="cart-move" type="button"><i class="bx bx-cart"></i> +</button>
+            <button class="cart-delete" type="button"><i class="bx bx-trash"></i></button>
           </td>
         </tr>
 
         
       </table>
-      <div class="total-price">
         <table>
           <tr>
-            <td>Subtotal</td>
-            <td>$100</td>
-          </tr>
-          <tr>
-            <td>Tax (5%)</td>
-            <td>$0</td>
-          </tr>
-          <tr>
-            <td>Total</td>
-            <td>$100</td>
+            <td><br/><br/><br/><br/><br/><br/><br/><br/><br/></td>
+            <td></td>
           </tr>
         </table>
-        <button class="checkout">Proceed To Checkout</button>
         
       </div>
     </div>
@@ -241,7 +229,7 @@
 </footer>
 
     <!-- Custom Script -->
-    <script src="./js/cart.js"></script>
+    <script src="./js/wishlist.js"></script>
     <script src="./js/footer.js"></script>
   </body>
 </html>
