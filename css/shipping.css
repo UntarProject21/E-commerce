@@ -22,7 +22,6 @@ section{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: left;
 }
 
 /* berikutnya kita akan mengatur ukuran tulisan dan margin di dalam method title ini */
@@ -31,9 +30,13 @@ section{
     margin: 2rem 0em;
 }
 
+.title sub{
+    font-size: 2rem;
+}
+
 /* bagian ini mengatur tampilan box untuk menampung section question dan answer */
 .faq{
-    max-width: 700px;
+    max-width: 620px;
     margin-top: 2rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid rgb(0, 0, 0);
@@ -53,7 +56,7 @@ section{
 
 /* dan begitu juga di lanjutkan untuk bagian answernya */
 .answer{
-    max-height: 0;
+    max-height: 300px;
     overflow: hidden;
     transition: max-height 1.4s ease;
 }
@@ -64,29 +67,17 @@ section{
     font-size: 1.4rem;
 }
 
-/* bagian ini dibuat untuk menampilkan answernya dengan animation fade ketika tombolnya arrow di tekan */
-.faq.active .answer{
-    max-height: 300px;
-    animation: fade 1s ease-in-out;
-}
-
-/* seterusnya faq active svg ini akan di rotate 180 derajat */
-.faq.active svg{
-    transform: rotate(180deg);
-}
- 
-/* dan disini akan mengatur lamanya selang waktu disaat arrownya ber rotate */
-svg{
-    transition: transform 0.5s ease-in;
-}
-
 .shipping{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 560px;
+    width: 540px;
     height: 520px;
 }
 
+.box{
+    border: 1px solid black;
+    align-items: center;
+}
 
 
