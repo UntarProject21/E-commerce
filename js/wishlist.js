@@ -17,13 +17,13 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
-    var removeCartItemButtons = document.getElementsByClassName('bx bx-trash')
+    var removeCartItemButtons = document.getElementsByClassName('cart-delete')
     for (var i = 0; i < removeCartItemButtons.length; i++) {
         var button = removeCartItemButtons[i]
         button.addEventListener('click', removeCartItem)
     }
 
-    var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+    var quantityInputs = document.getElementsByClassName('cart-buttons')
     for (var i = 0; i < quantityInputs.length; i++) {
         var input = quantityInputs[i]
         input.addEventListener('change', quantityChanged)
@@ -37,26 +37,24 @@ function ready() {
 
 }
 
-
 function removeCartItem(event) {
-    var buttonClicked = event.target
-    buttonClicked.parentElement.parentElement.parentElement.remove()
-    updateCartTotal()
+  var buttonClicked = event.target
+  buttonClicked.parentElement.parentElement.remove()
+  document.getElementsByClassName('checkout btn')[0].addEventListener('click', purchaseClicked)
 }
 
 function addToCart(event) {
 	var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.parentElement.remove()
-    updateCartTotal()
 }
 
 function quantityChanged(event) {
     var input = event.target
     if (isNaN(input.value) || input.value <= 0) {
-        input.value = 1
+      input.value = 1
     }
-    updateCartTotal()
 }
+
 
 function addToCartClicked(event) {
     var button = event.target
@@ -97,11 +95,22 @@ function addItemToCart(title, price, imageSrc) {
 			  <i class="bx bx-cart"></i>
 			</div>
 		  </td>
-        </tr>
+    </tr>
 	`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
     cartRow.getElementsByClassName('bx bx-trash')[0].addEventListener('click', removeCartItem)
 	cartRow.getElementsByClassName('bx bx-cart')[0].addEventListener('click', removeCartItem)
-    //cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+    cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
+
+function quantityChanged(event) {
+  var input = event.target
+  if (isNaN(input.value) || input.value <= 0) {
+      input.value = 1
+  }
+  document.getElementsByClassName('checkout btn')[0].addEventListener('click', purchaseClicked)
+}
+
+
+

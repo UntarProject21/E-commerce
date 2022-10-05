@@ -112,18 +112,6 @@ td img {
   margin-right: 1rem;
 }
 
-.total-price {
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  margin-top: 2rem;
-}
-
-.total-price table {
-  border-top: 3px solid var(--green);
-  width: 100%;
-  max-width: 35rem;
-}
 
 td:last-child {
   text-align: right;
@@ -141,6 +129,8 @@ th:last-child {
   margin-top: 1rem;
   cursor: pointer;
 }
+
+
 
 
 
