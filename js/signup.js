@@ -15,11 +15,13 @@ let loginButton = document.getElementById('loginButton');
 let logoutButton = document.getElementById('logoutButton');
 let formLog = document.getElementById('loginForm');
 let welcome = document.getElementById('adminOnly');
+let fnameInput = document.getElementById('fname');
+let lnameInput = document.getElementById('lname');
 
 formLog.style.display = "block";
 welcome.style.display = "none";
 logoutButton.style.display = "none";
-
+      
 function onLogin() {
   localStorage.setItem("username", usernameInput.value);
   localStorage.setItem("password", passwordInput.value);
@@ -32,12 +34,15 @@ function onLogin() {
       loginButton.style.display = "none";
       formLog.style.display = "none";
       welcome.style.display = "block";
+      
+      
     }else {
       localStorage.setItem("role", "basic");
       usernameInput.style.display = "none";
       passwordInput.style.display = "none";
       loginButton.style.display = "none";
       formLog.style.display = "none";
+      welcome.style.display = "block";
     }
 } else{
   localStorage.clear();
@@ -55,7 +60,7 @@ if(localStorage.getItem('username')){
     welcome.style.display = "block";
   }else{
     formLog.style.display = "none";
-    welcome.style.display = "none";
+    welcome.style.display = "block";
   }
 }
 
