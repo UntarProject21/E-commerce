@@ -139,7 +139,10 @@ th:last-child {
   color: white;
   padding: 1rem;
   margin-top: 1rem;
+  cursor: pointer;
 }
+
+
 
 @media only screen and (max-width: 567px) {
   .cart-info p {
