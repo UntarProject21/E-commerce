@@ -43,7 +43,16 @@
 
   .about img{
     height: auto;
-    width: 315px;
+    width: 316px;
+  }
+ 
+  .about-text h1{
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+  }
+  
+  .about-text p{
+    text-align: justify;
   }
 
   .about-text{
