@@ -69,7 +69,17 @@ table {
   flex-wrap: wrap;
 }
 
+.cart-move {
+  font-size: 16px;
+  color: white;
+  background-color: var(--green);
+  border: solid var(--green);
+  border-radius: .2em;
+  font-weight: bold;
+}
+
 .cart-delete {
+  font-size: 16px;
   color: white;
   background-color: #ff2323;
   border: solid #ff2323;

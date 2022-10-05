@@ -39,7 +39,7 @@ function ready() {
 
 function removeCartItem(event) {
   var buttonClicked = event.target
-  buttonClicked.parentElement.parentElement.remove()
+  buttonClicked.parentElement.parentElement.parentElement.remove()
   document.getElementsByClassName('checkout btn')[0].addEventListener('click', purchaseClicked)
 }
 
