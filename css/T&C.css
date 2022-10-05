@@ -21,6 +21,12 @@
   }
   
   body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
     background-color: var(--white);
@@ -38,6 +44,23 @@
     list-style: none;
   }
   
+  .terms-text{
+    padding: 0 20px;
+    height: 400px;
+    overflow-y: auto;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: justify;
+  }
+  
+  .terms-text h1{
+    color: rgb(255, 0, 0);
+  }
+
+  .terms-text h2{
+    color: rgb(255, 86, 86);
+  }
+
   .container {
     max-width: 114rem;
     margin: 0 auto;
