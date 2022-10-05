@@ -40,6 +40,33 @@
   li {
     list-style: none;
   }
+
+  .about img{
+    height: auto;
+    width: 316px;
+  }
+ 
+  .about-text h1{
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+  }
+  
+  .about-text p{
+    text-align: justify;
+  }
+
+  .about-text{
+    width: 550px;
+  }
+
+  .main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
   
   .container {
     max-width: 114rem;
@@ -52,6 +79,5 @@
     align-items: center;
   }
 
-/*  */
 
 
