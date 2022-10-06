@@ -98,6 +98,9 @@ Header
     justify-content: center;
   }
 
+  .search-box {
+    
+  }
   @media only screen and (max-width: 768px) {
     .nav-list {
       position: fixed;

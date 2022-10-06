@@ -17,7 +17,11 @@ logoutButton.style.display = "none";
 function onLogin() {
   localStorage.setItem("username", usernameInput.value);
   localStorage.setItem("password", passwordInput.value);
-  if(localStorage.getItem('username') && localStorage.getItem('password')){
+  localStorage.setItem("fname", fnameInput.value);
+  localStorage.setItem("lname", lnameInput.value);
+
+  if(localStorage.getItem('username') && localStorage.getItem('password') 
+  && localStorage.getItem('fname') && localStorage.getItem('lname')){
     logoutButton.style.display = "block";
     if(usernameInput.value == "admin" && passwordInput.value == "admin123") {
       localStorage.setItem("role", "admin");
@@ -39,7 +43,7 @@ function onLogin() {
 } else{
   localStorage.clear();
   location.reload();
-  alert("Please enter a username and password");
+  alert("Please fill the form completely");
 }}
 
 if(localStorage.getItem('username')){
