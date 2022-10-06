@@ -24,25 +24,25 @@ function ready() {
         button.addEventListener('click', addToCartClicked)
     }
 
-    //document.getElementsByClassName('checkout btn')[0].addEventListener('click', purchaseClicked)
+    document.getElementsByClassName('checkout btn')[0].addEventListener('click', showModal)
 
 }
 
 function purchaseClicked() {
-  alert('Makasih Duitnya')
+  //alert('Makasih Duitnya')
+  modal.style.display = "none";
   var cartContainer = document.getElementsByTagName('table')[0]
   for(var i = 1;i<cartContainer.rows.length;){
     cartContainer.deleteRow(i);
   }
-
-  updateCartTotal()
+  updateCartTotal();
 }
 
 function removeCartItem(event) {
   var buttonClicked = event.target
   buttonClicked.parentElement.parentElement.parentElement.parentElement.remove()
   updateCartTotal()
-  document.getElementsByClassName('checkout btn')[0].addEventListener('click', purchaseClicked)
+  document.getElementsByClassName('checkout btn')[0].addEventListener('click', showModal)
 }
 
 function addToCart(event) {
@@ -114,7 +114,7 @@ function quantityChanged(event) {
       input.value = 1
   }
   updateCartTotal()
-  document.getElementsByClassName('checkout btn')[0].addEventListener('click', purchaseClicked)
+  document.getElementsByClassName('checkout btn')[0].addEventListener('click', showModal)
 }
 
 function updateCartTotal() {
@@ -161,15 +161,21 @@ function updateCartTotal() {
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("checkout");
+var btn = document.getElementByClass("checkout");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+function showModal() {
+  document.getElementsByClassName('submit-btn')[0].addEventListener('click', purchaseClicked)
   modal.style.display = "block";
 }
+
+
+//btn.onclick = function() {
+//  modal.style.display = "block";
+//}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
