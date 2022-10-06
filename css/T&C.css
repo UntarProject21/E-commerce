@@ -53,18 +53,29 @@
     text-align: justify;
   }
   
-  .terms-text h1{
+  .term-text h1{
     color: rgb(255, 0, 0);
+    margin-bottom: 1%;
   }
 
-  .terms-text h2{
-    color: rgb(255, 86, 86);
+  .term-text{
+    margin: 0% 10% 10% 10%;
+  }
+
+  .term-text p{
+    text-align: justify;
+    margin-bottom: 1%;
+    line-height: 1.8;
+  }
+
+  .term-text h3{
+    line-height: 2.2;
   }
 
   .container {
     max-width: 114rem;
     margin: 0 auto;
-    padding: 0 3rem;
+    padding: 0 4rem;
   }
   
   .d-flex {
