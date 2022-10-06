@@ -98,6 +98,8 @@ li {
 }
 
 .login-form form button {
+  width: 100%;
+  border-radius: 100px;
   outline: none;
   border: none;
   font-size: 1.6rem;
@@ -106,9 +108,16 @@ li {
   background-color: var(--green);
   color: white;
   cursor: pointer;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+.login-form form button:hover {
+  opacity: 0.7;
 }
 
-.login-form form p a {
+.login-form a {
   color: dodgerblue;
 }
 .login-form a:hover {
@@ -117,7 +126,7 @@ li {
 
 @media only screen and (max-width: 768px) {
   .login-form form .email-password {
-    width: 25rem;
+    width: 26rem;
     border: 0.0625rem solid #ccc;
     outline: none;
     padding: 1.5rem 0;
