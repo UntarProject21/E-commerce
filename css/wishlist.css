@@ -9,6 +9,9 @@
   --green: #6cbe02;
   --grey1: #f0f0f0;
   --grey2: #e9d7d3;
+  /*
+  --green: #6cbe02;
+  --green2: #27ae60;*/
 }
 
 /* Basic Reset */
@@ -49,6 +52,21 @@ li {
   padding: 0 3rem;
 }
 
+.checkout-container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.checkout-quantity {
+  color: var(--green);
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
 .d-flex {
   display: flex; 
   align-items: center;
@@ -56,10 +74,12 @@ li {
 
 /* Cart Items */
 .cart {
-  margin: 10rem auto;
+  margin-bottom: 20rem;
+  margin-top: 5rem;
 }
 
 table {
+  border-top: 3px solid var(--green);
   width: 100%;
   border-collapse: collapse;
 }
@@ -71,11 +91,24 @@ table {
 
 .cart-move {
   font-size: 16px;
-  color: white;
+  color: var(--white);
   background-color: var(--green);
   border: solid var(--green);
   border-radius: .2em;
   font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.cart-move:hover {
+  color: var(--green);
+  background-color: var(--white);
+  transition: all 0.25s ease-in;
+}
+
+.cart-move:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(1px);
 }
 
 .cart-delete {
@@ -85,13 +118,22 @@ table {
   border: solid #ff2323;
   border-radius: .2em;
   font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
 }
 
 
 .cart-delete:active {
-  box-shadow: 0 0px #666;
+  box-shadow: 0 2px #666;
   transform: translateY(1px);
 }
+
+.cart-delete:hover {
+  color: #ff2323;
+  background-color: var(--white);
+  transition: all 0.25s ease-in;
+}
+
 
 th {
   text-align: left;
@@ -122,7 +164,6 @@ td img {
   margin-right: 1rem;
 }
 
-
 td:last-child {
   text-align: right;
 }
@@ -130,19 +171,6 @@ td:last-child {
 th:last-child {
   text-align: right;
 }
-
-.checkout {
-  display: inline-block;
-  background-color: var(--green);
-  color: white;
-  padding: 1rem;
-  margin-top: 1rem;
-  cursor: pointer;
-}
-
-
-
-
 
 @media only screen and (max-width: 567px) {
   .cart-info p {
@@ -152,4 +180,16 @@ th:last-child {
 }
 /*responsive*/
 
+.container-title {
+  font-size: 20px;
+  color:#333;
+  text-transform: uppercase;
+  text-align: center;
+}
 
+.container-sub-title {
+  font-size: 16px;
+  color:rgba(51, 51, 51, 0.755);
+  text-transform:none;
+  text-align: center;
+}
