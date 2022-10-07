@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap");
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 
 /* Color Variables */
@@ -25,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'roboto', sans-serif;;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   background-color: var(--white);
   color: var(--black);
