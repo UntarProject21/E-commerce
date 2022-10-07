@@ -29,7 +29,6 @@ function ready() {
 }
 
 function purchaseClicked() {
-  alert('Makasih Duitnya')
   modal.style.display = "none";
   var cartContainer = document.getElementsByTagName('table')[0]
   for(var i = 1;i<cartContainer.rows.length;){
@@ -125,7 +124,7 @@ function updateCartTotal() {
 
 
   for (var i = 1, row; row = cartItemContainer.rows[i]; i++) {
-    console.log(i)
+    //console.log(i)
     var cartRows = cartItemContainer.rows[i]
     //console.log(cartRows)
     var priceElement = cartRows.getElementsByTagName('span')[1]
@@ -157,20 +156,47 @@ function updateCartTotal() {
 <a class="checkout btn">Proceed To Checkout</a>`
 }
 
+function checkoutTotal() {
+  var cartItemContainer = document.getElementsByTagName('table')[0]
+  var total = 0
+  var subtotal = 0
+  var tax = (5 * subtotal)/100
+  var shipping = 20000
+
+  for (var i = 1, row; row = cartItemContainer.rows[i]; i++) {
+    var cartRows = cartItemContainer.rows[i]
+    //console.log(cartRows)
+    var priceElement = cartRows.getElementsByTagName('span')[1]
+    var quantityElement = cartRows.getElementsByClassName('cart-quantity-input')[0]
+    var price = parseFloat(priceElement.innerText.replace('IDR ', ''))
+    var quantity = quantityElement.value
+    subtotal += (price * quantity)
+  }
+  tax = (5 * subtotal)/100
+  subtotal = Math.round(subtotal * 100) / 100
+  total = subtotal + tax
+  document.getElementsByClassName('final-price')[0].innerHTML =
+  `        
+  Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: IDR ${total}
+  <br/>Shipping : IDR ${shipping}<br/><br/>
+  Final &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: IDR ${total+shipping}`
+} 
+
 // Get the modal
 var modal = document.getElementById("myModal");
+
+var contentmodal = document.getElementsByClassName("modal-content");
 
 // Get the button that opens the modal
 var btn = document.getElementByClass("checkout");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("myForm");
 
 // When the user clicks on the button, open the modal
 function showModal() {
   document.getElementsByClassName('close')[0].addEventListener('click', closeModal)
   document.getElementsByClassName('submit-btn')[0].addEventListener('click', purchaseClicked)
   modal.style.display = "block";
+  checkoutTotal();
 }
 
 function closeModal() {

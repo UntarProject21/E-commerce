@@ -151,6 +151,20 @@ td img {
   margin-top: 2rem;
 }
 
+.final-price {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.total-details {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
 .total-price table {
   width: 100%;
   max-width: 35rem;
