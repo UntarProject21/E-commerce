@@ -42,9 +42,22 @@ li {
   list-style: none;
 }
 
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.d-flex {
+  display: flex; 
+  align-items: center;
+}
+
+/* FAQ */
+
 /* bagian ini berfungsi untuk mengatur propertis yang akan ditampilkan disection yang meliputi question dan answer nya */
 section{
-    padding-left: 20%;
+    
     min-height: 65vh;
     width: 80%;
     margin: 0 auto;
@@ -56,13 +69,12 @@ section{
 /* berikutnya kita akan mengatur ukuran tulisan dan margin di dalam method title ini */
 .title{
     font-size: 3rem;
-    margin-left: 55%;
-    /* text-align: center; */
+    color:rgb(255, 0, 0)  
 }
 
 /* bagian ini mengatur tampilan box untuk menampung section question dan answer */
 .faq{
-    max-width: 700px;
+    max-width: 70rem;
     margin-top: 2rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid rgb(0, 0, 0);
@@ -110,14 +122,5 @@ svg{
     transition: transform 0.5s ease-in;
 }
 
-.container {
-  max-width: 114rem;
-  margin: 0 auto;
-  padding: 0 3rem;
-}
 
-.d-flex {
-  display: flex; 
-  align-items: center;
-}
 
