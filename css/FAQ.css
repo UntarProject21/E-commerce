@@ -64,7 +64,7 @@ section{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
 }
 
 /* berikutnya kita akan mengatur ukuran tulisan dan margin di dalam method title ini */
@@ -80,6 +80,7 @@ section{
   padding-bottom: 1rem;
   border-bottom: 2px solid rgb(0, 0, 0);
   cursor: pointer;
+  align-items: center;
 }
 
 /* bagian ini akan mengatur tampilan box terkhusu untuk menampung question*/
