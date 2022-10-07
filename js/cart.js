@@ -29,8 +29,8 @@ function ready() {
 }
 
 function purchaseClicked() {
-  //alert('Makasih Duitnya')
-  modal.style.display = "none";
+  alert('Makasih Duitnya')
+  modal.style.display = "blocked";
   var cartContainer = document.getElementsByTagName('table')[0]
   for(var i = 1;i<cartContainer.rows.length;){
     cartContainer.deleteRow(i);
@@ -164,18 +164,19 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementByClass("checkout");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("myForm");
 
 // When the user clicks on the button, open the modal
 function showModal() {
+  document.getElementsByClassName('close')[0].addEventListener('click', closeModal)
   document.getElementsByClassName('submit-btn')[0].addEventListener('click', purchaseClicked)
   modal.style.display = "block";
 }
 
+function closeModal() {
+  modal.style.display = "none";
+}
 
-//btn.onclick = function() {
-//  modal.style.display = "block";
-//}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -184,7 +185,8 @@ span.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target == span) {
     modal.style.display = "none";
   }
 }
+
