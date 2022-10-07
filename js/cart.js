@@ -30,7 +30,7 @@ function ready() {
 
 function purchaseClicked() {
   alert('Makasih Duitnya')
-  modal.style.display = "blocked";
+  modal.style.display = "none";
   var cartContainer = document.getElementsByTagName('table')[0]
   for(var i = 1;i<cartContainer.rows.length;){
     cartContainer.deleteRow(i);
