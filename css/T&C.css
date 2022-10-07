@@ -54,11 +54,11 @@ li {
   align-items: center;
 }
 
-/* .term-text{
-  padding: 0 20px;
-  height: 400px;
-  overflow-y: auto;
-  font-size: 14px;
+.term-text{
+
+  padding: 0px;
+  min-height: 20vh;
+  font-size: 1em;
   font-weight: 500;
   text-align: justify;
 }
@@ -75,13 +75,9 @@ li {
 .term-text p{
   text-align: justify;
   margin-bottom: 1%;
-  line-height: 1.8;
+  line-height:1.8;
 }
 
 .term-text h3{
   line-height: 2.2;
-} */
-
-/* @media only screen and (max-width:768px) {
-
-} */
+}
