@@ -29,6 +29,7 @@ function ready() {
 }
 
 function purchaseClicked() {
+  alert("Thank you for your purchase!")
   modal.style.display = "none";
   var cartContainer = document.getElementsByTagName('table')[0]
   for(var i = 1;i<cartContainer.rows.length;){
