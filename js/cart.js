@@ -29,6 +29,7 @@ function ready() {
 }
 
 function purchaseClicked() {
+  alert("Thank you for your purchase!")
   modal.style.display = "none";
   var cartContainer = document.getElementsByTagName('table')[0]
   for(var i = 1;i<cartContainer.rows.length;){
@@ -49,15 +50,6 @@ function addToCart(event) {
     buttonClicked.parentElement.parentElement.parentElement.remove()
     updateCartTotal()
 }
-
-function quantityChanged(event) {
-    var input = event.target
-    if (isNaN(input.value) || input.value <= 0) {
-      input.value = 1
-    }
-    updateCartTotal()
-}
-
 
 function addToCartClicked(event) {
     var button = event.target
@@ -105,6 +97,47 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.getElementsByClassName('bx bx-trash')[0].addEventListener('click', removeCartItem)
 	  cartRow.getElementsByClassName('bx bx-cart')[0].addEventListener('click', removeCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+}
+
+function checkoutItems() {
+  var cartItemContainers = document.getElementsByTagName('table')[0]
+  var cartItemContainer = document.getElementsByTagName('table')[2]
+  for (var i = 1, row; row = cartItemContainers.rows[i]; i++) {
+    console.log(i)
+    var cartRows = cartItemContainers.rows[i]
+    console.log(cartRows)
+    var nameElement = cartRows.getElementsByTagName('p')[0]
+    var priceElement = cartRows.getElementsByTagName('span')[1]
+    var imageElement = cartRows.getElementsByTagName('img')[0]
+    var quantityElement = cartRows.getElementsByClassName('cart-quantity-input')[0]
+
+    var names = nameElement.innerText
+    var prices = parseFloat(priceElement.innerText.replace('IDR ', ''))
+    var quantities = quantityElement.value
+    var images = imageElement.src
+
+    var checkRow = document.createElement('tr')
+    var checkRowContents = `
+    <tr>
+      <td>
+        <div class="cart-info">
+          <img src="${images}" alt="" />
+        </div>
+      </td>
+      <td>
+        <span class="checkout-quantity">x${quantities}</span>
+      </td>
+      <td>
+        <p>${names}</p>
+      </td>
+      <td>
+        <span>IDR ${prices*quantities}</span>  
+      </td>
+    </tr>
+    `
+    checkRow.innerHTML = checkRowContents
+    cartItemContainer.append(checkRow)
+  }
 }
 
 function quantityChanged(event) {
@@ -187,8 +220,6 @@ var modal = document.getElementById("myModal");
 
 var contentmodal = document.getElementsByClassName("modal-content");
 
-// Get the button that opens the modal
-var btn = document.getElementByClass("checkout");
 
 
 // When the user clicks on the button, open the modal
@@ -196,23 +227,17 @@ function showModal() {
   document.getElementsByClassName('close')[0].addEventListener('click', closeModal)
   document.getElementsByClassName('submit-btn')[0].addEventListener('click', purchaseClicked)
   modal.style.display = "block";
+  checkoutItems();
   checkoutTotal();
 }
 
 function closeModal() {
-  modal.style.display = "none";
-}
-
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == span) {
-    modal.style.display = "none";
+  var cartItemContainer = document.getElementsByTagName('table')[2]
+  for(var i = 0;i<cartItemContainer.rows.length;){
+    cartItemContainer.deleteRow(i);
   }
+  modal.style.display = "none";
+
 }
+
 
