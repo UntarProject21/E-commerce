@@ -34,7 +34,7 @@ function removeCartItem(event) {
 
 function addToCart(event) {
 	var buttonClicked = event.target
-    buttonClicked.parentElement.parentElement.remove()
+    buttonClicked.parentElement.parentElement.parentElement.remove()
 }
 
 function quantityChanged(event) {
