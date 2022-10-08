@@ -10,11 +10,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
+
+    <!-- Fonts Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <!-- Custom StyleSheet -->
     <link rel="stylesheet" href="./css/product.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/plugins/bootstrap.min.css">
+    
     <title>Boy’s T-Shirt</title>
   </head>
 
@@ -70,15 +74,16 @@
               </a>
             </li>
           </ul>
-          <div>
-            <nav class="navbar bg-light">
-              <div class="container-fluid">
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+
+          <div class="search-box-ggwp">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Search">
+              <div class="input-group-append">
+                <button class="btn btn-primary">
+                  <i class="fas fa-search"></i>
+                </button>
               </div>
-            </nav>
+            </div>
           </div>
           
           
@@ -362,6 +367,7 @@
     <script src="./js/product.js"></script>
     <script src="./js/footer.js"></script>
     <script src="./js/header.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
 
       let loadMoreBtn = document.querySelector('#load-more');
