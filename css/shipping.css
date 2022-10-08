@@ -73,6 +73,8 @@ section{
     margin-right: auto;
     width: 540px auto;
     height: 520px auto;
+    max-width:50%;
+    width:50%;
     
 }
 
