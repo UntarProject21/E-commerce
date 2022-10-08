@@ -14,9 +14,9 @@ if (popup) {
   });
 }
 // preloader
-$(window).load(function() {
-  $('.preloader').fadeOut('slow');
-});
+window.onload = function(){ 
+  document.querySelector(".preloader").style.display = "none"; 
+}
 
 //back to top
 let mybutton = document.getElementById("btn-back-to-top");

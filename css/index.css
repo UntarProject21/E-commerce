@@ -933,7 +933,7 @@ Hero Media Query
   height: 100%;
   z-index: 9999;
   background-color: #fff;
-  background-image: url(../images/loading__.gif);
+  background-image: url(./images/loading__.gif);
   background-repeat: no-repeat;
   background-position: center center; 
 }
