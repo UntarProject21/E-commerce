@@ -1,27 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 
-/* Basic Reset */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.6rem;
-  background-color: var(--white);
-  color: var(--black);
-  font-weight: 400;
-  font-style: normal;
+/* Bagian ini dibuat untuk mengatur mergin dan padding untuk halaman html FAQ */
+*{
+    margin: 0;
+    padding: 0;
 }
 
 /* selanjutnya dibagian body ini akan di beri tipe font quiksand dan juga mengatur warna background berwarna putih dan tulisannya berwarna hitam */
@@ -33,10 +16,10 @@ body{
 
 /* bagian ini berfungsi untuk mengatur propertis yang akan ditampilkan disection yang meliputi question dan answer nya */
 section{
-    padding-left: 20%;
     min-height: 65vh;
     width: 80%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
 }
@@ -58,6 +41,7 @@ section{
     padding-bottom: 1rem;
     border-bottom: 2px solid rgb(0, 0, 0);
     cursor: pointer;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -67,8 +51,6 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 /* setelah membuat tampilan boxnya , maka dilanjut dengan mengatur ukuran tulisannya*/
 .question h3{
@@ -80,16 +62,12 @@ section{
     max-height: 300px;
     overflow: hidden;
     transition: max-height 1.4s ease;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .answer p{
     padding-top: 1rem;
     line-height: 1.6;
     font-size: 1.4rem;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .shipping{
