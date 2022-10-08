@@ -71,9 +71,9 @@ section{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 540px;
-    height: 520px;
-    align-items: center;
+    width: 540px auto;
+    height: 520px auto;
+    
 }
 
 .box{
