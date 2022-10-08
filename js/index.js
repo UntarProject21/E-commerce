@@ -13,7 +13,10 @@ if (popup) {
     }, 1000);
   });
 }
-
+// preloader
+$(window).load(function() {
+  $('.preloader').fadeOut('slow');
+});
 
 //back to top
 let mybutton = document.getElementById("btn-back-to-top");
