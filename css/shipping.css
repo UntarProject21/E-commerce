@@ -1,10 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 
-/* Bagian ini dibuat untuk mengatur mergin dan padding untuk halaman html FAQ */
-*{
-    margin: 0;
-    padding: 0;
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* selanjutnya dibagian body ini akan di beri tipe font quiksand dan juga mengatur warna background berwarna putih dan tulisannya berwarna hitam */
