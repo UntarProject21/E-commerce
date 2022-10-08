@@ -73,6 +73,7 @@ section{
     margin-right: auto;
     width: 540px;
     height: 520px;
+    align-items: center;
 }
 
 .box{
