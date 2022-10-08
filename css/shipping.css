@@ -50,6 +50,8 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* setelah membuat tampilan boxnya , maka dilanjut dengan mengatur ukuran tulisannya*/
 .question h3{
@@ -61,12 +63,16 @@ section{
     max-height: 300px;
     overflow: hidden;
     transition: max-height 1.4s ease;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .answer p{
     padding-top: 1rem;
     line-height: 1.6;
     font-size: 1.4rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .shipping{
