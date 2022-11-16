@@ -1,24 +1,40 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 const ejs = require("ejs");
-const port = 3000
+const port = 3000;
 
 app.set('view engine', 'ejs')
 
+/*
 app.get('/', (req, res) => {
-    res.render('pages/index.ejs')
+  res.render('pages/index.ejs')
 })
+
+app.get('/', (req, res) => {
+	res.render('pages/Aboutus.ejs')
+})
+*/
+
+  
+// about page
+app.get('/', function(req, res) {
+  res.render('pages/index.ejs');
+});
+
+
+
 app.listen(port, () => {
   console.log(`App listening at port ${port}`)
 })
 
 app.use(express.static("public"));
 
+/*
 app.get('/', (req, res) => {
     res.render('index', { foo: 'FOO' });
 });
 
-/*
+
 var express = require("express");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
