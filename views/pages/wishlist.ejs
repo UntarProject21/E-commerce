@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layouts/header.ejs', {title: 'Wishlist' , state: 'wishlist' }); %>
+  <body>
+    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'wishlist'}); %>
+    <div class="container-title">
+      <h1>wishlist</h1>
+      <div class="container-sub-title">
+        <h3>You can either add liked products to your cart or remove them.</h3>
+      </div>
+    </div>
+    <!-- Cart Items -->
+    <div class="container cart">
+      <table>
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="/images/product-2.jpg" alt="" />
+              <div>
+                <p>Red Backpack</p>
+                <span>IDR 50,000</span> <br />
+                
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="cart-buttons">
+              <input class="cart-quantity-input" type="number" value="1" min="1">
+            </div>
+          </td>
+          <td>
+            <button class="cart-move" type="button"><i class="bx bx-cart"></i> +</button>
+            <button class="cart-delete" type="button"><i class="bx bx-trash"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="/images/product-7.jpg" alt="" />
+              <div>
+                <p>Blue T-Shirt</p>
+                <span>IDR 90,000</span> <br /> 
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="cart-buttons">
+              <input class="cart-quantity-input" type="number" value="1" min="1">
+            </div>
+          </td>
+          <td>
+            <button class="cart-move" type="button"><i class="bx bx-cart"></i> +</button>
+            <button class="cart-delete" type="button"><i class="bx bx-trash"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="/images/product-5.jpg" alt="" />
+              <div>
+                <p>Black Hoodie</p>
+                <span>IDR 120,000</span> <br />
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="cart-buttons">
+              <input class="cart-quantity-input" type="number" value="1" min="1">
+            </div>
+          </td>
+          <td>
+            <button class="cart-move" type="button"><i class="bx bx-cart"></i> +</button>
+            <button class="cart-delete" type="button"><i class="bx bx-trash"></i></button>
+          </td>
+        </tr>
+
+        
+      </table>
+        <table>
+          <tr>
+            <td></td>
+          </tr>
+        </table>
+        
+      </div>
+    </div>
+    <!-- Custom Script -->
+    <script src="/js/wishlist.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/header.js"></script>
+    <%- include('../layouts/footer.ejs', {state: 'wishlist'}); %>
+  </body>
+</html>

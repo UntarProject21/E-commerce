@@ -4,7 +4,7 @@ const ejs = require("ejs");
 const port = 3000;
 
 app.set('view engine', 'ejs')
-
+app.use( express.static( "public" ) );
 /*
 app.get('/', (req, res) => {
   res.render('pages/index.ejs')
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   
 // about page
 app.get('/', function(req, res) {
-  res.render('pages/index.ejs');
+  res.render('pages/productDetails.ejs');
 });
 
 
@@ -27,7 +27,6 @@ app.listen(port, () => {
   console.log(`App listening at port ${port}`)
 })
 
-app.use(express.static("public"));
 
 /*
 app.get('/', (req, res) => {

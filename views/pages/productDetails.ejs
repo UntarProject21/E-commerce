@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layouts/header.ejs', {title: 'Product Details' , state: 'productDetails' }); %>
+  <body>
+    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'productDetails'}); %> 
+    <!-- Product Details -->
+    <section class="section product-detail">
+      <div class="details container">
+        <div class="left image-container">
+          <div class="main">
+            <img src="/images/product-8.jpg" id="zoom" alt="" />
+          </div>
+        </div>
+        <div class="right">
+          <br>
+          
+          <h1>Boy’s T-Shirt By Handsome</h1>
+          <div class="price">$50</div>
+          <p>Size : L</p><br>
+          <form class="form">
+            <a href="cart.ejs" class="addCart"><i class="bx bx-cart"></i> Add To Cart</a><br><br>
+            <a href="wishlist.ejs" class="addWish"><i class="bx bx-heart"></i>Add To Wishlist</a>
+          </form>
+            <h3>Product Details</h3>
+          <p>
+            Our Boy’s T-Shirt By Handsome doesn't compromise on comfort. The plush, high-loft fleece helps you stay warm and contrasts with the smooth ripstop trim. Breezy mesh lining lets the air flow naturally and a bungee at the hem lets you cinch up your fit to dial in your temperature exactly how you like it.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Custom Script -->
+    <script src="/js/productDetails.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/header.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha384-JUMjoW8OzDJw4oFpWIB2Bu/c6768ObEthBMVSiIx4ruBIEdyNSUQAjJNFqT5pnJ6"
+      crossorigin="anonymous"
+    ></script>
+    <script src=/js/zoomsl.min.js"></script>
+    <script>
+      $(function () {
+        console.log("hello");
+        $("#zoom").imagezoomsl({
+          zoomrange: [4, 4],
+        });
+      });
+    </script>
+    <%- include('../layouts/footer.ejs', {state: 'productDetails'}); %>
+  </body>
+</html>

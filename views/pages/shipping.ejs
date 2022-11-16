@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layouts/header.ejs', {title: 'Shipping' , state: 'shipping' }); %>
+  <body>
+    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'shipping'}); %> 
+
+        <div class="col-lg-12 text-center">
+            <h2 class="title">SHIPPING</h2>
+        </div>  
+        
+        <section>
+            
+
+          <div class="faq">
+                <div class="question">
+                    <h3>Greater Jakarta</h3>
+                </div>
+                <div class="answer">
+                    <p>Standard Shipping (1-2 business day(s), may vary between shipping
+                      companies) IDR 20,000; Free Standard Shipping on orders over IDR 420,000
+                    </p>
+                    <p>Expedited Shipping (1 business day from dispatch) IDR 50,000</p>
+                </div>
+          </div>
+
+          <div class="faq">
+                <div class="question">
+                    <h3>Java</h3>
+                </div>
+                <div class="answer">
+                  <p>Standard Shipping (2-3 business day(s), may vary between shipping
+                    companies) IDR 25,000; Free Standard Shipping on orders over IDR 420,000
+                  </p>
+                  <p>Expedited Shipping (2 business day from dispatch) IDR 50,000</p>
+                </div>
+            </div>
+
+            <div class="faq">
+              <div class="question">
+                  <h3>Sumatra</h3>                     
+              </div>
+                <div class="answer">
+                  <p>Standard Shipping (3-5 business day(s), may vary between shipping
+                    companies) IDR 50,000; Free Standard Shipping on orders over IDR 420,000
+                  <p>Cargo Shipping (7 business day from dispatch) IDR 32,000</p>
+                </div>
+          </div>
+
+            <div class="faq">
+                <div class="question">
+                    <h3>Bali</h3>                     
+                </div>
+                  <div class="answer">
+                    <p>Standard Shipping (3-5 business day(s), may vary between shipping
+                      companies) IDR 50,000; Free Standard Shipping on orders over IDR 420,000
+                    <p>Cargo Shipping (7 business day from dispatch) IDR 32,000</p>
+                  </div>
+            </div>
+        </section>
+        <img src="/images/delivery-time.gif" class="shipping">
+<br>
+      <script src="/js/shipping.js"></script>
+      <script src="/js/footer.js"></script>
+      <script src="/js/header.js"></script>
+    <%- include('../layouts/footer.ejs', {state: 'shipping'}); %>
+  </body>
+</html>
