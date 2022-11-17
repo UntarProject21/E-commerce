@@ -90,33 +90,36 @@
       </div>
     </header>
 
-    <div class="row">
+    
       <div class="col">
-          <div class="card text-white col-md-8 col-lg-6 col-xl-5">
-              <h1 class="card-header text-white">Forgot Password</h1>
-              <div class="py-3 text" style="padding: 0% 5%; text-align: center;">
+          <div class="card text-white col-md-8 col-lg-6 col-xl-5"><br><br><br><br><br>
+              <h1 class="card-header text-white" style="text-align: center;">Forgot Password</h1>
+              <div class="py-3 text" style="padding: 2.25% 10%; text-align: center;">
                   <a>Enter your email to receive a link to reset your password.</a>
               </div>
               <div class="card-body">
                   <form class="px-4 py-3" action="forgot-password" method="POST">
-                      <div class="form-group" style="text-align: left;">
+                      <div class="form-group" style="text-align: center;">
                           <a data-feather="mail" href="" style="font-size: 40px;"></a>
                           <label for="exampleDropdownFormEmail1">Email</label>
                           <input class="form-control input-sm text-center"
                               placeholder="Email address" type="email" id="email" name="email">
                       </div>
-                      <div class="buttons">
-                        <button type="button" onclick="location.href = 'Forget-Verification.html';" value="Login" id="ForgetVerifyButton">Reset Password</button>
+                      <div class="buttons"><br>
+                        <div class="resetpassword" style="text-align: center;">
+                          <button type="button" onclick="location.href = 'Forget-Verification.html';" value="Login" id="ForgetVerifyButton">Reset Password</button>
+                        </div>
                       </div>
                       <br><br>
-                      <div class="hoverforgot-1 text-center">
-                          <a href="login">Or Return to Login</a>
+                      <div class="hoverforgot-1" style="text-align: center;">
+                        <a href="login.html" style="color: blue">Or Return to Log In</a><br><br>
+                        <br><br>
                       </div>
                   </form>
               </div>
           </div>
       </div>
-    </div>
+    
 
 
     <!-- Footer -->
