@@ -11,7 +11,7 @@
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
     <!-- Custom StyleSheet -->
-    <!-- <link rel="stylesheet" href="/public/css/ForgetPass.css"> -->
+    <link rel="stylesheet" href="/public/css/ForgetPass.css">
     <link rel="stylesheet" href="/public/css/index.css">
     <link rel="stylesheet" href="/public/css/footer.css">
     <link rel="stylesheet" href="/public/css/header.css">
@@ -92,16 +92,17 @@
 
     
       <div class="col">
-          <div class="card text-white col-md-8 col-lg-6 col-xl-5"><br><br><br><br><br>
+          <div class="card text-white col-md-8 col-lg-6 col-xl-5"><br><br>
               <h1 class="card-header text-white" style="text-align: center;">Forgot Password</h1>
-              <div class="py-3 text" style="padding: 2.25% 10%; text-align: center;">
+              <div class="py-3 text" style="padding: 2.5% 10%; text-align: center;">
                   <a>Enter your email to receive a link to reset your password.</a>
               </div>
-              <div class="card-body">
+              <div class="card-body" style="text-align: center;">
+                <label for="email"><i class="bx bx-envelope"></i> <b>Email</b></label><br>
                   <form class="px-4 py-3" action="forgot-password" method="POST">
                       <div class="form-group" style="text-align: center;">
                           <a data-feather="mail" href="" style="font-size: 40px;"></a>
-                          <label for="exampleDropdownFormEmail1">Email</label>
+                          <label for="exampleDropdownFormEmail1">Email : </label>
                           <input class="form-control input-sm text-center"
                               placeholder="Email address" type="email" id="email" name="email">
                       </div>
