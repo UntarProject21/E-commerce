@@ -11,7 +11,8 @@
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
     <!-- Custom StyleSheet -->
-    <link rel="stylesheet" href="/public/css/ForgetPass.css">
+    <!-- <link rel="stylesheet" href="/public/css/ForgetPass.css"> -->
+    <link rel="stylesheet" href="/public/css/index.css">
     <link rel="stylesheet" href="/public/css/footer.css">
     <link rel="stylesheet" href="/public/css/header.css">
     <link rel="stylesheet" href="/public/css/plugins/bootstrap.min.css">
@@ -93,8 +94,6 @@
       <div class="col">
           <div class="card text-white col-md-8 col-lg-6 col-xl-5">
               <h1 class="card-header text-white">Forgot Password</h1>
-              <lottie-player autoplay background="transparent" class="icon" loop speed="1"
-                  src="https://assets9.lottiefiles.com/packages/lf20_xvrofzfk.json"></lottie-player>
               <div class="py-3 text" style="padding: 0% 5%; text-align: center;">
                   <a>Enter your email to receive a link to reset your password.</a>
               </div>
@@ -106,8 +105,9 @@
                           <input class="form-control input-sm text-center"
                               placeholder="Email address" type="email" id="email" name="email">
                       </div>
-                      <input class="btn btn-resetpassword btn-primary" style="width: 100%;"
-                              type="submit" value="Reset Password">
+                      <div class="buttons">
+                        <button type="button" onclick="location.href = 'Forget-Verification.html';" value="Login" id="ForgetVerifyButton">Reset Password</button>
+                      </div>
                       <br><br>
                       <div class="hoverforgot-1 text-center">
                           <a href="login">Or Return to Login</a>
@@ -154,13 +154,6 @@
           </div>
         </div>
       </div>
-      <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up"
-          viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
-        </svg>
-      </button>
       <div class="bottom-footer">
         <div class="container">
             <p>© NO copyright 2022 <a href="#" style="color: blue">KeosYaro.Inc</a></p>
@@ -168,7 +161,7 @@
       </div>
     </footer>
     
-    <script src="/public/js/ForgetPass.js"></script>
+    <!-- <script src="/public/js/ForgetPass.js"></script> -->
     <script src="/public/js/footer.js"></script>
     <script src="/public/js/header.js"></script>
   </body>
