@@ -7,9 +7,9 @@ body {
     background-color: #212226;
 }
 
-img.ForgetVerify{
-    text-align: center;
-    width: auto;
+.card .VerifyGif4{
+    width: 365px;
+    height: 200px;
 }
 
 .card {
