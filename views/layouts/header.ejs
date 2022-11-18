@@ -85,5 +85,42 @@
     rel="stylesheet"
     href="/css/bootstrap-checkout.min.css"
   />
+
+
+  <% } else if(state == "register") { %>
+  <link rel="stylesheet" href="/css/register.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <% } else if(state == "registerverifcomplete") { %>
+  <link rel="stylesheet" href="/css/register-verification-completed.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <% } else if(state == "registerveriferror") { %>
+  <link rel="stylesheet" href="/css/register-Verification-error.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <% } else if(state == "registerverifsent") { %>
+  <link rel="stylesheet" href="/css/register-verification-sent.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+  <% } else if(state == "resetpass") { %>
+  <link rel="stylesheet" href="/css/ResetPass.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <% } else if(state == "resetpassverif") { %>
+  <link rel="stylesheet" href="/css/ResetPass-verification.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />  
+
+  <% } else if(state == "forgetpass") { %>
+  <link rel="stylesheet" href="/css/ForgetPass.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <% } else if(state == "forgetpassverif") { %>
+  <link rel="stylesheet" href="/css/ForgetPass-Verification.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
   <% } %>
 </head>

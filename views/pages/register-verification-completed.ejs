@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layouts/header.ejs', {title: 'Register Verification Completed' , state: 'registerverifcomplete' }); %>
+  <body>
+    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'regisverifcomplete'}); %>
+
+    <div data-aos="fade-in" data-aos-delay="500" class="container" style="text-align: center;">
+        <div class="col">
+            <div class="card col-md-6 col-lg-6 col-xl-8">
+                <div class="card-header" style="color: rgb(0, 0, 0);">
+                    <h2>Verification Completed !!!</h2><br>
+                </div>
+                <img src="https://media.giphy.com/media/nbX0ijnZwU33wY6Wwo/giphy.gif" class="VerifyGif2">
+                <br>
+                <div class="card-body">
+                    <h5 class="card-text" style="font-size: 20px;" style="color: #000000;">Your Account Has Been Verified !! You can now Sign In Using Your Credentials..</h5><br>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+      <!-- Custom Script -->
+      <script src="/public/js/footer.js"></script>
+      <script src="/public/js/header.js"></script>
+      <%- include('../layouts/footer.ejs', {state: 'registerverifcomplete'}); %>
+    </body>
+  </html>

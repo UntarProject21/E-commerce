@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layouts/header.ejs', {title: 'Forget Password Verification' , state: 'forgetpassverif' }); %>
+  <body>
+    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'forgetpassverif'}); %>
+
+    <div data-aos="fade-in" data-aos-delay="500" class="container">
+        
+            <div class="col">
+                <div class="card col-md-6 col-lg-6 col-xl-8">
+                    <div class="card-header" style="text-align: center;" style="color: rgb(0, 0, 0);">
+                        <h2>Check Your Inbox !!!</h2><br>
+                    </div>
+                    <div class="ForgetVerify" style="text-align: center;">
+                        <img src="https://media.giphy.com/media/PHWJ9QH178kdqfl0mH/giphy.gif" class="VerifyGif4"><br><br><br>
+                    </div>
+                    <div class="card-body" style="text-align: center;">
+                      <h5 class="card-text" style="font-size: 20px;" style="color: #000000;" style="color: #000000;">To reset your password, please check your email for a link
+                            to change your password.</h5>
+                    </div><br>
+                </div><br>
+            </div><br>
+    </div><br> 
+      <!-- Custom Script -->
+      <script src="/public/js/footer.js"></script>
+      <script src="/public/js/header.js"></script>
+      <%- include('../layouts/footer.ejs', {state: 'forgetpassverif'}); %>
+    </body>
+  </html>

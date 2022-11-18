@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layouts/header.ejs', {title: 'Register Verification Sent' , state: 'registerverifsent' }); %>
+  <body>
+    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'registerverifsent'}); %>
+    <div class="container" style="text-align: center">
+        <div data-aos="fade-in" data-aos-delay="500" class="container">
+            <div class="col">
+                <div class="card col-md-6 col-lg-6 col-xl-8">
+                    <div class="card-header" style="color: rgb(0, 0, 0);">
+                        <h2>Verify Your Email Address</h2>
+                    </div>
+                    <img src="https://media.giphy.com/media/nv6bOexvEyVV50U4Qz/giphy.gif" class="VerifyGif1">
+                    <div class="card-body">
+                        <h5 class="card-text" style="font-size: 20px;" style="color: #000000;">Before proceeding, please check your email for a
+                            verification link
+                            to verify your email address.</h5><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- Custom Script -->
+      <script src="/public/js/footer.js"></script>
+      <script src="/public/js/header.js"></script>
+      <%- include('../layouts/footer.ejs', {state: 'registerverifsent'}); %>
+    </body>
+  </html>

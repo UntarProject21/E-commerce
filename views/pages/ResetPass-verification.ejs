@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layouts/header.ejs', {title: 'Reset Password Verification' , state: 'resetpassverif' }); %>
+  <body>
+    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'resetpassverif'}); %>
+
+    <div data-aos="fade-in" data-aos-delay="500" class="container" style="text-align: center;">
+      <div class="col">
+        <div class="card col-md-6 col-lg-6 col-xl-8">
+          <div class="card-header" style="color: rgb(0, 0, 0);">
+            <h2>Success !!</h2><br>
+          </div>
+          <div class="card-body">
+            <img src="https://media.giphy.com/media/igyHznootpPO7uLv4z/giphy.gif" class="VerifyGif">
+            <h6 class="card-text" style="font-size: 20px;"
+             style="color: #000000;">Your Password Has Been Changed !! Please Sign in Using the button below..</h6>
+            <br style="display: block;content: ' ';margin: 1vw 0;line-height: 1vw;">
+            <div class="loginagain" style="text-align: center;" style="font-size: 10px;">
+              <a style="font-size: 20px; color: blue;" href="login.ejs">Log In</a><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <!-- Custom Script -->
+      <script src="/public/js/footer.js"></script>
+      <script src="/public/js/header.js"></script>
+      <%- include('../layouts/footer.ejs', {state: 'resetpassverif'}); %>
+    </body>
+  </html>

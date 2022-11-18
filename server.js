@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   
 // about page
 app.get('/', function(req, res) {
-  res.render('pages/productDetails.ejs');
+  res.render('pages/register.ejs');
 });
 
 

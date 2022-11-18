@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layouts/header.ejs', {title: 'Reset Password' , state: 'resetpass' }); %>
+  <body>
+    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'resetpass'}); %>
+
+
+    <br><br>
+    <div class="container" style="text-align: center;">  
+        <div class="col">
+            <div class="card text-white col-md-8 col-lg-6 col-xl-5">
+                <h1 class="card-header text-white">Reset Password</h1>
+                <lottie-player autoplay background="transparent" class="icon" loop speed="5" style="height: 300px;"
+                        src="https://assets9.lottiefiles.com/packages/lf20_rlhnbbev.json"></lottie-player>
+                <div class="py-3 text" style="padding: 0% 6%; text-align: center;">
+                    <a>Please Enter a new password to change the current one.</a>
+                </div><br><br><br><br><br>
+                <label for="password"><i class="bx bx-lock-alt"></i><b>Password</b></label>
+                <div class="card-body" >
+                    <form class="px-4 py-3" action="reset-password?token=<%= token %>" method="POST"> 
+                        <div class="form-group" style="text-align: center;">
+                            <a data-feather="key" href="" style="font-size: 40px;"></a>
+                            <label for="password">New Password</label>
+                            <div class="input-group">
+                                <input class="form-control input-sm text-center" id="password" name="password"
+                                    placeholder="New Password" type="password">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" style="background-color: #212226; color: white;">
+                                        <i class="fa fa-eye" onclick="revealhidePassword1()"></i>
+                                    </span>
+                                </div>
+                            </div><br>
+                            <div class="form-group" style="text-align: center;">
+                                <a data-feather="lock" href="" style="font-size: 40px;"></a>
+                                <label for="password">Confirm New Password</label>
+                                <div class="input-group">
+                                    <input class="form-control input-sm text-center" id="password2" name="password2"
+                                        placeholder="Confirm New Password" type="password">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" style="background-color: #212226; color: white;">
+                                            <i class="fa fa-eye" onclick="revealhidePassword2()"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div><br>  
+                            <div class="buttons">
+                                <button style="width: 15%;" type="button" onclick="location.href = 'ResetPass-Verification.ejs';" value="ResetPass" id="ResetPassButton">Reset Password</button>
+                              </div>
+                            <br><br><br>
+                        </div>
+                    </form>
+                </div>
+            </div>        
+        </div>
+    </div>
+    
+ 
+  
+      <!-- Custom Script -->
+      <script src="/public/js/ResetPass.js"></script>
+      <script src="/public/js/footer.js"></script>
+      <script src="/public/js/header.js"></script>
+      <%- include('../layouts/footer.ejs', {state: 'resetpass'}); %>
+    </body>
+  </html>
