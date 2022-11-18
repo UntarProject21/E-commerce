@@ -21,14 +21,14 @@ body {
 }
 
 .btn {
-    background-color: darkred;
-    border-color: darkred;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
     border-radius: 100px;
 }
 
 .btn:hover {
-    background-color: red;
-    border-color: red;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
 }
 
 .icon {
