@@ -4,7 +4,7 @@ body {
 }
 
 .nav-color {
-    background-color: #212226;
+    background-color: #ffffff;
 }
 
 .card {
@@ -12,7 +12,12 @@ body {
     margin: auto;
     text-align: center;
     border-radius: 20px;
-    background-color: #212226;
+    background-color: #ffffff;
+}
+
+.card .VerifyGif2{
+    width: 350px;
+    height: 350px;
 }
 
 .btn {
