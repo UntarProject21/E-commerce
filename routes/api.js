@@ -107,7 +107,7 @@ router.post("/register", async (req, res) => {
                                             if (result.length > 0) {
                                                 var token = randtoken.generate(20);
                                                 if (result[0].verify == 0) {
-                                                    let subject = "Account Verification - Nekoya";
+                                                    let subject = "Account Verification - ";
                                                     let content = `<p>Hello!!! Please click this link <a href="${config.url}/verify-mail?token=${token}">link</a> to verify your account!!! Thanks!!!</p>`;
                                                     var sent = mail.send(
                                                         req.body.email,
@@ -488,7 +488,7 @@ router.post("/request-reset-password", async (req, res) => {
                         message: "Sorry Your email is not registered in our system",
                     });
                 } else {
-                    let subject = "Reset Password - Nekoya";
+                    let subject = "Reset Password";
                     let content = `<p>Hello!!! Please click this link <a href="${config.url}/reset-password?token=${response[0].token}">link</a> to reset your account password!!! Thanks!!!</p>`;
                     var sent = mail.send(
                         req.body.email,
