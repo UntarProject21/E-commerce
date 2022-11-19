@@ -53,9 +53,24 @@
           </li>
         </div>
         <li class="icons d-flex">
-          <a href="login.ejs" class="icon">
-            <i class="bx bx-user"></i>
-          </a>
+          <span class="navbar-nav my-2 my-lg-0 text-white">
+            <div class="my-4">
+                <% if(loggedIn == "true") { %>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-success mt-auto mb-auto mr-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="transaction.html">Transaction</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.ejs">Logout</a>
+                        </div>
+                    </div>
+                <% } else { %>
+                    <a href="login.ejs"><button class="btn btn-outline-success mt-auto mb-auto mr-3" type="button">Login</button></a>
+                <% } %>
+            </div>
+          </span>
           <a href="wishlist.ejs" class="icon">
             <i class="bx bx-heart"></i>
           </a>
@@ -64,6 +79,25 @@
           </a>
         </li>
       </ul>
+
+      <span class="navbar-nav my-2 my-lg-0 text-white">
+        <div class="my-4">
+            <% if(loggedIn == "true") { %>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-success mt-auto mb-auto mr-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/transaction">Transaction</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/logout">Logout</a>
+                    </div>
+                </div>
+            <% } else { %>
+                <a href="/login"><button class="btn btn-outline-success mt-auto mb-auto mr-3" type="button">Login</button></a>
+            <% } %>
+        </div>
+      </span>
 
       <div class="search-box-ggwp">
         <div class="input-group mb-3">
