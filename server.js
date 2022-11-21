@@ -19,6 +19,16 @@ app.listen(port, () => {
 })
 app.use('/', indexRouter);
 
+
+
+
+
+
+
+
+
+
+
 /*
 app.get('/', (req, res) => {
     res.render('index', { foo: 'FOO' });
