@@ -13,7 +13,7 @@ router.get('/cart', function(req, res) {
   });
 
 router.get('/contactus', function(req, res) {
-    res.render('pages/Aboutus');
+    res.render('pages/contactus');
   });
 
 router.get('/FAQ', function(req, res) {
