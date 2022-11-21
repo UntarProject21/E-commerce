@@ -22,28 +22,26 @@
   </div>
   <div class="navigation">
     <div class="nav-center container d-flex">
-      <img
-        src="./images/logo_keos.png"
-        alt="AwesomeImage"
-        height="80"
-        width="110"
-        class="logo-keos"
+      <img 
+      src="./images/logo_keos.png" 
+      alt="AwesomeImage" 
+      height="80" 
+      width="110" 
+      class="logo-keos"
       />
-      <ul class="nav-list d-flex">
+      <ul class="nav-list d-flex" style="align-items:start">
         <li class="nav-item">
           <a href="index" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
           <a href="product" class="nav-link">Mall</a>
         </li>
-        <div class="harm-nav">
+        <div class="harm-nav" >
           <li class="nav-item">
             <a href="Aboutus" class="nav-link" title="About Us">About</a>
           </li>
           <li class="nav-item">
-            <a href="contactus" class="nav-link" title="Contact Us"
-              >Contact</a
-            >
+            <a href="contactus" class="nav-link" title="Contact Us">Contact</a>
           </li>
           <li class="nav-item">
             <a href="FAQ" class="nav-link" title="Contact Us">FAQ</a>
@@ -51,27 +49,11 @@
           <li class="nav-item">
             <a href="T&C" class="nav-link" title="Contact Us">T&C</a>
           </li>
-        </div>
+        </div> 
         <li class="icons d-flex">
-          <!-- <span class="navbar-nav my-2 my-lg-0 text-white">
-            <div class="my-4">
-                <%# if(loggedIn == "true") { %>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-success mt-auto mb-auto mr-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="transaction.html">Transaction</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="index">Logout</a>
-                        </div>
-                    </div>
-                <%# } else { %>
-                    <a href="login"><button class="btn btn-outline-success mt-auto mb-auto mr-3" type="button">Login</button></a>
-                <%# } %>
-            </div>
-          </span> -->
-          <a href="/login"><button class="btn btn-outline-success mt-auto mb-auto mr-3" type="button">Login</button></a>
+          <a href="login" class="icon">
+            <i class="bx bx-user"></i>
+          </a>
           <a href="wishlist" class="icon">
             <i class="bx bx-heart"></i>
           </a>
@@ -80,6 +62,35 @@
           </a>
         </li>
       </ul>
+
+      <div class="search-box-ggwp">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search">
+          <div class="input-group-append">
+            <button class="btn btn-primary">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="icons d-flex">
+        <a href="login" class="icon" title="Login">
+          <i class="bx bx-user"></i>
+        </a>
+        <a href="wishlist" class="icon" title="Wishlist">
+          <i class="bx bx-heart"></i>
+        </a>
+        <a href="cart" class="icon" title="Shopping Cart">
+          <i class="bx bx-cart"></i>  
+        </a>
+      </div>
+      <div class="hamburger">
+        <i class="bx bx-menu-alt-left"></i>
+      </div>
+      
+    </div>
+  </div>
 
       <!-- <span class="navbar-nav my-2 my-lg-0 text-white">
         <div class="my-4">
@@ -99,34 +110,6 @@
             <%# } %>
         </div>
       </span> -->
-
-      <div class="search-box-ggwp">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search" />
-          <div class="input-group-append">
-            <button class="btn btn-primary">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="icons d-flex">
-        <a href="login" class="icon" title="Login">
-          <i class="bx bx-user"></i>
-        </a>
-        <a href="wishlist" class="icon" title="Wishlist">
-          <i class="bx bx-heart"></i>
-        </a>
-        <a href="cart" class="icon" title="Shopping Cart">
-          <i class="bx bx-cart"></i>
-        </a>
-      </div>
-      <div class="hamburger">
-        <i class="bx bx-menu-alt-left"></i>
-      </div>
-    </div>
-  </div>
 
   <div class="hero">
     <div class="glide" id="glide_1">
