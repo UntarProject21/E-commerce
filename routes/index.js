@@ -104,11 +104,11 @@ router.get("/verify-mail", (req, res) => {
     });
 });
 
-router.route("/bag")
+router.route("/cart")
     .get((req, res) => {
         auth.session_converter(req.cookies.session_token).then((key) => {
             if (key != null) {
-                res.render("pages/bag", {
+                res.render("pages/cart", {
                     loggedIn: 'true'
                 });
             } else {
@@ -120,7 +120,7 @@ router.route("/bag")
         auth.session_converter(req.cookies.session_token).then((key) => {
             console.log(key);
             if (key != null) {
-                controller.bag(
+                controller.cart(
                     req.body.firstName,
                     req.body.lastName,
                     req.body.phoneNumber,
@@ -242,14 +242,14 @@ router.get(["/product", "/product/:id"], (req, res) => {
     });
 });
 
-router.get("/bag", (req, res) => {
+router.get("/cart", (req, res) => {
     auth.session_converter(req.cookies.session_token).then((key) => {
         if (key != null) {
-            res.render("pages/bag", {
+            res.render("pages/cart", {
                 loggedIn: 'true'
             });
         } else {
-            res.render("pages/bag", {
+            res.render("pages/cart", {
                 loggedIn: 'false'
             });
         }
@@ -279,28 +279,28 @@ router.get("/transaction", (req, res) => {
     });
 });
 
-router.get("/about-us", (req, res) => {
+router.get("/Aboutus", (req, res) => {
     auth.session_converter(req.cookies.session_token).then((key) => {
         if (key != null) {
-            res.render("pages/about-us", {
+            res.render("pages/Aboutus", {
                 loggedIn: 'true'
             });
         } else {
-            res.render("pages/about-us", {
+            res.render("pages/Aboutus", {
                 loggedIn: 'false'
             });
         }
     });
 });
 
-router.get("/faq", (req, res) => {
+router.get("/FAQ", (req, res) => {
     auth.session_converter(req.cookies.session_token).then((key) => {
         if (key != null) {
-            res.render("pages/faq", {
+            res.render("pages/FAQ", {
                 loggedIn: 'true'
             });
         } else {
-            res.render("pages/faq", {
+            res.render("pages/FAQ", {
                 loggedIn: 'false'
             });
         }

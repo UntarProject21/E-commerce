@@ -5,15 +5,6 @@ const port = 3000;
 
 app.set('view engine', 'ejs')
 app.use( express.static( "public" ) );
-/*
-app.get('/', (req, res) => {
-  res.render('pages/index.ejs')
-})
-
-app.get('/', (req, res) => {
-	res.render('pages/Aboutus.ejs')
-})
-*/
 
   
 // about page
