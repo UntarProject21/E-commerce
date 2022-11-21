@@ -4,6 +4,7 @@
   "description": "KeosYaro Website",
   "main": "server.js",
   "scripts": {
+    "dev":"npm i & nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
