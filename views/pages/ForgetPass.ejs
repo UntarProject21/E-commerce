@@ -3,35 +3,28 @@
   <%- include('../layouts/header.ejs', {title: 'Forget Password' , state: 'forgetpass' }); %>
   <body>
     <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'forgetpass'}); %> 
-      <div class="col">
-          <div class="card text-white col-md-8 col-lg-6 col-xl-5"><br><br>
-              <h1 class="card-header text-white" style="text-align: center;">Forgot Password</h1>
-              <div class="py-3 text" style="padding: 2.5% 10%; text-align: center;">
-                  <a>Enter your email to receive a link to reset your password.</a>
-              </div>
-              <div class="card-body" style="text-align: center;">
-                <label for="email"><i class="bx bx-envelope"></i> <b>Email</b></label><br>
-                  <form class="px-4 py-3" action="forgot-password" method="POST">
-                      <div class="form-group" style="text-align: center;">
-                          <a data-feather="mail" href="" style="font-size: 40px;"></a>
-                          <label for="exampleDropdownFormEmail1">Email</label>
-                          <input class="form-control input-sm text-center"
-                              placeholder="Email address" type="email" id="email" name="email">
-                      </div>
-                      <div class="buttons"><br>
-                        <div class="forgetsent" style="text-align: center;">
-                          <button style="width: 10%;" type="button" onclick="location.href = 'ForgetPass-Verification.ejs';" value="send" id="ForgetVerifyButton">Send</button>
-                        </div>
-                      </div>
-                      <br><br>
-                      <div class="hoverforgot-1" style="text-align: center;">
-                        <a href="login.ejs" style="color: blue">Or Return to Log In</a><br><br>
-                        <br><br>
-                      </div>
-                  </form>
-              </div>
+    <div class="container" >
+      <div class="ForgetPass-form">
+        <form action="" >
+          <div id="forgetpass" style="text-align:center ;">
+            <h1 class="card-header text-white" style="text-align: center;">Forgot Password</h1>
+            <p>
+              Return to login ?
+              <a href="login" >here</a>.
+            </p>     
+            <div class="text" style="text-align: center; color: black;">
+              <p>Enter your email to receive a link to reset your password.</p>
+            </div><br>
+            <label for="email"><i class="bx bx-envelope"></i> <b>Email</b></label><br><br>
+            <input type="text" placeholder="Email Address" id="email" class="email-password" required /><br>
           </div>
+          
+          <div class="ForgetButtons">
+            <button type="button" onclick="location.href = 'ForgetPass-verification';" value="forgetpass" id="ForgetpassButton">send</button>
+          </div>
+        </form>
       </div>
+    </div>
  
     
     <!-- <script src="/js/ForgetPass.js"></script> -->
