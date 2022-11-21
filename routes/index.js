@@ -104,11 +104,11 @@ router.get("/verify-mail", (req, res) => {
     });
 });
 
-router.route("/checkout")
+router.route("/bag")
     .get((req, res) => {
         auth.session_converter(req.cookies.session_token).then((key) => {
             if (key != null) {
-                res.render("pages/checkout", {
+                res.render("pages/bag", {
                     loggedIn: 'true'
                 });
             } else {
@@ -120,7 +120,7 @@ router.route("/checkout")
         auth.session_converter(req.cookies.session_token).then((key) => {
             console.log(key);
             if (key != null) {
-                controller.checkout(
+                controller.bag(
                     req.body.firstName,
                     req.body.lastName,
                     req.body.phoneNumber,
