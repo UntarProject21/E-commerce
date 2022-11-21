@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../layouts/header.ejs', {title: 'T&C' , state: 'T&C' }); %>
+  <%- include('../layouts/header', {title: 'T&C' , state: 'T&C' }); %>
   <body>
-    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'T&C'}); %> 
+    <%- include('../layouts/navbar', {types: 'v2', state: 'T&C'}); %> 
 
     <div class="container-term">
         <div class="term-text">
@@ -85,6 +85,6 @@
 <br>
     <script src="/js/footer.js"></script>
     <script src="/js/header.js"></script>
-    <%- include('../layouts/footer.ejs', {state: 'shipping'}); %>
+    <%- include('../layouts/footer', {state: 'shipping'}); %>
   </body>
 </html>

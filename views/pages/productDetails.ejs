@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../layouts/header.ejs', {title: 'Product Details' , state: 'productDetails' }); %>
+  <%- include('../layouts/header', {title: 'Product Details' , state: 'productDetails' }); %>
   <body>
-    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'productDetails'}); %> 
+    <%- include('../layouts/navbar', {types: 'v2', state: 'productDetails'}); %> 
     <!-- Product Details -->
     <section class="section product-detail">
       <div class="details container">
@@ -18,8 +18,8 @@
           <div class="price">$50</div>
           <p>Size : L</p><br>
           <form class="form">
-            <a href="cart.ejs" class="addCart"><i class="bx bx-cart"></i> Add To Cart</a><br><br>
-            <a href="wishlist.ejs" class="addWish"><i class="bx bx-heart"></i>Add To Wishlist</a>
+            <a href="cart" class="addCart"><i class="bx bx-cart"></i> Add To Cart</a><br><br>
+            <a href="wishlist" class="addWish"><i class="bx bx-heart"></i>Add To Wishlist</a>
           </form>
             <h3>Product Details</h3>
           <p>
@@ -47,6 +47,6 @@
         });
       });
     </script>
-    <%- include('../layouts/footer.ejs', {state: 'productDetails'}); %>
+    <%- include('../layouts/footer', {state: 'productDetails'}); %>
   </body>
 </html>

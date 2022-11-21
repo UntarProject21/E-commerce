@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../layouts/header.ejs', {title: 'Product' , state: 'product' }); %>
+  <%- include('../layouts/header', {title: 'Product' , state: 'product' }); %>
   <body>
-    <%- include('../layouts/navbar.ejs', {types: 'v3', state: 'product'}); %> 
+    <%- include('../layouts/navbar', {types: 'v3', state: 'product'}); %> 
     <!-- All Products -->
     <section class="section all-products" id="products">
       <div class="top container">
@@ -19,7 +19,7 @@
       <div class="product-center container">
 
         <div class="product-item">
-          <a href="productDetails.ejs" class="product-thumb">
+          <a href="productDetails" class="product-thumb">
             <img src="/images/product-6.jpg" alt="" />
           </a>
           <div class="product-info">
@@ -236,6 +236,6 @@
       
       
     </script>
-    <%- include('../layouts/footer.ejs', {state: 'product'}); %>
+    <%- include('../layouts/footer', {state: 'product'}); %>
   </body>
 </html>

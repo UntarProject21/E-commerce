@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../layouts/header.ejs', {title: 'Wishlist' , state: 'wishlist' }); %>
+  <%- include('../layouts/header', {title: 'Wishlist' , state: 'wishlist' }); %>
   <body>
-    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'wishlist'}); %>
+    <%- include('../layouts/navbar', {types: 'v2', state: 'wishlist'}); %>
     <div class="container-title">
       <h1>wishlist</h1>
       <div class="container-sub-title">
@@ -93,6 +93,6 @@
     <script src="/js/wishlist.js"></script>
     <script src="/js/footer.js"></script>
     <script src="/js/header.js"></script>
-    <%- include('../layouts/footer.ejs', {state: 'wishlist'}); %>
+    <%- include('../layouts/footer', {state: 'wishlist'}); %>
   </body>
 </html>

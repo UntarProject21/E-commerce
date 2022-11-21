@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../layouts/header.ejs', {title: 'Reset Password' , state: 'resetpass' }); %>
+  <%- include('../layouts/header', {title: 'Reset Password' , state: 'resetpass' }); %>
   <body>
-    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'resetpass'}); %>
+    <%- include('../layouts/navbar', {types: 'v2', state: 'resetpass'}); %>
 
 
     <br><br>
@@ -44,7 +44,7 @@
                                 </div>
                             </div><br>  
                             <div class="buttons">
-                                <button style="width: 15%;" type="button" onclick="location.href = 'ResetPass-Verification.ejs';" value="ResetPass" id="ResetPassButton">Reset Password</button>
+                                <button style="width: 15%;" type="button" onclick="location.href = 'ResetPass-Verification';" value="ResetPass" id="ResetPassButton">Reset Password</button>
                               </div>
                             <br><br><br>
                         </div>
@@ -60,6 +60,6 @@
       <script src="/public/js/ResetPass.js"></script>
       <script src="/public/js/footer.js"></script>
       <script src="/public/js/header.js"></script>
-      <%- include('../layouts/footer.ejs', {state: 'resetpass'}); %>
+      <%- include('../layouts/footer', {state: 'resetpass'}); %>
     </body>
   </html>

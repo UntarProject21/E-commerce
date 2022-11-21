@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../layouts/header.ejs', {title: 'Shipping' , state: 'shipping' }); %>
+  <%- include('../layouts/header', {title: 'Shipping' , state: 'shipping' }); %>
   <body>
-    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'shipping'}); %> 
+    <%- include('../layouts/navbar', {types: 'v2', state: 'shipping'}); %> 
 
         <div class="col-lg-12 text-center">
             <h2 class="title">SHIPPING</h2>
@@ -62,6 +62,6 @@
       <script src="/js/shipping.js"></script>
       <script src="/js/footer.js"></script>
       <script src="/js/header.js"></script>
-    <%- include('../layouts/footer.ejs', {state: 'shipping'}); %>
+    <%- include('../layouts/footer', {state: 'shipping'}); %>
   </body>
 </html>

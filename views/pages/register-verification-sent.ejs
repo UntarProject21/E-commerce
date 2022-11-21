@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../layouts/header.ejs', {title: 'Register Verification Sent' , state: 'registerverifsent' }); %>
+  <%- include('../layouts/header', {title: 'Register Verification Sent' , state: 'registerverifsent' }); %>
   <body>
-    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'registerverifsent'}); %>
+    <%- include('../layouts/navbar', {types: 'v2', state: 'registerverifsent'}); %>
     <div class="container" style="text-align: center">
         <div data-aos="fade-in" data-aos-delay="500" class="container">
             <div class="col">
@@ -25,6 +25,6 @@
       <!-- Custom Script -->
       <script src="/public/js/footer.js"></script>
       <script src="/public/js/header.js"></script>
-      <%- include('../layouts/footer.ejs', {state: 'registerverifsent'}); %>
+      <%- include('../layouts/footer', {state: 'registerverifsent'}); %>
     </body>
   </html>
