@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const ejs = require("ejs");
 const port = 3000;
+const indexRouter = require('./routes/index');
 
 app.set('view engine', 'ejs')
 app.use( express.static( "public" ) );
@@ -9,15 +10,14 @@ app.use( express.static( "public" ) );
   
 // about page
 app.get('/', function(req, res) {
-  res.render('pages/register.ejs');
+  res.render('pages/index');
 });
-
 
 
 app.listen(port, () => {
   console.log(`App listening at port ${port}`)
 })
-
+app.use('/', indexRouter);
 
 /*
 app.get('/', (req, res) => {

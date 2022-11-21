@@ -4,6 +4,16 @@ const router = express.Router();
 const auth = require("../auth/auth");
 let controller = require("../controllers/controllers");
 
+router.get('/Aboutus', function(req, res) {
+    res.render('pages/Aboutus');
+  });
+
+router.get('/FAQ', function(req, res) {
+    res.render('pages/FAQ');
+  });
+
+
+/*
 router.get("/", (req, res) => {
     auth.session_converter(req.cookies.session_token).then((key) => {
         if (key != null) {
@@ -306,5 +316,5 @@ router.get("/FAQ", (req, res) => {
         }
     });
 });
-
+*/
 module.exports = router;

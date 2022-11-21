@@ -18,7 +18,7 @@ try {
     console.log("No config file found");
     process.exit(0);
 }
-
+/*
 router.get("/getproducts", (req, res) => {
     const conn = db.connect();
     conn.execute("SELECT * FROM `products`", [], function (err, results) {
@@ -835,6 +835,6 @@ router.get("/subscribe", (req, res) => {
         );
     }
 });
-
+*/
 
 module.exports = router;

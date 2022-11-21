@@ -1,5 +1,6 @@
 const db = require("../modules/db");
 
+/*
 function session_decode(session) {
     let decode;
     try {
@@ -105,3 +106,4 @@ module.exports = {
     session_remove,
     auth_checker
 };
+*/
