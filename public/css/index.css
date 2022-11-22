@@ -180,7 +180,6 @@ Hero Media Query
   .hero .glide__slides {
     margin: 0;
     padding: 0 3rem;
-    display: none;
   }
 
   .hero .left h1 {
