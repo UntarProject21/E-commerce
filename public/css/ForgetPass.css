@@ -125,7 +125,7 @@ li {
 }
 
 @media only screen and (max-width: 768px) {
-  .login-form form .email-password {
+  .ForgetPass-form form .email-password {
     width: 26rem;
     border: 0.0625rem solid #ccc;
     outline: none;
