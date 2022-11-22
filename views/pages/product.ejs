@@ -235,27 +235,8 @@
       </div>
     </section>
     <br>
-
     
-    <script>
-
-      let loadMoreBtn = document.querySelector('#load-more');
-      let currentItem = 8;
-      
-      loadMoreBtn.onclick = () =>{
-        let boxes = [...document.querySelectorAll('.section .product-center .product-item')];
-        for (var i = currentItem; i < currentItem + 8; i++){
-            boxes[i].style.display = 'inline-block';
-        }
-        currentItem += 8;
-      
-        if(currentItem >= boxes.length){
-            loadMoreBtn.style.display = 'none';
-        }
-      }
-      
-      
-    </script>
+    </script> -->
     <%- include('../layouts/footer', {state: 'product'}); %>
   </body>
 </html>

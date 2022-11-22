@@ -1,108 +1,132 @@
 <!-- Footer -->
 <footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="footer-col">
-                <h4>INFORMATION</h4>
-                <ul>
-                    <li><a href="Aboutus">about us</a></li>
-                    <li><a href="contactus">contact us</a></li>
-                    <li><a href="T&C">terms and conditions</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>GET HELP</h4>
-                <ul>
-                    <li><a href="FAQ">FAQ</a></li>
-                    <li><a href="shipping">shipping</a></li>
-                </ul>
-            </div>
-            <div class="footer-col"></div>
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>INFORMATION</h4>
+        <ul>
+          <li><a href="Aboutus">about us</a></li>
+          <li><a href="contactus">contact us</a></li>
+          <li><a href="T&C">terms and conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>GET HELP</h4>
+        <ul>
+          <li><a href="FAQ">FAQ</a></li>
+          <li><a href="shipping">shipping</a></li>
+        </ul>
+      </div>
+      <div class="footer-col"></div>
 
-            <div class="footer-col">
-                <h4>FOLLOW US</h4>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/untarjakarta"><i class="bx bxl-facebook"></i></a>
-                    <a href="https://www.instagram.com/untarjakarta/"><i class="bx bxl-instagram-alt"></i></a>
-                    <a href="https://github.com/Testfirsthehehe"><i class="bx bxl-github"></i></a>
-                    <a href="https://twitter.com/untarjakarta"><i class="bx bxl-twitter"></i></a>
-                    <a href="https://www.youtube.com/UniversitasTarumanagara"><i class="bx bxl-youtube"></i></a>
-                </div>
-            </div>
+      <div class="footer-col">
+        <h4>FOLLOW US</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/untarjakarta"
+            ><i class="bx bxl-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/untarjakarta/"
+            ><i class="bx bxl-instagram-alt"></i
+          ></a>
+          <a href="https://github.com/Testfirsthehehe"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a href="https://twitter.com/untarjakarta"
+            ><i class="bx bxl-twitter"></i
+          ></a>
+          <a href="https://www.youtube.com/UniversitasTarumanagara"
+            ><i class="bx bxl-youtube"></i
+          ></a>
         </div>
+      </div>
     </div>
-    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up"
-            viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
-        </svg>
-    </button>
-    <div class="bottom-footer">
-        <div class="container">
-            <p>
-                © NO copyright 2022 <a href="#" style="color: blue">KeosYaro.Inc</a>
-            </p>
-        </div>
+  </div>
+  <button
+    type="button"
+    class="btn btn-danger btn-floating btn-lg"
+    id="btn-back-to-top"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="currentColor"
+      class="bi bi-arrow-up"
+      viewBox="0 0 16 16"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
+      />
+    </svg>
+  </button>
+  <div class="bottom-footer">
+    <div class="container">
+      <p>
+        © NO copyright 2022 <a href="#" style="color: blue">KeosYaro.Inc</a>
+      </p>
     </div>
+  </div>
 </footer>
 
 <script src="/js/footer.js"></script>
 <script src="/js/header.js"></script>
 
 <% if(state=="index" ) { %>
-    <script src="/js/plugins/bootstrap.min.js"></script>
-    <script src="/js/plugins/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
-    <script src="/js/slider.js"></script>
-    <script src="/js/index.js"></script>
-    <% } else if(state=="cart" ) { %>
-        <script src="/js/cart.js"></script>
-        <% } else if(state=="FAQ" ) { %>
-            <script src="/js/FAQ.js"></script>
-            <% } else if(state=="login" ) { %>
-                <script src="/js/login.js"></script>
-                <% } else if(state=="product" ) { %>
-                    <script src="/js/product.js"></script>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                    <script>
-                        let loadMoreBtn = document.querySelector("#load-more");
-                        let currentItem = 8;
+<script src="/js/plugins/bootstrap.min.js"></script>
+<script src="/js/plugins/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="/js/slider.js"></script>
+<script src="/js/index.js"></script>
+<% } else if(state=="cart" ) { %>
+<script src="/js/cart.js"></script>
+<% } else if(state=="FAQ" ) { %>
+<script src="/js/FAQ.js"></script>
+<% } else if(state=="login" ) { %>
+<script src="/js/login.js"></script>
+<% } else if(state=="product" ) { %>
+<script src="/js/product.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  let loadMoreBtn = document.querySelector("#load-more");
+  let currentItem = 8;
 
-                        loadMoreBtn.onclick = () => {
-                            let boxes = [
-                                ...document.querySelectorAll(".section .product-center .product-item"),
-                            ];
-                            for (var i = currentItem; i < currentItem + 8; i++) {
-                                boxes[i].style.display = "inline-block";
-                            }
-                            currentItem += 8;
+  loadMoreBtn.onclick = () => {
+    let boxes = [
+      ...document.querySelectorAll(".section .product-center .product-item"),
+    ];
+    for (var i = currentItem; i < currentItem + 8; i++) {
+      boxes[i].style.display = "inline-block";
+    }
+    currentItem += 8;
 
-                            if (currentItem >= boxes.length) {
-                                loadMoreBtn.style.display = "none";
-                            }
-                        };
-                    </script>
-                    <% } else if(state=="productDetails" ) { %>
-                        <script src="/js/productDetails.js"></script>
-                        <script src="https://code.jquery.com/jquery-3.4.0.min.js"
-                            integrity="sha384-JUMjoW8OzDJw4oFpWIB2Bu/c6768ObEthBMVSiIx4ruBIEdyNSUQAjJNFqT5pnJ6"
-                            crossorigin="anonymous"></script>
-                        <script src="./js/zoomsl.min.js"></script>
-                        <script>
-                            $(function () {
-                                console.log("hello");
-                                $("#zoom").imagezoomsl({
-                                    zoomrange: [4, 4],
-                                });
-                            });
-                        </script>
-                        <% } else if(state=="shipping" ) { %>
-                            <script src="/js/shipping.js"></script>
-                            <% } else if(state=="signup" ) { %>
-                                <script src="/js/signup.js"></script>
-                                <% } else if(state=="wishlist" ) { %>
-                                    <script src="/js/wishlist.js"></script>
-                                    <% } %>
+    if (currentItem >= boxes.length) {
+      loadMoreBtn.style.display = "none";
+    }
+  };
+</script>
+<% } else if(state=="productDetails" ) { %>
+<script src="/js/productDetails.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.0.min.js"
+  integrity="sha384-JUMjoW8OzDJw4oFpWIB2Bu/c6768ObEthBMVSiIx4ruBIEdyNSUQAjJNFqT5pnJ6"
+  crossorigin="anonymous"
+></script>
+<script src="./js/zoomsl.min.js"></script>
+<script>
+  $(function () {
+    console.log("hello");
+    $("#zoom").imagezoomsl({
+      zoomrange: [4, 4],
+    });
+  });
+</script>
+<% } else if(state=="shipping" ) { %>
+<script src="/js/shipping.js"></script>
+<% } else if(state=="signup" ) { %>
+<script src="/js/signup.js"></script>
+<% } else if(state=="wishlist" ) { %>
+<script src="/js/wishlist.js"></script>
+<% } %>
