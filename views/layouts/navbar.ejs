@@ -1,334 +1,333 @@
 <% if(types == "v1") { %>
-  <!-- Preloader -->
-  <!-- Benerin display jgn lupa -->
-  <div class="preloader" style="display: none">
-    <img src="./images/loading.gif" />
+<!-- Preloader -->
+<!-- Benerin display jgn lupa -->
+<div class="preloader" style="display: none">
+  <img src="./images/loading.gif" />
+</div>
+<!-- Header -->
+<header id="header" class="header">
+  <!-- Navigation -->
+  <div class="top-nav">
+    <div class="container d-flex">
+      <marquee>
+        <p><b>Welcome To The Cheapest, Easiest, and Trendiest Shop</b></p>
+      </marquee>
+      <ul class="d-flex">
+        <li><a href="FAQ.ejs" title="Frequently Asked Question">FAQ</a></li>
+        <li><a href="T&C.ejs" title="Terms & Conditions">T&C</a></li>
+        <li><a href="../pages/Aboutus.ejs" title="About Us">About</a></li>
+        <li><a href="contactus.ejs" title="Contact Us">Contact</a></li>
+      </ul>
+    </div>
   </div>
-  <!-- Header -->
-  <header id="header" class="header">
-    <!-- Navigation -->
-    <div class="top-nav">
-      <div class="container d-flex">
-        <marquee>
-          <p><b>Welcome To The Cheapest, Easiest, and Trendiest Shop</b></p>
-        </marquee>
-        <ul class="d-flex">
-          <li><a href="FAQ.ejs" title="Frequently Asked Question">FAQ</a></li>
-          <li><a href="T&C.ejs" title="Terms & Conditions">T&C</a></li>
-          <li><a href="../pages/Aboutus.ejs" title="About Us">About</a></li>
-          <li><a href="contactus.ejs" title="Contact Us">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="navigation">
-      <div class="nav-center container d-flex">
-        <img
-          src="./images/logo_keos.png"
-          alt="AwesomeImage"
-          height="80"
-          width="110"
-          class="logo-keos"
-        />
-        <ul class="nav-list d-flex">
+  <div class="navigation">
+    <div class="nav-center container d-flex">
+      <img
+        src="./images/logo_keos.png"
+        alt="AwesomeImage"
+        height="80"
+        width="110"
+        class="logo-keos"
+      />
+      <ul class="nav-list d-flex">
+        <li class="nav-item">
+          <a href="index.ejs" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="product.ejs" class="nav-link">Mall</a>
+        </li>
+        <div class="harm-nav">
           <li class="nav-item">
-            <a href="index.ejs" class="nav-link">Home</a>
+            <a href="Aboutus.ejs" class="nav-link" title="About Us">About</a>
           </li>
           <li class="nav-item">
-            <a href="product.ejs" class="nav-link">Mall</a>
+            <a href="contactus.ejs" class="nav-link" title="Contact Us"
+              >Contact</a
+            >
           </li>
-          <div class="harm-nav">
-            <li class="nav-item">
-              <a href="Aboutus.ejs" class="nav-link" title="About Us">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="contactus.ejs" class="nav-link" title="Contact Us"
-                >Contact</a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="FAQ.ejs" class="nav-link" title="Contact Us">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a href="T&C.ejs" class="nav-link" title="Contact Us">T&C</a>
-            </li>
-          </div>
-          <li class="icons d-flex">
-            <span class="navbar-nav my-2 my-lg-0 text-white">
-              <div class="my-4">
-                  <% if(loggedIn == "true") { %>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-outline-success mt-auto mb-auto mr-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <i class="fa fa-user" aria-hidden="true"></i>
-                          </button>
-                          <div class="dropdown-menu">
-                              <a class="dropdown-item" href="transaction.html">Transaction</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="index.ejs">Logout</a>
-                          </div>
-                      </div>
-                  <% } else { %>
-                      <a href="login.ejs"><button class="btn btn-outline-success mt-auto mb-auto mr-3" type="button">Login</button></a>
-                  <% } %>
-              </div>
-            </span>
-            <a href="wishlist.ejs" class="icon">
-              <i class="bx bx-heart"></i>
-            </a>
-            <a href="cart.ejs" class="icon">
-              <i class="bx bx-cart"></i>
-            </a>
+          <li class="nav-item">
+            <a href="FAQ.ejs" class="nav-link" title="Contact Us">FAQ</a>
           </li>
-        </ul>
-  
-        <span class="navbar-nav my-2 my-lg-0 text-white">
-          <div class="my-4">
-              <% if(loggedIn == "true") { %>
-                  <div class="btn-group">
-                      <button type="button" class="btn btn-outline-success mt-auto mb-auto mr-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fa fa-user" aria-hidden="true"></i>
-                      </button>
-                      <div class="dropdown-menu">
-                          <a class="dropdown-item" href="/transaction">Transaction</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="/logout">Logout</a>
-                      </div>
-                  </div>
-              <% } else { %>
-                  <a href="/login"><button class="btn btn-outline-success mt-auto mb-auto mr-3" type="button">Login</button></a>
-              <% } %>
-          </div>
-        </span>
-  
-        <div class="search-box-ggwp">
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Search" />
-            <div class="input-group-append">
-              <button class="btn btn-primary">
-                <i class="fas fa-search"></i>
-              </button>
+          <li class="nav-item">
+            <a href="T&C.ejs" class="nav-link" title="Contact Us">T&C</a>
+          </li>
+        </div>
+        <li class="icons d-flex">
+          <span class="navbar-nav my-2 my-lg-0 text-white">
+            <div class="my-4">
+                <% if(loggedIn == "true") { %>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-success mt-auto mb-auto mr-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="transaction.html">Transaction</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.ejs">Logout</a>
+                        </div>
+                    </div>
+                <% } else { %>
+                    <a href="login.ejs"><button class="btn btn-outline-success mt-auto mb-auto mr-3" type="button">Login</button></a>
+                <% } %>
             </div>
-          </div>
-        </div>
-  
-        <div class="icons d-flex">
-          <a href="login.ejs" class="icon" title="Login">
-            <i class="bx bx-user"></i>
-          </a>
-          <a href="wishlist.ejs" class="icon" title="Wishlist">
+          </span>
+          <a href="wishlist.ejs" class="icon">
             <i class="bx bx-heart"></i>
           </a>
-          <a href="cart.ejs" class="icon" title="Shopping Cart">
+          <a href="cart.ejs" class="icon">
             <i class="bx bx-cart"></i>
           </a>
+        </li>
+      </ul>
+
+      <span class="navbar-nav my-2 my-lg-0 text-white">
+        <div class="my-4">
+            <% if(loggedIn == "true") { %>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-success mt-auto mb-auto mr-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/transaction">Transaction</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/logout">Logout</a>
+                    </div>
+                </div>
+            <% } else { %>
+                <a href="/login"><button class="btn btn-outline-success mt-auto mb-auto mr-3" type="button">Login</button></a>
+            <% } %>
         </div>
-        <div class="hamburger">
-          <i class="bx bx-menu-alt-left"></i>
-        </div>
-      </div>
-    </div>
-  
-    <div class="hero">
-      <div class="glide" id="glide_1">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide">
-              <div class="center">
-                <div class="left">
-                  <span class="">New Inspiration 2022</span>
-                  <h1 class="">NEW COLLECTION!</h1>
-                  <p>Trending from men's and women's style collection</p>
-                  <a href="product.ejs" class="hero-btn">SHOP NOW</a>
-                </div>
-                <div class="right">
-                  <img class="img1" src="/images/hero-1.png" alt="" />
-                </div>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="center">
-                <div class="left">
-                  <span>New Inspiration 2022</span>
-                  <h1>THE PERFECT MATCH!</h1>
-                  <p>Trending from men's and women's style collection</p>
-                  <a href="product.ejs" class="hero-btn">SHOP NOW</a>
-                </div>
-                <div class="right">
-                  <img class="img2" src="/images/hero-2.png" alt="" />
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
-  <% } else if (types == "v2") { %>
-  <header id="header" class="header">
-    <!-- Header -->
-    <!-- Navigation -->
-    <div class="top-nav">
-      <div class="container d-flex">
-        <marquee>
-          <p><b>Welcome To The Cheapest, Easiest, and Trendiest Shop</b></p>
-        </marquee>
-        <ul class="d-flex">
-          <li><a href="FAQ.ejs" title="Frequently Asked Question">FAQ</a></li>
-          <li><a href="T&C.ejs" title="Terms & Conditions">T&C</a></li>
-          <li><a href="Aboutus.ejs" title="About Us">About</a></li>
-          <li><a href="contactus.ejs" title="Contact Us">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="navigation">
-      <div class="nav-center container d-flex">
-        <img
-          src="./images/logo_keos.png"
-          alt="AwesomeImage"
-          height="80"
-          width="110"
-          class="logo-keos"
-        />
-        <ul class="nav-list d-flex">
-          <li class="nav-item">
-            <a href="index.ejs" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="product.ejs" class="nav-link">Mall</a>
-          </li>
-          <div class="harm-nav">
-            <li class="nav-item">
-              <a href="Aboutus.ejs" class="nav-link" title="About Us">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="contactus.ejs" class="nav-link" title="Contact Us"
-                >Contact</a>
-            </li>
-            <li class="nav-item">
-              <a href="FAQ.ejs" class="nav-link" title="FAQ">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a href="T&C.ejs" class="nav-link" title="T&C">T&C</a>
-            </li>
+      </span>
+
+      <div class="search-box-ggwp">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search" />
+          <div class="input-group-append">
+            <button class="btn btn-primary">
+              <i class="fas fa-search"></i>
+            </button>
           </div>
-          <li class="icons d-flex">
-            <a href="login.ejs" class="icon">
-              <i class="bx bx-user"></i>
-            </a>
-            <a href="wishlist.ejs" class="icon">
-              <i class="bx bx-heart"></i>
-            </a>
-            <a href="cart.ejs" class="icon">
-              <i class="bx bx-cart"></i>
-            </a>
-          </li>
-        </ul>
-  
-        <div class="icons d-flex">
-          <a href="login.ejs" class="icon" title="Login">
-            <i class="bx bx-user"></i>
-          </a>
-          <a href="wishlist.ejs" class="icon" title="Wishlist">
-            <i class="bx bx-heart"></i>
-          </a>
-          <a href="cart.ejs" class="icon" title="Shopping Cart">
-            <i class="bx bx-cart"></i>
-          </a>
-        </div>
-        <div class="hamburger">
-          <i class="bx bx-menu-alt-left"></i>
         </div>
       </div>
-    </div>
-  </header>
-  <% } else if (types == "v3") { %>
-  <!-- Header -->
-  <header id="header" class="header">
-    <!-- Navigation -->
-    <div class="top-nav">
-      <div class="container d-flex">
-        <marquee>
-          <p><b>Welcome To The Cheapest, Easiest, and Trendiest Shop</b></p>
-        </marquee>
-        <ul class="d-flex">
-          <li><a href="FAQ.ejs" title="Frequently Asked Question">FAQ</a></li>
-          <li><a href="T&C.ejs" title="Terms & Conditions">T&C</a></li>
-          <li><a href="Aboutus.ejs" title="About Us">About</a></li>
-          <li><a href="contactus.ejs" title="Contact Us">Contact</a></li>
-        </ul>
+
+      <div class="icons d-flex">
+        <a href="login.ejs" class="icon" title="Login">
+          <i class="bx bx-user"></i>
+        </a>
+        <a href="wishlist.ejs" class="icon" title="Wishlist">
+          <i class="bx bx-heart"></i>
+        </a>
+        <a href="cart.ejs" class="icon" title="Shopping Cart">
+          <i class="bx bx-cart"></i>
+        </a>
+      </div>
+      <div class="hamburger">
+        <i class="bx bx-menu-alt-left"></i>
       </div>
     </div>
-    <div class="navigation">
-      <div class="nav-center container d-flex">
-        <img
-          src="./images/logo_keos.png"
-          alt="AwesomeImage"
-          height="80"
-          width="110"
-          class="logo-keos"
-        />
-        <ul class="nav-list d-flex">
-          <li class="nav-item">
-            <a href="index.ejs" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="product.ejs" class="nav-link">Mall</a>
-          </li>
-          <div class="harm-nav">
-            <li class="nav-item">
-              <a href="Aboutus.ejs" class="nav-link" title="About Us">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="contactus.ejs" class="nav-link" title="Contact Us"
-                >Contact</a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="FAQ.ejs" class="nav-link" title="FAQ">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a href="T&C.ejs" class="nav-link" title="T&C">T&C</a>
-            </li>
-          </div>
-          <li class="icons d-flex">
-            <a href="login.ejs" class="icon">
-              <i class="bx bx-user"></i>
-            </a>
-            <a href="wishlist.ejs" class="icon">
-              <i class="bx bx-heart"></i>
-            </a>
-            <a href="cart.ejs" class="icon">
-              <i class="bx bx-cart"></i>
-            </a>
-          </li>
-        </ul>
-  
-        <div class="search-box-ggwp">
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Search" />
-            <div class="input-group-append">
-              <button class="btn btn-primary">
-                <i class="fas fa-search"></i>
-              </button>
+  </div>
+
+  <div class="hero">
+    <div class="glide" id="glide_1">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <div class="center">
+              <div class="left">
+                <span class="">New Inspiration 2022</span>
+                <h1 class="">NEW COLLECTION!</h1>
+                <p>Trending from men's and women's style collection</p>
+                <a href="product.ejs" class="hero-btn">SHOP NOW</a>
+              </div>
+              <div class="right">
+                <img class="img1" src="/images/hero-1.png" alt="" />
+              </div>
             </div>
-          </div>
-        </div>
-  
-        <div class="icons d-flex">
-          <a href="login.ejs" class="icon" title="Login">
-            <i class="bx bx-user"></i>
-          </a>
-          <a href="wishlist.ejs" class="icon" title="Wishlist">
-            <i class="bx bx-heart"></i>
-          </a>
-          <a href="cart.ejs" class="icon" title="Shopping Cart">
-            <i class="bx bx-cart"></i>
-          </a>
-        </div>
-        <div class="hamburger">
-          <i class="bx bx-menu-alt-left"></i>
-        </div>
+          </li>
+          <li class="glide__slide">
+            <div class="center">
+              <div class="left">
+                <span>New Inspiration 2022</span>
+                <h1>THE PERFECT MATCH!</h1>
+                <p>Trending from men's and women's style collection</p>
+                <a href="product.ejs" class="hero-btn">SHOP NOW</a>
+              </div>
+              <div class="right">
+                <img class="img2" src="/images/hero-2.png" alt="" />
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
-  </header>
-  <% } %>
-  
+  </div>
+</header>
+<% } else if (types == "v2") { %>
+<header id="header" class="header">
+  <!-- Header -->
+  <!-- Navigation -->
+  <div class="top-nav">
+    <div class="container d-flex">
+      <marquee>
+        <p><b>Welcome To The Cheapest, Easiest, and Trendiest Shop</b></p>
+      </marquee>
+      <ul class="d-flex">
+        <li><a href="FAQ.ejs" title="Frequently Asked Question">FAQ</a></li>
+        <li><a href="T&C.ejs" title="Terms & Conditions">T&C</a></li>
+        <li><a href="Aboutus.ejs" title="About Us">About</a></li>
+        <li><a href="contactus.ejs" title="Contact Us">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="navigation">
+    <div class="nav-center container d-flex">
+      <img
+        src="./images/logo_keos.png"
+        alt="AwesomeImage"
+        height="80"
+        width="110"
+        class="logo-keos"
+      />
+      <ul class="nav-list d-flex">
+        <li class="nav-item">
+          <a href="index.ejs" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="product.ejs" class="nav-link">Mall</a>
+        </li>
+        <div class="harm-nav">
+          <li class="nav-item">
+            <a href="Aboutus.ejs" class="nav-link" title="About Us">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="contactus.ejs" class="nav-link" title="Contact Us"
+              >Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="FAQ.ejs" class="nav-link" title="FAQ">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a href="T&C.ejs" class="nav-link" title="T&C">T&C</a>
+          </li>
+        </div>
+        <li class="icons d-flex">
+          <a href="login.ejs" class="icon">
+            <i class="bx bx-user"></i>
+          </a>
+          <a href="wishlist.ejs" class="icon">
+            <i class="bx bx-heart"></i>
+          </a>
+          <a href="cart.ejs" class="icon">
+            <i class="bx bx-cart"></i>
+          </a>
+        </li>
+      </ul>
+
+      <div class="icons d-flex">
+        <a href="login.ejs" class="icon" title="Login">
+          <i class="bx bx-user"></i>
+        </a>
+        <a href="wishlist.ejs" class="icon" title="Wishlist">
+          <i class="bx bx-heart"></i>
+        </a>
+        <a href="cart.ejs" class="icon" title="Shopping Cart">
+          <i class="bx bx-cart"></i>
+        </a>
+      </div>
+      <div class="hamburger">
+        <i class="bx bx-menu-alt-left"></i>
+      </div>
+    </div>
+  </div>
+</header>
+<% } else if (types == "v3") { %>
+<!-- Header -->
+<header id="header" class="header">
+  <!-- Navigation -->
+  <div class="top-nav">
+    <div class="container d-flex">
+      <marquee>
+        <p><b>Welcome To The Cheapest, Easiest, and Trendiest Shop</b></p>
+      </marquee>
+      <ul class="d-flex">
+        <li><a href="FAQ.ejs" title="Frequently Asked Question">FAQ</a></li>
+        <li><a href="T&C.ejs" title="Terms & Conditions">T&C</a></li>
+        <li><a href="Aboutus.ejs" title="About Us">About</a></li>
+        <li><a href="contactus.ejs" title="Contact Us">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="navigation">
+    <div class="nav-center container d-flex">
+      <img
+        src="./images/logo_keos.png"
+        alt="AwesomeImage"
+        height="80"
+        width="110"
+        class="logo-keos"
+      />
+      <ul class="nav-list d-flex">
+        <li class="nav-item">
+          <a href="index.ejs" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="product.ejs" class="nav-link">Mall</a>
+        </li>
+        <div class="harm-nav">
+          <li class="nav-item">
+            <a href="Aboutus.ejs" class="nav-link" title="About Us">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="contactus.ejs" class="nav-link" title="Contact Us"
+              >Contact</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="FAQ.ejs" class="nav-link" title="FAQ">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a href="T&C.ejs" class="nav-link" title="T&C">T&C</a>
+          </li>
+        </div>
+        <li class="icons d-flex">
+          <a href="login.ejs" class="icon">
+            <i class="bx bx-user"></i>
+          </a>
+          <a href="wishlist.ejs" class="icon">
+            <i class="bx bx-heart"></i>
+          </a>
+          <a href="cart.ejs" class="icon">
+            <i class="bx bx-cart"></i>
+          </a>
+        </li>
+      </ul>
+
+      <div class="search-box-ggwp">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search" />
+          <div class="input-group-append">
+            <button class="btn btn-primary">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="icons d-flex">
+        <a href="login.ejs" class="icon" title="Login">
+          <i class="bx bx-user"></i>
+        </a>
+        <a href="wishlist.ejs" class="icon" title="Wishlist">
+          <i class="bx bx-heart"></i>
+        </a>
+        <a href="cart.ejs" class="icon" title="Shopping Cart">
+          <i class="bx bx-cart"></i>
+        </a>
+      </div>
+      <div class="hamburger">
+        <i class="bx bx-menu-alt-left"></i>
+      </div>
+    </div>
+  </div>
+</header>
+<% } %>
