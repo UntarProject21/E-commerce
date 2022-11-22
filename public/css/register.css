@@ -53,30 +53,30 @@ li {
   display: flex; 
   align-items: center;
 }
-/* Login Form */
-.login-form {
+/* register Form */
+.register-form {
   padding: 5rem 0;
   max-width: 50rem;
   margin: 5rem auto;
 }
 
-.login-form form {
+.register-form form {
   display: flex;
   flex-direction: column;
 }
 
-.login-form form h1 {
+.register-form form h1 {
   margin-bottom: 1rem;
 }
-.login-form form p {
+.register-form form p {
   margin-bottom: 2rem;
 }
 
-.login-form form label {
+.register-form form label {
   margin-bottom: 1rem;
 }
 
-.login-form form .email-password {
+.register-form form .email-password {
   width: 400px;
   border: 1px solid #ccc;
   outline: none;
@@ -87,16 +87,16 @@ li {
   border-radius: 0.5rem;
 }
 
-.login-form form input::placeholder {
+.register-form form input::placeholder {
   font-size: 1.6rem;
   color: #222;
 }
 
-.login-form form .buttons {
+.register-form form .regbuttons {
   margin-top: 1rem;
 }
 
-.login-form form button {
+.register-form form button {
   width: 100%;
   border-radius: 100px;
   outline: none;
@@ -113,14 +113,14 @@ li {
   -o-border-radius: 100px;
 }
 
-.login-form form button:hover {
+.register-form form button:hover {
   opacity: 0.7;
 }
 
-.login-form form p a {
+.register-form form p a {
   color: dodgerblue;
 }
-.login-form a:hover {
+.register-form a:hover {
   text-decoration: underline;
 }
 
