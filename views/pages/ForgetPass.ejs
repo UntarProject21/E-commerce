@@ -9,20 +9,22 @@
           <div id="forgetpass" style="text-align:center ;">
             <h1 class="card-header text-white" style="text-align: center;">Forgot Password</h1>
                  
-            <div class="text" style="text-align: center; color: black;">
+            <div class="text" style="text-align: left; color: black;">
               <p>Enter your email to receive a link to reset your password.</p>
             </div><br>
+            <div class="forgettgif" style="text-align: center;">
+              <img src="https://media.giphy.com/media/IhZjlTBthiElq4Pf3W/giphy.gif" class="forgetttgif">
+            </div>
             <label for="email"><i class="bx bx-envelope"></i> <b>Email</b></label><br><br>
-            <input type="text" placeholder="Email Address" id="email" class="email-password" required /><br>
-          </div>
+              <input type="text" placeholder="Email Address" id="email" class="email-password" required /><br>
+          </div>     
+          <div class="ForgetButtons">
+            <button type="button" onclick="location.href = 'ForgetPass-verification';" value="forgetpass" id="ForgetpassButton">send</button>
+          </div><br>
           <p>
             Return to login ?
             <a href="login" >here</a>.
           </p>
-          
-          <div class="ForgetButtons">
-            <button type="button" onclick="location.href = 'ForgetPass-verification';" value="forgetpass" id="ForgetpassButton">send</button>
-          </div>
           
         </form>
       </div>
