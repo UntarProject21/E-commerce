@@ -79,6 +79,9 @@ router.get('/T&C', function(req, res) {
 router.get('/wishlist', function(req, res) {
     res.render('pages/wishlist');
   });
+  router.get('/transaction', function(req, res) {
+    res.render('pages/transaction');
+  });
   
 /*
 router.get("/", (req, res) => {
