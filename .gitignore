@@ -9,7 +9,7 @@ package-lock.json
 *.code-workspace
 
 # Config
-config.js
+
 
 # env
 .env
