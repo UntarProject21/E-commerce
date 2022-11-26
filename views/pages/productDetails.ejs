@@ -19,7 +19,8 @@
           <p>Size : L</p><br>
           <form class="form">
             <a href="cart" class="addCart"><i class="bx bx-cart"></i> Add To Cart</a><br><br>
-            <a href="wishlist" class="addWish"><i class="bx bx-heart"></i>Add To Wishlist</a>
+            <button class="checkout" onclick="addToCart(77831)">Add To Cart</button>
+            <!-- <a href="wishlist" class="addWish"><i class="bx bx-heart"></i>Add To Wishlist</a> -->
           </form>
             <h3>Product Details</h3>
           <p>
@@ -28,22 +29,7 @@
         </div>
       </div>
     </section>
-    
-    
-    <script
-      src="https://code.jquery.com/jquery-3.4.0.min.js"
-      integrity="sha384-JUMjoW8OzDJw4oFpWIB2Bu/c6768ObEthBMVSiIx4ruBIEdyNSUQAjJNFqT5pnJ6"
-      crossorigin="anonymous"
-    ></script>
-    <script src=/js/zoomsl.min.js"></script>
-    <script>
-      $(function () {
-        console.log("hello");
-        $("#zoom").imagezoomsl({
-          zoomrange: [4, 4],
-        });
-      });
-    </script>
+
     <%- include('../layouts/footer', {state: 'productDetails'}); %>
   </body>
 </html>

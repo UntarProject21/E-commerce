@@ -1,3 +1,5 @@
+const { localsName } = require("ejs");
+
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -5,26 +7,26 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
-  updateCartTotal()
-    var removeCartItemButtons = document.getElementsByClassName('cart-delete')
-    for (var i = 0; i < removeCartItemButtons.length; i++) {
-        var button = removeCartItemButtons[i]
-        button.addEventListener('click', removeCartItem)
-    }
+  // updateCartTotal()
+    // var removeCartItemButtons = document.getElementsByClassName('cart-delete')
+    // for (var i = 0; i < removeCartItemButtons.length; i++) {
+    //     var button = removeCartItemButtons[i]
+    //     button.addEventListener('click', removeCartItem)
+    // }
 
-    var quantityInputs = document.getElementsByClassName('cart-buttons')
-    for (var i = 0; i < quantityInputs.length; i++) {
-        var input = quantityInputs[i]
-        input.addEventListener('change', quantityChanged)
-    }
+    // var quantityInputs = document.getElementsByClassName('cart-buttons')
+    // for (var i = 0; i < quantityInputs.length; i++) {
+    //     var input = quantityInputs[i]
+    //     input.addEventListener('change', quantityChanged)
+    // }
 
-    var addToCartButtons = document.getElementsByClassName('bx bx-heart')
-    for (var i = 0; i < addToCartButtons.length; i++) {
-        var button = addToCartButtons[i]
-        button.addEventListener('click', addToCartClicked)
-    }
+    // var addToCartButtons = document.getElementsByClassName('bx bx-heart')
+    // for (var i = 0; i < addToCartButtons.length; i++) {
+    //     var button = addToCartButtons[i]
+    //     button.addEventListener('click', addToCartClicked)
+    // }
 
-    document.getElementsByClassName('checkout btn')[0].addEventListener('click', showModal)
+    // document.getElementsByClassName('checkout btn')[0].addEventListener('click', showModal)
 
 }
 
@@ -45,10 +47,28 @@ function removeCartItem(event) {
   document.getElementsByClassName('checkout btn')[0].addEventListener('click', showModal)
 }
 
-function addToCart(event) {
-	var buttonClicked = event.target
-    buttonClicked.parentElement.parentElement.parentElement.remove()
-    updateCartTotal()
+function addToCart(product_id) {
+  localStorage.setItem("cart","etst")
+    // if (localStorage.getItem("cart") === null) {
+    //     localStorage.setItem("cart", "[]");
+    // }
+    // var bag = JSON.parse(localStorage.getItem("bag"));
+    // var filtered_bag = bag.filter( x => x.product_id == product_id);
+    // if (filtered_bag.length === 0) {
+    //     bag.push({
+    //         product_id: product_id,
+    //         quantity: 1
+    //     });
+    // } else {
+    //     filtered_bag[0].quantity++;
+    //     bag = bag.filter( x => {
+    //         if (x.product_id != product_id) {
+    //             return x;
+    //         }
+    //     });
+    //     bag.push(filtered_bag[0]);
+    // }
+    // localStorage.setItem("bag", JSON.stringify(bag));
 }
 
 function addToCartClicked(event) {
