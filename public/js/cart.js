@@ -7,6 +7,55 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
+  var cart = JSON.parse(localStorage.getItem("cart"));
+  let total_price = 0;
+  var html = '';
+
+  for (var i = 0; i < cart.length; i++) {
+      //let request = new XMLHttpRequest();
+      //request.open('GET', `api/getProduct?id=${cart[i].product_id}`, false); DATABASE OK
+      //request.send(null);
+
+      //if (request.status === 200) {
+          let data = JSON.parse(request.responseText);
+          total_price += parseInt(data[0].PRICE * cart[i].quantity);
+          html += `
+          <div class="card">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-sm-7 col-md-6 col-lg-4">
+                          <img alt="placeholder image" class="img-fluid lazyload" src="img/${data[0].IMAGE}"
+                              width="180px" height="180px" />
+                      </div>
+                      <div class="col-sm-5 col-md-6 col-lg-8">
+                          <h2>${data[0].TITLE}</h2>
+                          <h4>Size : ${data[0].SIZE}</h4>
+                          <h6>Qty</h6>
+                          <div style="display: flex;">
+                              <span class="input-group-btn">
+                                  <button type="button" class="btn btn-default btn-number" style="color: white;"
+                                      onclick="minus('${cart[i].product_id}', '${data[0].PRICE}')"><i class="far fa-minus-square"></i></button>
+                              </span>
+                              <input class="box" type="text" disabled="disabled" value="${cart[i].quantity}"
+                                  class="form-control input-number" id="${cart[i].product_id}" />
+                              <span class="input-group-btn">
+                                  <button type="button" class="btn btn-default btn-number" style="color: white;"
+                                      onclick="add('${cart[i].product_id}', '${data[0].PRICE}')"><i class="far fa-plus-square"></i></button>
+                              </span>
+                          </div>
+                          <br>
+                          <p id="${cart[i].product_id}-price" class="price">Rp ${data[0].PRICE * cart[i].quantity}</p>
+                          <a href="javascript:;" onclick='return remove("${cart[i].product_id}")' style="color:red;"><i class="far fa-trash-alt" color="red"></i> <u>Remove</u></a>
+                          <br><br>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          `;
+      }
+  //}
+  document.getElementById("view-cart").innerHTML = html;
+  document.getElementById("total-price").innerHTML = 'Rp ' + total_price;
   // updateCartTotal()
     // var removeCartItemButtons = document.getElementsByClassName('cart-delete')
     // for (var i = 0; i < removeCartItemButtons.length; i++) {
@@ -27,15 +76,14 @@ function ready() {
     // }
 
     // document.getElementsByClassName('checkout btn')[0].addEventListener('click', showModal)
-
 }
 
 function purchaseClicked() {
   alert("Thank you for your purchase!")
-  modal.style.display = "none";
+  modal.style.display = "none"
   var cartContainer = document.getElementsByTagName('table')[0]
   for(var i = 1;i<cartContainer.rows.length;){
-    cartContainer.deleteRow(i);
+    cartContainer.deleteRow(i)
   }
   updateCartTotal();
 }
@@ -48,28 +96,28 @@ function removeCartItem(event) {
 }
 
 function addToCart(product_id) {
-  localStorage.setItem("cart","etst")
-    // if (localStorage.getItem("cart") === null) {
-    //     localStorage.setItem("cart", "[]");
-    // }
-    // var bag = JSON.parse(localStorage.getItem("bag"));
-    // var filtered_bag = bag.filter( x => x.product_id == product_id);
-    // if (filtered_bag.length === 0) {
-    //     bag.push({
-    //         product_id: product_id,
-    //         quantity: 1
-    //     });
-    // } else {
-    //     filtered_bag[0].quantity++;
-    //     bag = bag.filter( x => {
-    //         if (x.product_id != product_id) {
-    //             return x;
-    //         }
-    //     });
-    //     bag.push(filtered_bag[0]);
-    // }
-    // localStorage.setItem("bag", JSON.stringify(bag));
+     if (localStorage.getItem("cart") === null) {
+         localStorage.setItem("cart", "[]");
+     }
+     var cart = JSON.parse(localStorage.getItem("cart"));
+     var filtered_cart = cart.filter( x => x.product_id == product_id);
+     if (filtered_cart.length === 0) {
+         cart.push({
+             product_id: product_id,
+             quantity: 1
+         });
+     } else {
+         filtered_cart[0].quantity++;
+         cart = cart.filter( x => {
+             if (x.product_id != product_id) {
+                 return x;
+             }
+        });
+         cart.push(filtered_cart[0]);
+     }
+     localStorage.setItem("cart", JSON.stringify(cart));
 }
+
 
 function addToCartClicked(event) {
     var button = event.target
@@ -237,10 +285,7 @@ function checkoutTotal() {
 
 // Get the modal
 var modal = document.getElementById("myModal");
-
 var contentmodal = document.getElementsByClassName("modal-content");
-
-
 
 // When the user clicks on the button, open the modal
 function showModal() {
