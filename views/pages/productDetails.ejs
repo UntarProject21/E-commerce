@@ -8,15 +8,16 @@
       <div class="details container">
         <div class="left image-container">
           <div class="main">
-            <img src="/images/product-8.jpg" id="zoom" alt="" />
+            <img src="/images/<%= data[0].IMAGE %>" id="zoom" alt="" />
           </div>
         </div>
         <div class="right">
           <br>
           
-          <h1 class="name">Boy’s T-Shirt By Handsome</h1>
-          <div class="price">$50</div>
-          <p>Size : L</p><br>
+          <h1 class="name"><%= data[0].TITLE %></h1>
+          <div class="price">Rp.<%= data[0].PRICE %></div>
+          <div class="price">Rp.<%= data[0].STOCK %></div>
+          <p>Size : <%= data[0].SIZE %></p><br>
           <form class="form">
             <a href="cart" class="addCart"><i class="bx bx-cart"></i> Add To Cart</a><br><br>
             <button class="checkout" onclick="addToCart(77831)">Add To Cart</button>
@@ -24,7 +25,7 @@
           </form>
             <h3>Product Details</h3>
           <p class="description">
-            Our Boy’s T-Shirt By Handsome doesn't compromise on comfort. The plush, high-loft fleece helps you stay warm and contrasts with the smooth ripstop trim. Breezy mesh lining lets the air flow naturally and a bungee at the hem lets you cinch up your fit to dial in your temperature exactly how you like it.
+            <%= data[0].DESCRIPTION %>
           </p>
         </div>
       </div>
