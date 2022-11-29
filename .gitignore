@@ -1,5 +1,5 @@
 # Node Modules Directory
-node_modules/
+node_modules
 
 # Package Manager
 package-lock.json
