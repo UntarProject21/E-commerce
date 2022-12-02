@@ -8,7 +8,8 @@
       <div class="top container">
         <h1>All Products</h1>
         <form>
-          <select>
+
+          <select name="sortingOptions" onchange="priceSort();">
             <option value="1">Default Sorting</option>
             <option value="2">Sort By Price(Low-High)</option>
             <option value="3">Sort By Price(High-Low)</option>
@@ -19,7 +20,7 @@
       <div class="product-center container">
       <% for(let i=0; i < data.length; i++) { %>
       <div class="product-item">
-        <a href="productDetails/<%= data[i].name %>" class="product-thumb">
+        <a href="productDetails/<%= data[i].pid %>" class="product-thumb">
           <img src="/images/<%= data[i].image %>" alt="" />
         </a>
         <div class="product-info">

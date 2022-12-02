@@ -80,33 +80,34 @@
 <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script src="/js/slider.js"></script>
 <script src="/js/index.js"></script>
+
 <% } else if(state=="cart" ) { %>
 <script src="/js/cart.js"></script>
+
 <% } else if(state=="FAQ" ) { %>
 <script src="/js/FAQ.js"></script>
+
 <% } else if(state=="login" ) { %>
 <script src="/js/login.js"></script>
+
 <% } else if(state=="product" ) { %>
 <script src="/js/product.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-  let loadMoreBtn = document.querySelector("#load-more");
-  let currentItem = 8;
+loadMoreBtn.onclick = () => {
+  let boxes = [
+    ...document.querySelectorAll(".section .product-center .product-item"),
+  ];
+  for (var i = currentItem; i < currentItem + 8; i++) {
+    boxes[i].style.display = "inline-block";
+  }
+  currentItem += 8;
 
-  loadMoreBtn.onclick = () => {
-    let boxes = [
-      ...document.querySelectorAll(".section .product-center .product-item"),
-    ];
-    for (var i = currentItem; i < currentItem + 8; i++) {
-      boxes[i].style.display = "inline-block";
-    }
-    currentItem += 8;
+  if (currentItem >= boxes.length) {
+    loadMoreBtn.style.display = "none";
+  }
+};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    if (currentItem >= boxes.length) {
-      loadMoreBtn.style.display = "none";
-    }
-  };
-</script>
 <% } else if(state=="productDetails" ) { %>
 <script src="/js/productDetails.js"></script>
 <script
@@ -124,10 +125,13 @@
   });
 </script>
 <script src="/js/cart.js"></script>
+
 <% } else if(state=="shipping" ) { %>
 <script src="/js/shipping.js"></script>
+
 <% } else if(state=="signup" ) { %>
 <script src="/js/signup.js"></script>
+
 <% } else if(state=="wishlist" ) { %>
 <script src="/js/wishlist.js"></script>
 <% } %>

@@ -1,11 +1,16 @@
 const port = 3000;
-const indexRouter = require('./routes/index');
 var express = require('express');
+
+const indexRouter = require('./routes/index');
+const api = require('./routes/api');
+
+
 var env = require('dotenv').config()
 var ejs = require('ejs');
 var path = require('path');
 var app = express();
 var bodyParser = require('body-parser');
+
 var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
@@ -22,9 +27,9 @@ mongoose.connect(process.env.DB_URL, {
   }
 });
 
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {
+var database = mongoose.connection;
+database.on('error', console.error.bind(console, 'connection error:'));
+database.once('open', function () {
 });
 
 
@@ -34,7 +39,7 @@ app.use(session({
     resave: true,
     saveUninitialized: false,
     store: new MongoStore({
-      mongooseConnection: db
+      mongooseConnection: database
     })
   }));
 
@@ -51,9 +56,13 @@ app.listen(port, () => {
   console.log(`App listening at port ${port}`)
 })
 app.use('/', indexRouter);
+app.use('/api', api);
 
 
-module.exports = db;
+module.exports = {
+  database,
+  app
+}
 
 
 

@@ -2,17 +2,19 @@ const express = require("express");
 const router = express.Router();
 const product = require("../models/product")
 
+const controller = require("../controllers/controllers");
+
 router.get('/', async function(req, res, next) {
   const data = await product.find();
 	res.render("pages/index", {data});
-  res.render('pages/index');
+  //res.render('pages/index');
 });
 
 
 router.get('/index', async function(req, res, next) {
   const data = await product.find();
   res.render("pages/index", {data});
-  res.render('pages/index');
+  //res.render('pages/index');
 });
 
 router.get('/Aboutus', function(req, res) {
@@ -46,17 +48,28 @@ router.get('/login', function(req, res) {
   
 router.get('/product', async function(req, res) {
     const data = await product.find();
-    res.render("pages/product", {data});
+    //const controllerdata = controller.getProducts()
+    //res.render("pages/product", {data});
+    controller.getProducts().then((data) => {
+      res.render("pages/product", {
+          data: data,
+          //loggedIn: 'true'
+      });
+    });
   });
 
-router.post('/product', function(req, res, next) {
-  console.log(123123123);
-  console.log(req.body);
-  var productInfo = req.body;
-});
 
-router.get('/productDetails', function(req, res) {
-    res.render('pages/productDetails');
+
+router.get(['/productDetails', '/productDetails/:pid'], async function(req, res) {
+    const data = await product.find();
+    //res.render('pages/productDetails', {data}); 
+    //var pid = data.pid;
+    controller.getProducts(req.params.id).then((data) => {
+      res.render("pages/productDetails", {
+          data: data,
+          //loggedIn: 'true'
+      });
+    });
   });
 
 router.get('/register-verification-completed', function(req, res) {

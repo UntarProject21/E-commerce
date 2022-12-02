@@ -8,16 +8,16 @@
       <div class="details container">
         <div class="left image-container">
           <div class="main">
-            <img src="/images/<%= data[0].IMAGE %>" id="zoom" alt="" />
+            <img src="/images/<%= data[0].image %>" id="zoom" alt="" />
           </div>
         </div>
         <div class="right">
           <br>
           
-          <h1 class="name"><%= data[0].TITLE %></h1>
-          <div class="price">Rp.<%= data[0].PRICE %></div>
-          <div class="price">Rp.<%= data[0].STOCK %></div>
-          <p>Size : <%= data[0].SIZE %></p><br>
+          <h1 class="name"><%= data[0].name %></h1>
+          <div class="price">Rp.<%= data[0].price %></div>
+          <div class="price">Stock: <%= data[0].price %></div>
+          <p>Size : <%= data[0].price %></p><br>
           <form class="form">
             <a href="cart" class="addCart"><i class="bx bx-cart"></i> Add To Cart</a><br><br>
             <button class="checkout" onclick="addToCart(77831)">Add To Cart</button>
@@ -25,7 +25,7 @@
           </form>
             <h3>Product Details</h3>
           <p class="description">
-            <%= data[0].DESCRIPTION %>
+            <%= data[0].description %>
           </p>
         </div>
       </div>
