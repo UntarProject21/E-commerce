@@ -10,12 +10,13 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
-mongoose.connect('mongodb+srv://keosyaro:5352keos@keosyaro.tuhvjmd.mongodb.net/test', {
+
+mongoose.connect(process.env.DB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }, (err) => {
   if (!err) {
-    console.log('MongoDB Connection Succeeded.');
+    console.log('MongoDB Connection Succeeded : ' + process.env.DB_URL);
   } else {
     console.log('Error in DB connection : ' + err);
   }
@@ -25,6 +26,8 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
 });
+
+
 
 app.use(session({
     secret: 'work hard',
@@ -49,19 +52,6 @@ app.listen(port, () => {
 })
 app.use('/', indexRouter);
 
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-    var err = new Error('File Not Found');
-    err.status = 404;
-    next(err);
-  });
-  
-// error handler
-// define as the last app.use callback
-app.use(function (err, req, res, next) {
-res.status(err.status || 500);
-res.send(err.message);
-});
 
 module.exports = db;
 

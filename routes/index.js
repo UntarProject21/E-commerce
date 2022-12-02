@@ -1,15 +1,18 @@
 const express = require("express");
 const router = express.Router();
+const product = require("../models/product")
 
-router.get('/', function(req, res, next) {
-  console.log(req.body);
+router.get('/', async function(req, res, next) {
+  const data = await product.find();
+	res.render("pages/index", {data});
   res.render('pages/index');
 });
 
-router.post('/', function(req, res, next) {
-  console.log(123123123);
-  console.log(req.body);
-  var productInfo = req.body;
+
+router.get('/index', async function(req, res, next) {
+  const data = await product.find();
+  res.render("pages/index", {data});
+  res.render('pages/index');
 });
 
 router.get('/Aboutus', function(req, res) {
@@ -41,9 +44,9 @@ router.get('/login', function(req, res) {
     res.render('pages/login');
   });
   
-router.get('/product', function(req, res) {
-    res.render('pages/product');
-    console.log(req.body);
+router.get('/product', async function(req, res) {
+    const data = await product.find();
+    res.render("pages/product", {data});
   });
 
 router.post('/product', function(req, res, next) {

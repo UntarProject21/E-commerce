@@ -19,12 +19,13 @@
       <div class="product-center container">
       <% for(let i=0; i < data.length; i++) { %>
       <div class="product-item">
-        <a href="productDetails/<%= data[i].ID %>" class="product-thumb">
-          <img src="/images/<%= data[i].IMAGE %>" alt="" />
+        <a href="productDetails/<%= data[i].name %>" class="product-thumb">
+          <img src="/images/<%= data[i].image %>" alt="" />
         </a>
         <div class="product-info">
-          <a><%= data[i].TITLE %></a>
-          <h4 class="product-price"><%= data[i].PRICE %></h4>
+          <span><%= data[i].category %></span>
+          <a><%= data[i].name %></a>
+          <h4 class="product-price">Rp. <%= data[i].price %></h4>
         </div>
       </div>
       <% } %>
