@@ -31,9 +31,9 @@
       </div>
 
       <div class="product-center">
-        <% for(let i=0; i < 4; i++) { %>
+        <% for(let i=12; i < 16; i++) { %>
           <div class="product-item">
-            <a href="productDetails/<%= data[i].pid %>" class="product-thumb">
+            <a href="productDetails/<%= data[i]._id %>" class="product-thumb">
               <img src="/images/<%= data[i].image %>" alt="" />
             </a>
             <div class="product-info">
@@ -109,61 +109,19 @@
       </div>
 
       <div class="product-center">
-        <div class="product-item">
-          
-            <a href="" class="product-thumb">
-              <img src="./images/product-7.jpg" alt="" />
+        <% for(let i=6; i < 10; i++) { %>
+          <div class="product-item">
+            <a href="productDetails/<%= data[i]._id %>" class="product-thumb">
+              <img src="/images/<%= data[i].image %>" alt="" />
             </a>
-            
-          
-          <div class="product-info">
-            <span>MEN'S CLOTHES</span>
-            <a href="">Quis Nostrud Exercitation</a>
-            <h4>$700</h4>
+            <div class="product-info">
+              <span><%= data[i].category %></span>
+              <a><%= data[i].name %></a>
+              <h4 class="product-price">Rp. <%= data[i].price %></h4>
+            </div>
           </div>
-          
-        </div>
-        <div class="product-item">
-          
-            <a href="" class="product-thumb">
-              <img src="./images/product-4.jpg" alt="" />
-            </a>
-          
-
-          <div class="product-info">
-            <span>MEN'S CLOTHES</span>
-            <a href="">Sonata White Men’s Shirt</a>
-            <h4>$800</h4>
-          </div>
-          
-        </div>
-        <div class="product-item">
-          
-            <a href="" class="product-thumb">
-              <img src="./images/product-1.jpg" alt="" />
-            </a>
-            
-          
-          <div class="product-info">
-            <span>WOMEN'S CLOTHES</span>
-            <a href="">Concepts Solid Pink Men’s Polo</a>
-            <h4>$150</h4>
-          </div>
-          
-        </div>
-        <div class="product-item">
-         
-            <a href="" class="product-thumb">
-              <img src="./images/product-6.jpg" alt="" />
-            </a>
-          
-          <div class="product-info">
-            <span>MEN'S CLOTHES</span>
-            <a href="">Edor do eiusmod tempor</a>
-            <h4>$900</h4>
-          </div>
-          
-        </div>
+          <% } %>
+      </div>
 
     </section>
 
@@ -174,7 +132,7 @@
           <h2>SUPPORTS</h2>
           <p>We love our customers and they can reach us any time
           of day we will be at your service 24/7</p>
-          <a href="contactus" class="btn-1">Contact</a>
+          <a href="/contactus" class="btn-1">Contact</a>
         </div>
         <div class="col">
           <ul>

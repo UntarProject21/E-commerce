@@ -20,7 +20,7 @@
       <div class="product-center container">
       <% for(let i=0; i < data.length; i++) { %>
       <div class="product-item">
-        <a href="productDetails/<%= data[i].id %>" class="product-thumb">
+        <a href="productDetails/<%= data[i]._id %>" class="product-thumb">
           <img src="/images/<%= data[i].image %>" alt="" />
         </a>
         <div class="product-info">
