@@ -10,7 +10,8 @@ function getProducts() {
         .catch((error) => console.log(error));
 }
 
-function getProduct(pid) {
+
+function getProduct(_id) {
     return axios
         .get(HOST + "/getproduct", {
             params: {
