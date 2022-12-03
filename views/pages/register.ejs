@@ -3,46 +3,66 @@
   <%- include('../layouts/header', {title: 'Register' , state: 'register' }); %>
   <body>
     <%- include('../layouts/navbar', {types: 'v2', state: 'register'}); %>
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+  
+        $( "#registerform1" ).submit(function(event) {
+          event.preventDefault();
+  
+          $.ajax({
+            type: 'POST',
+            url: '/register',
+            data: $('#registerform1').serialize(),
+            dataType: "json",
+            success: function(response){
+              //alert("a");
+              //console.log(response.Success);
+              $('#registerform1')[0].reset();
+  
+              document.getElementById("check").innerHTML=response.Success;
+                     //ADD THIS CODE
+                     setTimeout(function(){
+                       document.getElementById("check").innerHTML="";
+                     },3000);
+                     if (response.Success=="You are registered,You can login now.") {
+                       document.getElementById("aa").click();
+                     };
+                   },
+                   error: function() {
+                   }
+                 })
+        });
+      });
+    </script>
 
     <!-- Register -->
     <div class="container" >
       <div class="register-form">
-        <form action="" >
+        <form id="registerform1" method="post">
           <div id="registerForm" style="text-align:center ;">
-          <h1 >Register</h1>
-          <p><img src="./images/sign_up.gif" alt="AwesomeImage" width="40%"></p>
-          <p>
-            Already have an account? Login 
-            <a href="login" >here</a>.
-          </p>
-          
-          <input type="text" placeholder="First name" id="fname" class="email-password" required/><br>
+            <h1 >Register</h1>
+            <p><img src="./images/sign_up.gif" alt="AwesomeImage" width="40%"></p>
+            <p>Already have an account? Login <a id = "aa" href="login" >here</a>.</p>
 
-          
-          <input type="text" placeholder="Last name" id="lname" class="email-password" required/><br>
+            <input type="text" name="firstName" placeholder="First Name" required="" class="email-password"><br/>
+            <input type="text" name="lastName" placeholder="Last Name" required="" class="email-password"><br/>
+            <input type="email" name="email" placeholder="e-Mail" required="" class="email-password"><br/>
+            <input type="password" name="password" placeholder="Password" required="" class="email-password"><br/>
+            <input type="password" name="passwordConf" placeholder="Confirm Password" required="" class="email-password"><br/>
+            
+            <p>By creating an account you agree to our <a href="/T&C">Terms & Conditions</a>.</p>
 
-          
-          <input type="text" placeholder="Email Address" id="email" class="email-password" required /><br>
-
-          
-          <input
-            type="password"
-            placeholder="Password"
-            id="password"
-            class="email-password"
-            required
-          /><br>
-          
-          <p>
-            By creating an account you agree to our
-            <a href="T&C">Terms & Conditions</a>.
-          </p>
+            <input type="submit" value="Register" class="regbuttons">
           </div>
           
           <div class="regbuttons">
-            <button type="button" onclick="location.href = 'register-verification-sent';" value="register" id="registerButton">Register</button>
+            <button type="submit" value="register" id="registerButton">Register</button>
           </div>
         </form>
+        <div class="mssg bg-danger">
+          <span id="check">haya</span>
+        </div>
       </div>
     </div>
     <%- include('../layouts/footer', {state: 'register'}); %>

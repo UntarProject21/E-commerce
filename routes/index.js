@@ -1,14 +1,19 @@
 const express = require("express");
 const router = express.Router();
-const product = require("../models/product")
+var bodyParser = require('body-parser');
 
-const controller = require("../controllers/controllers");
+const product = require("../models/product");
+var User = require('../models/user');
+
+router.use(bodyParser.json());
 
 router.get('/', async function(req, res, next) {
   const data = await product.find();
 	res.render("pages/index", {data});
   //res.render('pages/index');
 });
+
+
 
 router.get('/Aboutus', function(req, res) {
     res.render('pages/Aboutus');
@@ -70,6 +75,60 @@ router.get('/register-verification-sent', function(req, res) {
 router.get('/register', function(req, res) {
     res.render('pages/register');
   });
+
+router.post('/register', function(req, res) {
+  console.log(req.body);
+  var personInfo = req.body;
+  // var newPerson = new User({
+  //   email:personInfo.email,
+  //   firstName: personInfo.firstName,
+  //   lastName: personInfo.lastName,
+  //   password: personInfo.password,
+  //   passwordConf: personInfo.passwordConf
+  // });
+  // console.log(newPerson);
+  // console.log(User);
+  // newPerson.save();
+
+  if(!personInfo.email || !personInfo.firstName || !personInfo.lastName || !personInfo.password || !personInfo.passwordConf){
+    res.send();
+  } else {
+    if (personInfo.password == personInfo.passwordConf) {
+
+      User.findOne({_id:personInfo._id},function(err,personInfo){
+        if(!personInfo){
+          console.log(personInfo)
+          User.findOne({},function(err,personInfo){
+            var newPerson = new User({
+              email:personInfo.email,
+              firstName: personInfo.firstName,
+              lastName: personInfo.lastName,
+              password: personInfo.password,
+              passwordConf: personInfo.passwordConf
+            });
+            console.log(newPerson);
+            console.log(User);
+            newPerson.save();
+
+            newPerson.save(function(err, Person){
+              if(err)
+                console.log(err);
+              else
+                console.log('Success');
+            });
+
+          }).sort({_id: -1}).limit(1);
+          res.send({"Success":"You are regestered,You can login now."});
+        }else{
+         res.send({"Success":"Email is already used."});
+        }
+
+     });
+    }else{
+     res.send({"Success":"password is not matched"});
+    }
+  }
+});
 
 router.get('/ResetPass-verification', function(req, res) {
     res.render('pages/ResetPass-verification');

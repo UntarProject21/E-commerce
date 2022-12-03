@@ -11,6 +11,12 @@
   --grey2: #e9d7d3;
 }
 
+.mssg{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+
 /* Basic Reset */
 *,
 *::before,
