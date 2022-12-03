@@ -45,31 +45,36 @@ router.get('/ForgetPass', function(req, res) {
 router.get('/login', function(req, res) {
     res.render('pages/login');
   });
-  
+
+//get all products
 router.get('/product', async function(req, res) {
     const data = await product.find();
     //const controllerdata = controller.getProducts()
-    //res.render("pages/product", {data});
-    controller.getProducts().then((data) => {
-      res.render("pages/product", {
-          data: data,
-          //loggedIn: 'true'
-      });
-    });
+    console.log({data});  
+    res.render("pages/product", {data});
+    // controller.getProducts().then((data) => {
+    //   res.render("pages/product", {
+    //       data: data,
+    //       //loggedIn: 'true'
+    //   });
+    //});
   });
 
 
-
-router.get(['/productDetails', '/productDetails/:pid'], async function(req, res) {
-    const data = await product.find();
-    //res.render('pages/productDetails', {data}); 
+//get A product
+router.get(['/productDetails', '/productDetails/:_id'], async function(req, res) {
+    const _id = req.params  
+    const data = await product.findById(_id);
+    //const params = req.params.id;
+    console.log({data});
+    res.render('pages/productDetails', {data}); 
     //var pid = data.pid;
-    controller.getProducts(req.params.id).then((data) => {
-      res.render("pages/productDetails", {
-          data: data,
-          //loggedIn: 'true'
-      });
-    });
+    // controller.getProducts(req.params.id).then((data) => {
+    //   res.render("pages/productDetails", {
+    //       data: data,
+    //       //loggedIn: 'true'
+    //   });
+    // });
   });
 
 router.get('/register-verification-completed', function(req, res) {
