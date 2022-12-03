@@ -19,9 +19,7 @@
           <div class="price">Stock: <%= data.price %></div>
           <p>Size : <%= data.price %></p><br>
           <form class="form">
-            <a href="/cart" class="addCart" onclick= "return addToCart(data._id)"><i class="bx bx-cart"></i> Add To Cart</a><br><br>
-            <button class="checkout" onclick="addToCart(data._id)">Add To Cart</button>
-            <!-- <a href="wishlist" class="addWish"><i class="bx bx-heart"></i>Add To Wishlist</a> -->
+            <a class="addCart" onclick= "return addToCart('<%= data._id %>')"><i class="bx bx-cart"></i> Add To Cart</a><br><br>
           </form>
             <h3>Product Details</h3>
           <p class="description">

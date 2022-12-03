@@ -139,10 +139,21 @@ li {
 
 .product-detail .form .addCart {
   background: var(--green);
+  border: 2px solid var(--green);
   padding: 0.8rem 4rem;
   color: #fff;
   border-radius: 3rem;
+  transition: all 0.25s ease-out;
+  cursor: pointer;
 }
+
+.product-detail .form .addCart:hover {
+  color: var(--green);
+  background-color: var(--white);
+  transition: all 0.25s ease-in;
+  
+}
+
 .product-detail .form .addWish {
   background: var(--green);
   padding: 0.8rem 4rem;
