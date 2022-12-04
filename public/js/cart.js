@@ -5,42 +5,71 @@
 // }
 
 function view_cart() {
-    console.log(12314123)
+    var cartItems = document.getElementsByClassName('containertable')[0]
     var bag = JSON.parse(localStorage.getItem("cart"));
     let total_price = 0;
-    var html = '';
+    let final_price = 0;
 
     for (var i = 0; i < bag.length; i++) {
+        var cartRow = document.createElement('tr');
         console.log(i);
-        let data = JSON.parse();
-        total_price += parseInt(data[0].PRICE * bag[i].quantity);
-        html += `
+        console.log(bag[i]);
+        total_price = parseInt(bag[i].price * bag[i].quantity);
+        final_price += parseInt(bag[i].price * bag[i].quantity);
+        //console.log()
+        var cartRowContents = 
+        `
         <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="${imageSrc}" alt="" />
-                <div>
-                <p>${title}</p>
-                <span>${price}</span> <br />
-                <input type="number" value="1" min="1" />
-                    </div>
-                </div>
-                </td>
-                <td>
-                <div class="wish-action">
-                    <i class="bx bx-trash"></i>
-                    <i class="bx bx-cart"></i>
-                </div>
-            </td>
+          <td>
+            <div class="cart-info">
+              <img src="/images/${bag[i].image}" alt="" />
+              <div>
+                <p>${bag[i].name}</p>
+                <span>IDR ${bag[i].price}</span> <br />
+                <button class="cart-delete" type="button"><i class="bx bx-trash"></i> Remove</button>
+                
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="cart-buttons">
+              <input class="cart-quantity-input" type="number" value="${bag[i].quantity}" min="1">
+            </div>
+          </td>     
+          <td>
+            <span>IDR ${total_price}</span>
+          </td>
         </tr>
         `;
-        
+
+        cartRow.innerHTML = cartRowContents
+        cartItems.append(cartRow)
+        // cartRow.getElementsByClassName('bx bx-trash')[0].addEventListener('click', removeCartItem)
+	    // cartRow.getElementsByClassName('bx bx-cart')[0].addEventListener('click', removeCartItem)
+        // cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
     }
-    document.getElementById("view-cart").innerHTML = html;
-    document.getElementById("total-price").innerHTML = 'Rp ' + total_price;
+    document.getElementById("total-price").innerHTML =   document.getElementsByClassName('total-price')[0].innerHTML =
+    `        
+    <table>
+    <tr>
+      <td>Total</td>
+      <td>IDR ${final_price}</td>
+    </tr>
+    </table>
+    <a class="checkout btn">Proceed To Checkout</a>`
+  
+}
+function add(product_id, price) {
+    var inputCount = document.getElementById(product_id);
+    inputCount.value++;
+    document.getElementById(product_id + '-price').innerHTML = 'Rp ' + price * inputCount.value;
+    set_total_price();
+    addToBag(product_id);
 }
 
-function addToCart(product) {
+//product == _id
+
+function addToCart(product,name,price,image) {
     if (localStorage.getItem("cart") === null) {
         localStorage.setItem("cart", "[]");
     }
@@ -49,6 +78,9 @@ function addToCart(product) {
     if (filtered_cart.length === 0) {
         cart.push({
             product: product,
+            name: name,
+            price: price,
+            image: image,
             quantity: 1
         });
     } else {
@@ -270,4 +302,4 @@ function checkoutTotal() {
 
 view_cart();
 
-module.exports = addToCart;
+//module.exports = addToCart;

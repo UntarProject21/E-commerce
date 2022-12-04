@@ -1,4 +1,6 @@
 const { localsName } = require("ejs");
+const express = require("express");
+const router = express.Router();
 
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
@@ -141,7 +143,6 @@ function addItemToCart(title, price, imageSrc) {
         }
     }
     var cartRowContents = `
-		<tr>
           <td>
             <div class="cart-info">
               <img src="${imageSrc}" alt="" />
@@ -158,7 +159,6 @@ function addItemToCart(title, price, imageSrc) {
 			  <i class="bx bx-cart"></i>
 			</div>
 		  </td>
-    </tr>
 	`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
