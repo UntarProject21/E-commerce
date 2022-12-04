@@ -174,7 +174,6 @@ function addToCart(product,name,price,image) {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-
 function checkoutItems() {
   var cartItemContainers = document.getElementsByTagName('table')[0]
   var cartItemContainer = document.getElementsByTagName('table')[2]
@@ -267,12 +266,12 @@ function closeModal() {
 
 function purchaseClicked() {
     alert("Thank you for your purchase!")
-    modal.style.display = "none"
-    var cartContainer = document.getElementsByTagName('table')[0]
-    for(var i = 1;i<cartContainer.rows.length;){
-      cartContainer.deleteRow(i)
-    }
-    updateCartTotal();
+    // modal.style.display = "none"
+    // var cartContainer = document.getElementsByTagName('table')[0]
+    // for(var i = 1;i<cartContainer.rows.length;){
+    //   cartContainer.deleteRow(i)
+    // }
+    // updateCartTotal();
   }
 
 view_cart();
