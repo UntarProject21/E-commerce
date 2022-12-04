@@ -9,6 +9,7 @@ function view_cart() {
     var cart = JSON.parse(localStorage.getItem("cart"));
     let total_price = 0;
     let final_price = 0;
+    var product;
 
     for (var i = 0; i < cart.length; i++) {
         var cartRow = document.createElement('tr');
@@ -16,6 +17,7 @@ function view_cart() {
         console.log(cart[i]);
         total_price = parseInt(cart[i].price * cart[i].quantity);
         final_price += parseInt(cart[i].price * cart[i].quantity);
+        console.log(cart[i].product);
         //console.log()
         var cartRowContents = 
         `
@@ -26,7 +28,7 @@ function view_cart() {
               <div>
                 <p>${cart[i].name}</p>
                 <span>IDR ${cart[i].price}</span> <br />
-                <button class="cart-delete" type="button"><i class="bx bx-trash"></i> Remove</button>
+                <button class="cart-delete" type="button" onclick='removeCartItem("${cart[i].product}")'><i class="bx bx-trash"></i> Remove</button>
                 
               </div>
             </div>
@@ -44,7 +46,7 @@ function view_cart() {
 
         cartRow.innerHTML = cartRowContents;
         cartItems.append(cartRow);
-        cartRow.getElementsByClassName('bx bx-trash')[0].addEventListener('click', removeCartItem);
+        //cartRow.getElementsByClassName('bx bx-trash')[i].addEventListener('click', removeCartItem(cart[i].product));
 	    //cartRow.getElementsByClassName('bx bx-cart')[0].addEventListener('click', removeCartItem)
         //cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
     }
@@ -62,14 +64,17 @@ function view_cart() {
 
 
 function removeCartItem(product_id) {
+    console.log("clicked" + product_id);
     var cart = JSON.parse(localStorage.getItem("cart"));
     cart = cart.filter( x => {
-        if (x.product_id != product_id) {
+        if (x.product != product_id) {
             return x;
         }
         location.reload();
+        console.log("filter else")
     });
     localStorage.setItem("cart", JSON.stringify(cart));
+    console.log("clicked end" + product_id);
 }
 
 
