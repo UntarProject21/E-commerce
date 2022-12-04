@@ -111,6 +111,49 @@ table {
   transform: translateY(1px);
 }
 
+.cart-add {
+  color: white;
+  background-color: var(--green);
+  border: 2px solid var(--green);
+  border-radius: .2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.cart-add:hover {
+  color: var(--green);
+  background-color: var(--white);
+  transition: all 0.25s ease-in;
+}
+
+.cart-add:active {
+  box-shadow: 0 0px #666;
+  transform: translateY(1px);
+}
+
+.cart-reduce {
+  color: white;
+  background-color: #ff2323;
+  border: 2px solid #ff2323;
+  border-radius: .2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+}
+
+.cart-reduce:hover {
+  color: #ff2323;
+  background-color: var(--white);
+  transition: all 0.15s ease-in;
+}
+
+.cart-reduce:active {
+  box-shadow: 0 0px #666;
+  transform: translateY(1px);
+}
+
+
 
 
 
