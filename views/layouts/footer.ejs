@@ -73,6 +73,23 @@
 <script src="/js/header.js"></script>
 
 <% if(state=="index" ) { %>
+  <script>
+    // Popup
+    const popup = document.querySelector(".popup");
+    const closePopup = document.querySelector(".popup-close");
+
+    if (popup) {
+      closePopup.addEventListener("click", () => {
+        popup.classList.add("hide-popup");
+      });
+
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          popup.classList.remove("hide-popup");
+        }, 1000);
+      });
+    }
+  </script>
 <script src="/js/plugins/bootstrap.min.js"></script>
 <script src="/js/plugins/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
