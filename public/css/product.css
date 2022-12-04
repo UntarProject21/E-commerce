@@ -308,12 +308,16 @@ z-index: 0;
   display: inline-block;
 }
 
-/* Search box */
+
 /* Search box */
 .search-box-ggwp {
-  width: 400px;
+	width: 400px;
 	border: none;
 	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
 }
 
 .search-box-ggwp .form-control{
