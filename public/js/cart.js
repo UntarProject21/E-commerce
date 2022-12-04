@@ -12,47 +12,29 @@ function view_cart() {
 
     for (var i = 0; i < bag.length; i++) {
         console.log(i);
-        let request = new XMLHttpRequest();
-        request.open('GET', `api/getProduct?id=${bag[i].product_id}`, false);
-        request.send(null);
-
-        if (request.status === 200) {
-            let data = JSON.parse(request.responseText);
-            total_price += parseInt(data[0].PRICE * bag[i].quantity);
-            html += `
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-7 col-md-6 col-lg-4">
-                            <img alt="placeholder image" class="img-fluid lazyload" src="img/${data[0].IMAGE}"
-                                width="180px" height="180px" />
-                        </div>
-                        <div class="col-sm-5 col-md-6 col-lg-8">
-                            <h2>${data[0].TITLE}</h2>
-                            <h4>Size : ${data[0].SIZE}</h4>
-                            <h6>Qty</h6>
-                            <div style="display: flex;">
-                                <span class="input-group-btn">
-                                    <button type="button" class="btn btn-default btn-number" style="color: white;"
-                                        onclick="minus('${bag[i].product_id}', '${data[0].PRICE}')"><i class="far fa-minus-square"></i></button>
-                                </span>
-                                <input class="box" type="text" disabled="disabled" value="${bag[i].quantity}"
-                                    class="form-control input-number" id="${bag[i].product_id}" />
-                                <span class="input-group-btn">
-                                    <button type="button" class="btn btn-default btn-number" style="color: white;"
-                                        onclick="add('${bag[i].product_id}', '${data[0].PRICE}')"><i class="far fa-plus-square"></i></button>
-                                </span>
-                            </div>
-                            <br>
-                            <p id="${bag[i].product_id}-price" class="price">Rp ${data[0].PRICE * bag[i].quantity}</p>
-                            <a href="javascript:;" onclick='return remove("${bag[i].product_id}")' style="color:red;"><i class="far fa-trash-alt" color="red"></i> <u>Remove</u></a>
-                            <br><br>
-                        </div>
+        let data = JSON.parse();
+        total_price += parseInt(data[0].PRICE * bag[i].quantity);
+        html += `
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="${imageSrc}" alt="" />
+                <div>
+                <p>${title}</p>
+                <span>${price}</span> <br />
+                <input type="number" value="1" min="1" />
                     </div>
                 </div>
-            </div>
-            `;
-        }
+                </td>
+                <td>
+                <div class="wish-action">
+                    <i class="bx bx-trash"></i>
+                    <i class="bx bx-cart"></i>
+                </div>
+            </td>
+        </tr>
+        `;
+        
     }
     document.getElementById("view-cart").innerHTML = html;
     document.getElementById("total-price").innerHTML = 'Rp ' + total_price;
