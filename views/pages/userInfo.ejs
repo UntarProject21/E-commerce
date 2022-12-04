@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layouts/header', {title: 'Profile' , state: 'login' }); %>
+  <body>
+    <%- include('../layouts/navbar', {types: 'v2', state: 'login'}); %>
+    <!-- Info -->
+    <div class="container" >
+      <div class="login-form">
+        <form id="loginform1" method="post" >
+          <div id="loginForm" style="text-align: center;">
+            <h1>Profile</h1>
+            <!-- redirect back to index after success -->
+            <p><img src="/images/sign_up.gif" alt="" width="30%"></p>
+
+            <label for="email"><i class="bx bx-envelope"></i> <b>Email</b></label><br><br>
+            <p>Logged in as : <%= data.email %></p><br/>
+            <p>Welcome, <%= data.firstName %> <%= data.firstName %> !</p><br/>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+    <%- include('../layouts/footer', {state: 'login'}); %>
+  </body>
+</html>

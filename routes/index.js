@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 const product = require("../models/product");
 var User = require('../models/user');
+const e = require("express");
 
 router.use(bodyParser.json());
 
@@ -40,10 +41,21 @@ router.get('/ForgetPass', function(req, res) {
     res.render('pages/ForgetPass');
   });
  
+router.get(['/userInfo', '/userInfo/:_id'], async function(req, res) {
+  //const _id = req.params;
+  console.log(req.session.userId);
+  const data = await User.findById(req.session.userId);
+  console.log(data);
+  res.render('pages/userInfo',{data});
+});
 
 router.get('/login', function(req, res) {
+  if (req.session.userId != null) {
+    res.redirect('/userInfo');
+  } else {
     res.render('pages/login');
-  });
+  }
+});
 
 
 //get all products
@@ -55,7 +67,7 @@ router.get('/product', async function(req, res) {
 
 //get A product
 router.get(['/productDetails', '/productDetails/:_id'], async function(req, res) {
-    const _id = req.params  
+    const _id = req.params;
     //const data = await product.find();
     const data = await product.findById(_id);
     console.log({data});
