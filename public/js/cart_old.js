@@ -64,19 +64,16 @@ function ready() {
     //     var button = removeCartItemButtons[i]
     //     button.addEventListener('click', removeCartItem)
     // }
-
     // var quantityInputs = document.getElementsByClassName('cart-buttons')
     // for (var i = 0; i < quantityInputs.length; i++) {
     //     var input = quantityInputs[i]
     //     input.addEventListener('change', quantityChanged)
     // }
-
     // var addToCartButtons = document.getElementsByClassName('bx bx-heart')
     // for (var i = 0; i < addToCartButtons.length; i++) {
     //     var button = addToCartButtons[i]
     //     button.addEventListener('click', addToCartClicked)
     // }
-
     // document.getElementsByClassName('checkout btn')[0].addEventListener('click', showModal)
 }
 
@@ -227,13 +224,14 @@ function updateCartTotal() {
   for (var i = 1, row; row = cartItemContainer.rows[i]; i++) {
     //console.log(i)
     var cartRows = cartItemContainer.rows[i]
-    //console.log(cartRows)
+
     var priceElement = cartRows.getElementsByTagName('span')[1]
     var quantityElement = cartRows.getElementsByClassName('cart-quantity-input')[0]
     var price = parseFloat(priceElement.innerText.replace('IDR ', ''))
     var quantity = quantityElement.value
     subtotal += (price * quantity)
- }
+  }
+
   tax = (5 * subtotal)/100
   subtotal = Math.round(subtotal * 100) / 100
   total = subtotal + tax
@@ -253,8 +251,8 @@ function updateCartTotal() {
     <td>Total</td>
     <td>IDR ${total}</td>
   </tr>
-</table>
-<a class="checkout btn">Proceed To Checkout</a>`
+  </table>
+  <a class="checkout btn">Proceed To Checkout</a>`
 }
 
 function checkoutTotal() {
