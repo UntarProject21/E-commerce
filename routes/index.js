@@ -49,6 +49,12 @@ router.get(['/userInfo', '/userInfo/:_id'], async function(req, res) {
   res.render('pages/userInfo',{data});
 });
 
+router.post('/userInfo', function(req, res) {
+  console.log("logged out")
+  req.session.destroy();
+  res.redirect('/');
+});
+
 router.get('/login', function(req, res) {
   if (req.session.userId != null) {
     res.redirect('/userInfo');
@@ -57,6 +63,25 @@ router.get('/login', function(req, res) {
   }
 });
 
+router.post('/login', async function (req, res, next) {
+  console.log(req.body);
+  User.findOne({email:req.body.email},function(err,data){
+    if(data){
+      
+      if(data.password==req.body.password){
+        console.log("Done Login");
+        req.session.userId = data._id;
+        console.log("login session : " + req.session.userId);
+        res.send({"Success":"Success!"});
+        
+      }else{
+        res.send({"Success":"Wrong password!"});
+      }
+    }else{
+      res.send({"Success":"This Email Is not regestered!"});
+    }
+  });
+});
 
 //get all products
 router.get('/product', async function(req, res) {
@@ -89,26 +114,6 @@ router.get('/register-verification-sent', function(req, res) {
 router.get('/register', function(req, res) {
     res.render('pages/register');
   });
-
-router.post('/login', async function (req, res, next) {
-  console.log(req.body);
-  User.findOne({email:req.body.email},function(err,data){
-    if(data){
-      
-      if(data.password==req.body.password){
-        console.log("Done Login");
-        req.session.userId = data._id;
-        console.log("login session : " + req.session.userId);
-        res.send({"Success":"Success!"});
-        
-      }else{
-        res.send({"Success":"Wrong password!"});
-      }
-    }else{
-      res.send({"Success":"This Email Is not regestered!"});
-    }
-  });
-});
 
 router.post('/register', async function(req, res, next) {
   var personInfo = req.body;

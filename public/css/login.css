@@ -113,6 +113,24 @@ li {
   -ms-border-radius: 100px;
   -o-border-radius: 100px;
 }
+
+.login-form form .delbutton {
+  width: 100%;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+  padding: 1rem 3rem;
+  margin-right: 1.5rem;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
 .login-form form button:hover {
   opacity: 0.7;
   
