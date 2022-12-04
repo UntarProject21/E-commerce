@@ -15,7 +15,7 @@
           <br>
           
           <h1 class="name"><%= data.name %></h1>
-          <div class="price">Price  : Rp.<%= data.price %></div><br>
+          <div class="price">Price  : IDR <%= data.price %></div><br>
           <form class="form">
             <label for="size">Size :</label>
             <select id="sizes" name="sizelist" form="sizeform">
@@ -24,7 +24,9 @@
               <option value="2">L ( 104 cm X 22 cm X 104 cm X 72 cm )</option>
             </select><br><br>
             <div class="stock">Stock : <%= data.variety[0].stock %></div><br>
-            <a class="addCart" onclick= "return addToCart('<%= data._id %>')"><i class="bx bx-cart"></i> Add To Cart</a><br><br>
+            <a class="addCart" onclick= "return addToCart
+            ('<%= data._id %>','<%= data.name %>','<%= data.price %>','<%= data.image %>')">
+            <i class="bx bx-cart"></i> Add To Cart</a><br><br>
           </form>
             <h3>Product Details</h3>
           <p class="description">
