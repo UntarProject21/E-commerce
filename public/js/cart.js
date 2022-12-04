@@ -5,16 +5,17 @@
 // }
 
 function view_cart() {
-    console.log(12314123)
     var cartItems = document.getElementsByClassName('containertable')[0]
     var bag = JSON.parse(localStorage.getItem("cart"));
     let total_price = 0;
+    let final_price = 0;
 
     for (var i = 0; i < bag.length; i++) {
         var cartRow = document.createElement('tr');
         console.log(i);
         console.log(bag[i]);
         total_price = parseInt(bag[i].price * bag[i].quantity);
+        final_price += parseInt(bag[i].price * bag[i].quantity);
         //console.log()
         var cartRowContents = 
         `
@@ -47,9 +48,25 @@ function view_cart() {
 	    // cartRow.getElementsByClassName('bx bx-cart')[0].addEventListener('click', removeCartItem)
         // cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
     }
-    //document.getElementById("view-cart").innerHTML = html;
-    //document.getElementById("total-price").innerHTML = 'Rp ' + total_price;
+    document.getElementById("total-price").innerHTML =   document.getElementsByClassName('total-price')[0].innerHTML =
+    `        
+    <table>
+    <tr>
+      <td>Total</td>
+      <td>IDR ${final_price}</td>
+    </tr>
+    </table>
+    <a class="checkout btn">Proceed To Checkout</a>`
+  
 }
+function add(product_id, price) {
+    var inputCount = document.getElementById(product_id);
+    inputCount.value++;
+    document.getElementById(product_id + '-price').innerHTML = 'Rp ' + price * inputCount.value;
+    set_total_price();
+    addToBag(product_id);
+}
+
 //product == _id
 
 function addToCart(product,name,price,image) {
