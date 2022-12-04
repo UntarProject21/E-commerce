@@ -76,7 +76,7 @@ router.get('/register', function(req, res) {
     res.render('pages/register');
   });
 
-router.post('/register', async function(req, res) {
+router.post('/register', async function(req, res, next) {
   var personInfo = req.body;
   //console.log(personInfo);
 
@@ -96,8 +96,8 @@ router.post('/register', async function(req, res) {
               password: personInfo.password,
               passwordConf: personInfo.passwordConf
             });
-            console.log("DATA INPUT : " + newPerson);
-            console.log("USER REGISTERED TO DATABASE : " + User);
+            //console.log("DATA INPUT : " + newPerson);
+            console.log("USER REGISTERED TO DATABASE : " + newPerson);
             newPerson.save();
 
             newPerson.save(function(err, Person){
@@ -109,6 +109,7 @@ router.post('/register', async function(req, res) {
 
           }).sort({_id: -1}).limit(1);
           res.send({"Success":"You are registered,You can login now."});
+          //res.redirect(200, '/login');
         }else{
          res.send({"Success":"e-mail is already used. Please use another e-mail."});
         }
