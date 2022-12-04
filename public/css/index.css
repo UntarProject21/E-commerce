@@ -938,39 +938,4 @@ Hero Media Query
   display: none;
 }
 
-/* Search box */
-.search-box-ggwp {
-  width: 400px;
-	border: none;
-	border-radius: 20px;
-}
 
-.search-box-ggwp .form-control{
-	border-radius: 20px;
-	border: 1.5px solid #E3E6ED;
-	height: 30px;
-  padding-left: 10px;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	-ms-border-radius: 20px;
-	-o-border-radius: 20px;
-  opacity: 0.8;
-}
-.search-box-ggwp input.form-control:focus{
-	box-shadow: none;
-	border: 1.5px solid #E3E6ED;
-	background-color: #F7F8FD;
-	letter-spacing: 1px;
-  opacity: 1;
-}
-.search-box-ggwp .btn-primary{
-	background-color: #5878FF!important;
-	border-radius:20px;
-	-webkit-border-radius:20px;
-	-moz-border-radius:20px;
-	-ms-border-radius:20px;
-	-o-border-radius:20px;
-}
-.search-box-ggwp .btn-primary:focus{
-	box-shadow: none;
-}
