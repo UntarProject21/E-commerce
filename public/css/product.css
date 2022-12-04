@@ -88,11 +88,11 @@ font-size: 2rem;
 z-index: 0;
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
 .all-products .top select {
     width: 15rem;
 }
-}
+} */
 /* New Arrivals */
 .title {
   text-align: center;
@@ -311,7 +311,7 @@ z-index: 0;
 
 /* Search box */
 .search-box-ggwp {
-	width: 400px;
+	
 	border: none;
 	border-radius: 20px;
 	-webkit-border-radius: 20px;
