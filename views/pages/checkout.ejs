@@ -4,6 +4,38 @@
   <body>
     <%- include('../layouts/navbar', {types: 'v2', state: 'transaction'}); %> 
     <!-- Checkout -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+    
+          $( "#loginform1" ).submit(function(event) {
+            event.preventDefault();
+    
+            $.ajax({
+              type: 'POST',
+              url: '/login',
+              data: $('#loginform1').serialize(),
+              dataType: "json",
+              success: function(response){
+                //alert("a");
+                //console.log(response.Success);
+                $('#loginform1')[0].reset();
+    
+                console.log(response.success);
+                       //ADD THIS CODE
+                       setTimeout(function(){
+                         document.getElementById("check").innerHTML="";
+                       },3000);
+                       if (response.Success=="Success!") {
+                         document.getElementById("aa").click();
+                       };
+                     },
+                     error: function() {
+                     }
+                   })
+          });
+    
+        });
+      </script>
     <div class="full-body justify-content-center">
         <div class="body-left">
             <table class="table" style="color: white; margin-right: 48px;">

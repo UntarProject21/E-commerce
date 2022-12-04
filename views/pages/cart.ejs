@@ -3,6 +3,40 @@
   <%- include('../layouts/header.ejs', {title: 'Shopping Cart' , state: 'cart' }); %>
   <body>
     <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'cart'}); %>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+  
+        $( "#loginform1" ).submit(function(event) {
+          event.preventDefault();
+  
+          $.ajax({
+            type: 'POST',
+            url: '/login',
+            data: $('#loginform1').serialize(),
+            dataType: "json",
+            success: function(response){
+              //alert("a");
+              //console.log(response.Success);
+              $('#loginform1')[0].reset();
+  
+              console.log(response.success);
+                     //ADD THIS CODE
+                     setTimeout(function(){
+                       document.getElementById("check").innerHTML="";
+                     },3000);
+                     if (response.Success=="Success!") {
+                       document.getElementById("aa").click();
+                     };
+                   },
+                   error: function() {
+                   }
+                 })
+        });
+  
+      });
+    </script>
+
     <div class="container-title">
       <h1>shopping cart</h1>
       <div class="container-sub-title">
@@ -34,17 +68,12 @@
 
   <!-- The Modal -->
   <div id="myModal" class="modal">
-
     <div class="modal-content">
       <div class="contain">
-
         <form action="myForm">
           <span class="close">X</span>
-
               <div class="row">
-
                 <div class="col">
-
                     <h3 class="title">billing address</h3>
 
                     <div class="inputBox">
