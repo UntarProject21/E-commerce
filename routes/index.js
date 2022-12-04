@@ -159,6 +159,11 @@ router.post('/register', async function(req, res, next) {
   }
 });
 
+router.get('/checkout', async function(req, res) {
+  const data = await product.find();
+  res.render("pages/checkout", {data});
+})
+
 router.get('/ResetPass-verification', function(req, res) {
     res.render('pages/ResetPass-verification');
   });

@@ -64,7 +64,7 @@ function view_cart() {
       <td>IDR ${final_price}</td>
     </tr>
     </table>
-    <a class="checkout btn">Proceed To Checkout</a>`  
+    <a class="checkout btn" onclick="showModal()">Proceed To Checkout</a>`  
 }
 
 function add(product_id, price) {
@@ -76,14 +76,13 @@ function add(product_id, price) {
 }
 
 function reduce(product_id, price) {
-    
-        var inputCount = document.getElementById(product_id);
-        if (inputCount.value > 1) {
-            inputCount.value--;
-            document.getElementById(product_id + '-price').innerHTML = 'IDR ' + price * inputCount.value;
-            set_total_price();
-            removeFromCart(product_id);
-        }
+    var inputCount = document.getElementById(product_id);
+    if (inputCount.value > 1) {
+        inputCount.value--;
+        document.getElementById(product_id + '-price').innerHTML = 'IDR ' + price * inputCount.value;
+        set_total_price();
+        removeFromCart(product_id);
+    }
 }
 
 function set_total_price() {
@@ -175,71 +174,6 @@ function addToCart(product,name,price,image) {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function purchaseClicked() {
-  alert("Thank you for your purchase!")
-  modal.style.display = "none"
-  var cartContainer = document.getElementsByTagName('table')[0]
-  for(var i = 1;i<cartContainer.rows.length;){
-    cartContainer.deleteRow(i)
-  }
-  updateCartTotal();
-}
-
-// function removeCartItem(event) {
-//   var buttonClicked = event.target
-//   buttonClicked.parentElement.parentElement.parentElement.parentElement.remove()
-//   updateCartTotal()
-//   document.getElementsByClassName('checkout btn')[0].addEventListener('click', showModal)
-// }
-
-
-
-function addToCartClicked(event) {
-    var button = event.target
-    var shopItem = button.parentElement.parentElement.parentElement
-    var title = shopItem.getElementsByClassName('product-info')[0].innerText
-    var price = shopItem.getElementsByClassName('product-price')[0].innerText
-    var imageSrc = shopItem.getElementsByClassName('product-thumb')[1].src
-    addItemToCart(title, price, imageSrc)
-}
-
-function addItemToCart(title, price, imageSrc) {
-    var cartRow = document.createElement('tr')
-    cartRow.classList.add('cart-info')
-    var cartItems = document.getElementsByClassName('container cart')[0]
-    var cartItemNames = cartItems.getElementsByClassName('product-info')
-    for (var i = 0; i < cartItemNames.length; i++) {
-       if (cartItemNames[i].innerText == title) {
-            alert('This item is already added to the cart')
-            return
-        }
-    }
-    var cartRowContents = `
-		<tr>
-          <td>
-            <div class="cart-info">
-              <img src="${imageSrc}" alt="" />
-              <div>
-                <p>${title}</p>
-                <span>${price}</span> <br />
-				<input type="number" value="1" min="1" />
-              </div>
-            </div>
-          </td>
-          <td>
-		 	<div class="wish-action">
-			  <i class="bx bx-trash"></i>
-			  <i class="bx bx-cart"></i>
-			</div>
-		  </td>
-    </tr>
-	`
-    cartRow.innerHTML = cartRowContents
-    cartItems.append(cartRow)
-    cartRow.getElementsByClassName('bx bx-trash')[0].addEventListener('click', removeCartItem)
-	cartRow.getElementsByClassName('bx bx-cart')[0].addEventListener('click', removeCartItem)
-    cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
-}
 
 function checkoutItems() {
   var cartItemContainers = document.getElementsByTagName('table')[0]
@@ -253,11 +187,12 @@ function checkoutItems() {
     var imageElement = cartRows.getElementsByTagName('img')[0]
     var quantityElement = cartRows.getElementsByClassName('cart-quantity-input')[0]
 
+    console.log(quantityElement)
     var names = nameElement.innerText
     var prices = parseFloat(priceElement.innerText.replace('IDR ', ''))
     var quantities = quantityElement.value
     var images = imageElement.src
-
+    //console.log(prices)
     var checkRow = document.createElement('tr')
     var checkRowContents = `
     <tr>
@@ -281,38 +216,6 @@ function checkoutItems() {
     cartItemContainer.append(checkRow)
   }
 }
-
-function quantityChanged(event,product_id,price) {
-  var input = event.target
-  if (isNaN(input.value) || input.value <= 0) {
-      input.value = 1
-  }
-  updateCartTotal(product_id,price)
-  //document.getElementsByClassName('checkout btn')[0].addEventListener('click', showModal)
-}
-
-
-
-// function updateCartTotal(product_id, price) {
-//   console.log("update cart total" + product_id + price);
-//     function add(product_id, price) {
-//         var inputCount = document.getElementById(product_id);
-//         inputCount.value++;
-//         document.getElementById(product_id + '-price').innerHTML = 'Rp ' + price * inputCount.value;
-//         set_total_price();
-//         addToBag(product_id);
-//     }
-
-//     function minus(product_id, price) {
-//         var inputCount = document.getElementById(product_id);
-//         if (inputCount.value > 0) {
-//             inputCount.value--;
-//             document.getElementById(product_id + '-price').innerHTML = 'Rp ' + price * inputCount.value;
-//             set_total_price();
-//             removeFromBag(product_id);
-//         }
-//     }
-// }
 
 function checkoutTotal() {
   var cartItemContainer = document.getElementsByTagName('table')[0]
@@ -341,26 +244,37 @@ function checkoutTotal() {
 } 
 
 // Get the modal
-// var modal = document.getElementById("myModal");
-// var contentmodal = document.getElementsByClassName("modal-content");
+var modal = document.getElementById("myModal");
+var contentmodal = document.getElementsByClassName("modal-content");
 
-// // When the user clicks on the button, open the modal
-// function showModal() {
-//   document.getElementsByClassName('close')[0].addEventListener('click', closeModal)
-//   document.getElementsByClassName('submit-btn')[0].addEventListener('click', purchaseClicked)
-//   modal.style.display = "block";
-//   checkoutItems();
-//   checkoutTotal();
-// }
+// When the user clicks on the button, open the modal
+function showModal() {
+  //console.log("show modal!")
+  document.getElementsByClassName('close')[0].addEventListener('click', closeModal)
+  document.getElementsByClassName('submit-btn')[0].addEventListener('click', purchaseClicked)
+  modal.style.display = "block";
+  checkoutItems();
+  checkoutTotal();
+}
 
-// function closeModal() {
-//   var cartItemContainer = document.getElementsByTagName('table')[2]
-//   for(var i = 0;i<cartItemContainer.rows.length;){
-//     cartItemContainer.deleteRow(i);
-//   }
-//   modal.style.display = "none";
+function closeModal() {
+  var cartItemContainer = document.getElementsByTagName('table')[2]
+  for(var i = 0;i<cartItemContainer.rows.length;){
+    cartItemContainer.deleteRow(i);
+  }
+  modal.style.display = "none";
 
-// }
+}
+
+function purchaseClicked() {
+    alert("Thank you for your purchase!")
+    modal.style.display = "none"
+    var cartContainer = document.getElementsByTagName('table')[0]
+    for(var i = 1;i<cartContainer.rows.length;){
+      cartContainer.deleteRow(i)
+    }
+    updateCartTotal();
+  }
 
 view_cart();
 
