@@ -4,48 +4,72 @@
   <body>
     <%- include('../layouts/navbar', {types: 'v2', state: 'login'}); %>
 
+    <script type="text/javascript">
+      $(document).ready(function(){
+  
+        $( "#loginform1" ).submit(function(event) {
+          event.preventDefault();
+  
+          $.ajax({
+            type: 'POST',
+            url: '/login',
+            data: $('#loginform1').serialize(),
+            dataType: "json",
+            success: function(response){
+              //alert("a");
+              //console.log(response.Success);
+              $('#loginform1')[0].reset();
+  
+              document.getElementById("check").innerHTML=response.Success;
+                     //ADD THIS CODE
+                     setTimeout(function(){
+                       document.getElementById("check").innerHTML="";
+                     },3000);
+                     if (response.Success=="Success!") {
+                       document.getElementById("aa").click();
+                     };
+                   },
+                   error: function() {
+                   }
+                 })
+        });
+  
+      });
+    </script>
+
+
     <!-- Login -->
     <div class="container" >
       <div class="login-form">
-        <form action="" >
+        <form id="loginform1" method="post" >
           <div id="loginForm" style="text-align: center;">
-          <h1>Login</h1>
-          <p><img src="/images/login.gif" alt="" width="30%"></p>
-          <p>
-            Don't have an account? Sign up
-            <a href="/register">here</a>.
-          </p>
+            <h1>Login</h1>
+            <!-- redirect back to index after success -->
+            <a id = "aa" href="/" >test</a>
+            <p><img src="/images/login.gif" alt="" width="30%"></p>
+            <p>Don't have an account? Sign up <a href="/register">here</a>.</p>
 
-          <label for="email"><i class="bx bx-envelope"></i> <b>Email</b></label><br><br>
-          <input type="text" placeholder="Enter Email" id="email" class="email-password"required /><br>
+            <label for="email"><i class="bx bx-envelope"></i> <b>Email</b></label><br><br>
+            <input type="text" name="email" placeholder="Enter Email" required="" class="email-password"><br/>
 
-          <label for="password"><i class="bx bx-lock-alt"></i><b>Password</b></label><br><br>
-          <input
-            type="password"
-            placeholder="Enter Password"
-            id="password"
-            class="email-password"
-            required
-          /><br>
-          <label>
-            <input 
-            type="checkbox" 
-            checked="checked" 
-            style="margin-bottom:15px ; margin-left: 0 px;"/> Remember me
-          </label>
-          <a href="/ForgetPass" style="margin-left: 14rem; font-size:1.4rem;">
-          Forgot your password?</a>
-          <p>
-            By continuing you agree to our
-            <a href="/T&C">Terms & Conditions</a>.
-          </p>
-          
+            <label for="password"><i class="bx bx-lock-alt"></i><b>Password</b></label><br><br>
+            <input type="password" name="password" placeholder="Password" required="" class="email-password"><br/>
+
+            <label><input type="checkbox" checked="checked" style="margin-bottom:15px ; margin-left: 0 px;"/> Remember me</label>
+
+            <a href="/ForgetPass" style="margin-left: 14rem; font-size:1.4rem;">Forgot your password?</a>
+
+            <p>By continuing you agree to our <a href="/T&C">Terms & Conditions</a>.</p>
+
+            <div class="buttons">
+              <button type="submit" value="Login" id="registerButton">Login</button>
+            </div>
           </div>
-        
-        <div class="buttons">
-          <button type="button" onclick="location.href = '/';" value="Login" id="loginButton">Login</button>
-        </div>
+          
         </form>
+        <div class="mssg bg-danger">
+          <span id="check"><center>hello</center></span>
+        </div>
       </div>
     </div>
     <%- include('../layouts/footer', {state: 'login'}); %>

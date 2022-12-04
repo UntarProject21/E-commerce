@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 var bodyParser = require('body-parser');
 
+var session = require('express-session');
 const product = require("../models/product");
 var User = require('../models/user');
 
@@ -44,6 +45,7 @@ router.get('/login', function(req, res) {
     res.render('pages/login');
   });
 
+
 //get all products
 router.get('/product', async function(req, res) {
     const data = await product.find();
@@ -75,6 +77,26 @@ router.get('/register-verification-sent', function(req, res) {
 router.get('/register', function(req, res) {
     res.render('pages/register');
   });
+
+router.post('/login', async function (req, res, next) {
+  console.log(req.body);
+  User.findOne({email:req.body.email},function(err,data){
+    if(data){
+      
+      if(data.password==req.body.password){
+        console.log("Done Login");
+        req.session.userId = data._id;
+        console.log("login session : " + req.session.userId);
+        res.send({"Success":"Success!"});
+        
+      }else{
+        res.send({"Success":"Wrong password!"});
+      }
+    }else{
+      res.send({"Success":"This Email Is not regestered!"});
+    }
+  });
+});
 
 router.post('/register', async function(req, res, next) {
   var personInfo = req.body;
@@ -109,7 +131,6 @@ router.post('/register', async function(req, res, next) {
 
           }).sort({_id: -1}).limit(1);
           res.send({"Success":"You are registered,You can login now."});
-          //res.redirect(200, '/login');
         }else{
          res.send({"Success":"e-mail is already used. Please use another e-mail."});
         }
