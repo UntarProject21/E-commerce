@@ -55,6 +55,7 @@ app.use( express.static( "public" ) );
 app.listen(port, () => {
   console.log(`App listening at port ${port}`)
 })
+
 app.use('/', indexRouter);
 app.use('/api', api);
 
