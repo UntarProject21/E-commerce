@@ -233,11 +233,10 @@ router.get('/wishlist', function(req, res) {
     res.render('pages/transaction');
   });
 
-// router.get("/sorting", (req, res) => {
-//   const conn = mongoose.connection;
-//   conn.execute("SELECT * FROM `products` WHERE ``"
 
-//   )
-//   );
+  
+  
+  
+  );
 
 module.exports = router;
