@@ -16,26 +16,32 @@ function view_cart() {
         console.log(bag[i]);
         total_price += parseInt(bag[i].price * bag[i].quantity);
 
-        var cartRowContents = `
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="/images/${bag[i].image}" alt="" />
-                    <div>
-                    <p>${bag[i].name}</p>
-                    <span>${bag[i].price}</span> <br />
-                    <input type="number" value="1" min="1" />
-                        </div>
-                    </div>
-                    </td>
-                    <td>
-                    <div class="wish-action">
-                        <i class="bx bx-trash"></i>
-                        <i class="bx bx-cart"></i>
-                    </div>
-                </td>
-            </tr>
+
+        var cartRowContents = 
+        `
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="/images/${bag[i].image}" alt="" />
+              <div>
+                <p>${bag[i].name}</p>
+                <span>IDR ${bag[i].price}</span> <br />
+                <button class="cart-delete" type="button"><i class="bx bx-trash"></i> Remove</button>
+                
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="cart-buttons">
+              <input class="cart-quantity-input" type="number" value="1" min="1">
+            </div>
+          </td>
+          <td>
+            <span>IDR ${total_price}</span>
+          </td>
+        </tr>
         `;
+
         cartRow.innerHTML = cartRowContents
         cartItems.append(cartRow)
         // cartRow.getElementsByClassName('bx bx-trash')[0].addEventListener('click', removeCartItem)
