@@ -14,9 +14,8 @@ function view_cart() {
         var cartRow = document.createElement('tr');
         console.log(i);
         console.log(bag[i]);
-        total_price += parseInt(bag[i].price * bag[i].quantity);
-
-
+        total_price = parseInt(bag[i].price * bag[i].quantity);
+        //console.log()
         var cartRowContents = 
         `
         <tr>
@@ -33,9 +32,9 @@ function view_cart() {
           </td>
           <td>
             <div class="cart-buttons">
-              <input class="cart-quantity-input" type="number" value="1" min="1">
+              <input class="cart-quantity-input" type="number" value="${bag[i].quantity}" min="1">
             </div>
-          </td>
+          </td>     
           <td>
             <span>IDR ${total_price}</span>
           </td>
