@@ -76,13 +76,14 @@ function add(product_id, price) {
 }
 
 function reduce(product_id, price) {
-    var inputCount = document.getElementById(product_id);
-    if (inputCount.value > 0) {
-        inputCount.value--;
-        document.getElementById(product_id + '-price').innerHTML = 'IDR ' + price * inputCount.value;
-        set_total_price();
-        removeFromCart(product_id);
-    }
+    
+        var inputCount = document.getElementById(product_id);
+        if (inputCount.value > 1) {
+            inputCount.value--;
+            document.getElementById(product_id + '-price').innerHTML = 'IDR ' + price * inputCount.value;
+            set_total_price();
+            removeFromCart(product_id);
+        }
 }
 
 function set_total_price() {
