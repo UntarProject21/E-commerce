@@ -102,14 +102,7 @@ router.get(['/productDetails', '/productDetails/:_id'], async function(req, res)
 
 router.get('/register-verification-completed', function(req, res) {
     res.render('pages/register-verification-completed');
-  });
-
-router.get('/register-verification-error', function(req, res) {
-    res.render('pages/register-verification-error');
-  });
-  
-router.get('/register-verification-sent', function(req, res) {
-    res.render('pages/register-verification-sent');
+    res.redirect()
   });
 
 router.get('/register', function(req, res) {
@@ -232,10 +225,5 @@ router.get('/wishlist', function(req, res) {
   router.get('/transaction', function(req, res) {
     res.render('pages/transaction');
   });
-
-
-  
-  
-  
 
 module.exports = router;

@@ -3,17 +3,24 @@
   <%- include('../layouts/header', {title: 'Register Verification Completed' , state: 'registerverifcomplete' }); %>
   <body>
     <%- include('../layouts/navbar', {types: 'v2', state: 'regisverifcomplete'}); %>
+    <script>
+      window.setTimeout(function(){
 
+      // Move to a new location or you can do something else
+      window.location.href = "/login";
+
+      }, 2000);
+    </script>
     <div data-aos="fade-in" data-aos-delay="500" class="container" style="text-align: center;">
         <div class="col">
             <div class="card col-md-6 col-lg-6 col-xl-8">
                 <div class="card-header" style="color: rgb(0, 0, 0);">
-                    <h2>Verification Completed !!!</h2><br>
+                    <h2>Registration Completed !!!</h2><br>
                 </div>
                 <img src="https://media.giphy.com/media/nbX0ijnZwU33wY6Wwo/giphy.gif" class="VerifyGif2">
                 <br>
                 <div class="card-body">
-                    <h5 class="card-text" style="font-size: 20px;" style="color: #000000;">Your Account Has Been Verified !! You can now Sign In Using Your Credentials..</h5><br>
+                    <h5 class="card-text" style="font-size: 20px;" style="color: #000000;">Your Account Has Been Registered !! You can now Log In Using Your Credentials.</h5><br>
                 </div>
             </div>
         </div>
