@@ -237,6 +237,5 @@ router.get('/wishlist', function(req, res) {
   
   
   
-  );
 
 module.exports = router;
