@@ -76,29 +76,19 @@ router.get('/register', function(req, res) {
     res.render('pages/register');
   });
 
-router.post('/register', function(req, res) {
-  console.log(req.body);
+router.post('/register', async function(req, res) {
   var personInfo = req.body;
-  // var newPerson = new User({
-  //   email:personInfo.email,
-  //   firstName: personInfo.firstName,
-  //   lastName: personInfo.lastName,
-  //   password: personInfo.password,
-  //   passwordConf: personInfo.passwordConf
-  // });
-  // console.log(newPerson);
-  // console.log(User);
-  // newPerson.save();
+  //console.log(personInfo);
 
   if(!personInfo.email || !personInfo.firstName || !personInfo.lastName || !personInfo.password || !personInfo.passwordConf){
     res.send();
+    console.log("help");
   } else {
     if (personInfo.password == personInfo.passwordConf) {
 
-      User.findOne({_id:personInfo._id},function(err,personInfo){
-        if(!personInfo){
-          console.log(personInfo)
-          User.findOne({},function(err,personInfo){
+      User.findOne({email:personInfo.email},function(err,data){
+        if(!data){
+          User.findOne({},function(err,data){
             var newPerson = new User({
               email:personInfo.email,
               firstName: personInfo.firstName,
@@ -106,8 +96,8 @@ router.post('/register', function(req, res) {
               password: personInfo.password,
               passwordConf: personInfo.passwordConf
             });
-            console.log(newPerson);
-            console.log(User);
+            console.log("DATA INPUT : " + newPerson);
+            console.log("USER REGISTERED TO DATABASE : " + User);
             newPerson.save();
 
             newPerson.save(function(err, Person){
@@ -118,9 +108,9 @@ router.post('/register', function(req, res) {
             });
 
           }).sort({_id: -1}).limit(1);
-          res.send({"Success":"You are regestered,You can login now."});
+          res.send({"Success":"You are registered,You can login now."});
         }else{
-         res.send({"Success":"Email is already used."});
+         res.send({"Success":"e-mail is already used. Please use another e-mail."});
         }
 
      });
