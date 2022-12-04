@@ -14,7 +14,6 @@ orderSchema = new Schema( {
     expMonth: String,
     expYear: String,
     cvv: String,
-    //orders: []
 }),
 Order = mongoose.model('Order', orderSchema);
 

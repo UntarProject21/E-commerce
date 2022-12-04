@@ -93,10 +93,11 @@ function set_total_price() {
     }
     document.getElementsByClassName("total-price")[0].innerHTML = `        
     <table>
-    <tr>
-      <td>Total</td>
-      <td>IDR ${total_price}</td>
-    </tr>
+        <tr>
+        <td>Total</td>
+        <td>IDR ${total_price}</td>
+        </tr>
+        
     </table>
     <a class="checkout btn" onclick="showModal()">Proceed To Checkout</a>`  
 }
@@ -266,6 +267,9 @@ function closeModal() {
 
 function purchaseClicked() {
     alert("Thank you for your purchase!")
+    localStorage.clear();
+    set_total_price();
+
     // modal.style.display = "none"
     // var cartContainer = document.getElementsByTagName('table')[0]
     // for(var i = 1;i<cartContainer.rows.length;){
