@@ -111,7 +111,7 @@ table {
   transform: translateY(1px);
 }
 
-.cart-plus {
+.cart-add {
   color: white;
   background-color: var(--green);
   border: 2px solid var(--green);
@@ -121,18 +121,18 @@ table {
   transition: all 0.25s ease-out;
 }
 
-.cart-plus:hover {
+.cart-add:hover {
   color: var(--green);
   background-color: var(--white);
   transition: all 0.25s ease-in;
 }
 
-.cart-plus:active {
+.cart-add:active {
   box-shadow: 0 0px #666;
   transform: translateY(1px);
 }
 
-.cart-minus {
+.cart-reduce {
   color: white;
   background-color: #ff2323;
   border: 2px solid #ff2323;
@@ -142,13 +142,13 @@ table {
   transition: all 0.15s ease-out;
 }
 
-.cart-minus:hover {
+.cart-reduce:hover {
   color: #ff2323;
   background-color: var(--white);
   transition: all 0.15s ease-in;
 }
 
-.cart-minus:active {
+.cart-reduce:active {
   box-shadow: 0 0px #666;
   transform: translateY(1px);
 }

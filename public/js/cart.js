@@ -27,7 +27,7 @@ function view_cart() {
               <img src="/images/${cart[i].image}" alt="" />
               <div>
                 <p>${cart[i].name}</p>
-                <span>IDR ${cart[i].price}</span> <br />
+                <span id="product-price">IDR ${cart[i].price}</span> <br />
                 <button class="cart-delete" type="button" onclick='removeCartItem("${cart[i].product}")'><i class="bx bx-trash"></i> Remove</button>
                 
               </div>
@@ -35,17 +35,17 @@ function view_cart() {
           </td>
           <td>
             <span>
-                <button class="cart-plus" type="button" onclick="minus('${cart[i].product}', '${cart[i].price}')"><i class="bx bx-plus"></i></button>
+                <button class="cart-add" type="button" onclick="add('${cart[i].product}', '${cart[i].price}')"><i class="bx bx-plus"></i></button>
             </span>
             <div class="cart-buttons">
-              <input class="cart-quantity-input" type="number" value="${cart[i].quantity}" min="1">
+              <input class="cart-quantity-input" type="text" disabled="disabled" value="${cart[i].quantity}" min="1" id="${cart[i].product}">
             </div>
             <span>
-                <button class="cart-minus" type="button" onclick="minus('${cart[i].product}', '${cart[i].price}')"><i class="bx bx-minus"></i></button>
+                <button class="cart-reduce" type="button" onclick="reduce('${cart[i].product}', '${cart[i].price}')"><i class="bx bx-minus"></i></button>
             </span>
           </td>     
           <td>
-            <span>IDR ${total_price}</span>
+            <span id="${cart[i].product}-price" class="product-price">IDR ${total_price}</span>
           </td>
         </tr>
         `;
@@ -54,9 +54,9 @@ function view_cart() {
         cartItems.append(cartRow);
         //cartRow.getElementsByClassName('bx bx-trash')[i].addEventListener('click', removeCartItem(cart[i].product));
 	    //cartRow.getElementsByClassName('bx bx-cart')[0].addEventListener('click', removeCartItem)
-        cartRow.getElementsByClassName('cart-quantity-input')[i].addEventListener('change', quantityChanged)
+        //cartRow.getElementsByClassName('cart-quantity-input')[i].addEventListener('change', quantityChanged)
     }
-    document.getElementById("total-price").innerHTML = document.getElementsByClassName('total-price')[0].innerHTML =
+    document.getElementsByClassName('total-price')[0].innerHTML =
     `        
     <table>
     <tr>
@@ -67,6 +67,39 @@ function view_cart() {
     <a class="checkout btn">Proceed To Checkout</a>`  
 }
 
+function add(product_id, price) {
+    var inputCount = document.getElementById(product_id);
+    inputCount.value++;
+    document.getElementById(product_id + '-price').innerHTML = 'IDR ' + price * inputCount.value;
+    set_total_price();
+    addToCart(product_id);
+}
+
+function reduce(product_id, price) {
+    var inputCount = document.getElementById(product_id);
+    if (inputCount.value > 0) {
+        inputCount.value--;
+        document.getElementById(product_id + '-price').innerHTML = 'IDR ' + price * inputCount.value;
+        set_total_price();
+        removeFromCart(product_id);
+    }
+}
+
+function set_total_price() {
+    let price = document.getElementsByClassName("product-price");
+    let total_price = 0;
+    for (let i = 0; i < price.length; i++) {
+        total_price += parseInt(price[i].innerHTML.substr(3));
+    }
+    document.getElementsByClassName("total-price")[0].innerHTML = `        
+    <table>
+    <tr>
+      <td>Total</td>
+      <td>IDR ${total_price}</td>
+    </tr>
+    </table>
+    <a class="checkout btn">Proceed To Checkout</a>`  
+}
 
 
 function removeCartItem(product_id) {
@@ -112,13 +145,6 @@ function removeFromCart(product_id) {
     }
 }
 
-function add(product_id, price) {
-    var inputCount = document.getElementById(product_id);
-    inputCount.value++;
-    document.getElementById(product_id + '-price').innerHTML = 'Rp ' + price * inputCount.value;
-    set_total_price();
-    addToCart(product_id);
-}
 
 //product == _id
 
@@ -264,26 +290,28 @@ function quantityChanged(event,product_id,price) {
   //document.getElementsByClassName('checkout btn')[0].addEventListener('click', showModal)
 }
 
-function updateCartTotal(product_id, price) {
-  console.log("update cart total" + product_id + price);
-    // function add(product_id, price) {
-    //     var inputCount = document.getElementById(product_id);
-    //     inputCount.value++;
-    //     document.getElementById(product_id + '-price').innerHTML = 'Rp ' + price * inputCount.value;
-    //     set_total_price();
-    //     addToBag(product_id);
-    // }
 
-    // function minus(product_id, price) {
-    //     var inputCount = document.getElementById(product_id);
-    //     if (inputCount.value > 0) {
-    //         inputCount.value--;
-    //         document.getElementById(product_id + '-price').innerHTML = 'Rp ' + price * inputCount.value;
-    //         set_total_price();
-    //         removeFromBag(product_id);
-    //     }
+
+// function updateCartTotal(product_id, price) {
+//   console.log("update cart total" + product_id + price);
+//     function add(product_id, price) {
+//         var inputCount = document.getElementById(product_id);
+//         inputCount.value++;
+//         document.getElementById(product_id + '-price').innerHTML = 'Rp ' + price * inputCount.value;
+//         set_total_price();
+//         addToBag(product_id);
+//     }
+
+//     function minus(product_id, price) {
+//         var inputCount = document.getElementById(product_id);
+//         if (inputCount.value > 0) {
+//             inputCount.value--;
+//             document.getElementById(product_id + '-price').innerHTML = 'Rp ' + price * inputCount.value;
+//             set_total_price();
+//             removeFromBag(product_id);
+//         }
+//     }
 // }
-}
 
 function checkoutTotal() {
   var cartItemContainer = document.getElementsByTagName('table')[0]
