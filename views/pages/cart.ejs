@@ -7,18 +7,18 @@
     <script type="text/javascript">
       $(document).ready(function(){
   
-        $( "#loginform1" ).submit(function(event) {
+        $( "#checkoutform1" ).submit(function(event) {
           event.preventDefault();
   
           $.ajax({
             type: 'POST',
-            url: '/login',
-            data: $('#loginform1').serialize(),
+            url: '/cart',
+            data: $('#checkoutform1').serialize(),
             dataType: "json",
             success: function(response){
               //alert("a");
               //console.log(response.Success);
-              $('#loginform1')[0].reset();
+              $('#checkoutform1')[0].reset();
   
               console.log(response.success);
                      //ADD THIS CODE
@@ -70,48 +70,48 @@
   <div id="myModal" class="modal">
     <div class="modal-content">
       <div class="contain">
-        <form action="myForm">
+        <form id="checkoutform1" method="post">
+          <!-- redirect back to index after success -->
+          <a id = "aa" href="/" ></a>
           <span class="close">X</span>
               <div class="row">
                 <div class="col">
                     <h3 class="title">billing address</h3>
-
                     <div class="inputBox">
-                        <span>full name :</span>
-                        <input type="text" placeholder="John Doe" required>
+                        <span>first name :</span>
+                        <input type="text" name="firstName" placeholder="John" required="">
                     </div>
                     <div class="inputBox">
+                      <span>last name :</span>
+                      <input type="text" name="lastName" placeholder="Doe" required="">
+                  </div>
+                    <div class="inputBox">
                         <span>email :</span>
-                        <input type="email" placeholder="example@example.com">
+                        <input type="email" name="email" placeholder="example@example.com" required="">
                     </div>
                     <div class="inputBox">
                         <span>address :</span>
-                        <input type="text" placeholder="House - Street - Regency">
+                        <input type="text" name="address" placeholder="House - Street - Regency" required="">
                     </div>
                     <div class="inputBox">
-                        <span>city :</span>
-                        <input type="text" placeholder="Jakarta Barat">
+                        <span>regency :</span>
+                        <input type="text" name="regency" placeholder="Jakarta Barat" required="">
                     </div>
-
                     <div class="flex">
                         <div class="inputBox">
                             <span>Province :</span>
-                            <input type="text" placeholder="DKI Jakarta">
+                            <input type="text" name="province" placeholder="DKI Jakarta" required="">
                         </div>
                         <div class="inputBox">
                             <span>zip code :</span>
-                            <input type="text" placeholder="11130">
+                            <input type="text" name="zipcode" placeholder="11130" required="">
                         </div>
                     </div>
-
                 </div>
-
                 <div class="col">
-
                     <h3 class="title">Cart Details</h3>
                     <div class="checkout-container">
-                      <table>
-                        
+                      <table> 
                       </table>
                       <span class="final-price">Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Error
                         <br/>Shipping : Error<br/><br/>
@@ -119,34 +119,32 @@
                     </div>
                   </div>
                 <div class="col">
-
                   <h3 class="title">payment</h3>
-
                   <div class="inputBox">
                       <span>cards accepted :</span>
                       <img src="/images/card_img.png" alt="">
                   </div>
                   <div class="inputBox">
                       <span>name on card :</span>
-                      <input type="text" placeholder="John Doe">
+                      <input type="text" name="cardName" placeholder="John Doe" required="">
                   </div>
                   <div class="inputBox">
                       <span>credit card number :</span>
-                      <input type="number" placeholder="1111-2222-3333-4444">
+                      <input type="text" name="creditNumber" placeholder="1111-2222-3333-4444" required="">
                   </div>
                   <div class="inputBox">
                       <span>exp month :</span>
-                      <input type="text" placeholder="January">
+                      <input type="text" name="expMonth" placeholder="January" required="">
                   </div>
 
                   <div class="flex">
                       <div class="inputBox">
                           <span>exp year :</span>
-                          <input type="number" placeholder="2022">
+                          <input type="text" name="expYear" placeholder="2022" required="">
                       </div>
                       <div class="inputBox">
                           <span>CVV :</span>
-                          <input type="text" placeholder="1234">
+                          <input type="text" name="cvv" placeholder="1234" required="">
                       </div>
                   </div>
                 </div> 
